@@ -190,5 +190,8 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 # Treble flag
 BOARD_VNDK_VERSION := current
 
+# WiFi
+CONFIG_ACS := true
+
 # Inherit from the proprietary version
 include vendor/xiaomi/spes/BoardConfigVendor.mk
