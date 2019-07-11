@@ -52,9 +52,6 @@ ro.vendor.use_data_netmgrd=true
 # Radio
 persist.sys.fflag.override.settings_provider_model=false
 
-# SSR
-persist.vendor.ssr.restart_level=ALL_ENABLE
-
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
 
