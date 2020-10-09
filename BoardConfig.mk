@@ -173,6 +173,9 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
+# Power
+TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
+
 # qcom/common tree
 include $(COMMON_PATH)/BoardConfigQcom.mk
 OVERRIDE_QCOM_HARDWARE_VARIANT := sm8250-common
