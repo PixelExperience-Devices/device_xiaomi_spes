@@ -569,3 +569,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.data.iwlan.enable=true \
     ro.hardware.wlan.dbs=2 \
     ro.telephony.iwlan_operation_mode=legacy
+
+# Zygote
+PRODUCT_SYSTEM_PROPERTIES += \
+    zygote.critical_window.minute=10
