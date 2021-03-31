@@ -43,6 +43,7 @@ on property:vendor.post_boot.parsed=1
     write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 20000
 
     # Configure scheduler
+    write /proc/sys/kernel/sched_child_runs_first 1
     write /proc/sys/kernel/sched_group_downmigrate 25
     write /sys/devices/system/cpu/cpu0/core_ctl/enable 0
     write /sys/devices/system/cpu/cpu4/core_ctl/enable 0
