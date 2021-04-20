@@ -154,6 +154,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
     $(LOCAL_PATH)/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
+# Charger
+PRODUCT_PACKAGES += \
+    libsuspend
+    
 # Configs File System
 PRODUCT_PACKAGES += \
     fs_config_files
