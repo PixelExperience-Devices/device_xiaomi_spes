@@ -197,6 +197,10 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
 
+# Dalvik - Use 64-bit dex2oat for better dexopt time.
+PRODUCT_VENDOR_PROPERTIES += \
+    dalvik.vm.dex2oat64.enabled=true
+    
 # Display
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor
