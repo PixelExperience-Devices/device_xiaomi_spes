@@ -66,3 +66,11 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
 
 on property:ro.boot.hwversion=*
     setprop vendor.boot.hwversion ${ro.boot.hwversion}
+
+on property:graphics.display.kernel_idle_timer.enabled=true
+    # Switch display mode to 60hz when idle
+    write /sys/devices/platform/soc/soc:qcom,dsi-display-primary/idle_mode "@60"
+
+on property:graphics.display.kernel_idle_timer.enabled=false
+    # Disable agressive idle mode switching
+    write /sys/devices/platform/soc/soc:qcom,dsi-display-primary/idle_mode "none"
