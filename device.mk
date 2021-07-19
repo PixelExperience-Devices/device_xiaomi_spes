@@ -349,6 +349,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
+# LMK
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.lmk.filecache_min_kb=153600
+    
 # Media
 PRODUCT_ODM_PROPERTIES += \
     media.settings.xml=/vendor/etc/media_profiles_khaje.xml \
