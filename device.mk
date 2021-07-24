@@ -69,7 +69,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_ODM_PROPERTIES += \
     vendor.audio.feature.dynamic_ecns.enable=false \
-    vendor.audio.hw.aac.encoder=false
+    vendor.audio.hw.aac.encoder=false \
+    vendor.audio.offload.buffer.size.kb=256
 
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.config.vc_call_vol_steps=11
