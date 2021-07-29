@@ -47,9 +47,6 @@ property Name is called. -->
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="60" />
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
-                <Prop Name="vendor.appcompact.enable_app_compact" Value="true" />
-                <Prop Name="vendor.appcompact.full_compact_type"  Value="2" />
-                <Prop Name="vendor.appcompact.some_compact_type"  Value="4" />
                 <Prop Name="vendor.perf.bgt.enable" Value="true" />
 
                 <!--Mention all the target/kernel specific properties at the end of xml file
@@ -85,6 +82,18 @@ property Name is called. -->
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_age"   Value="5000"  Target="khaje" Ram="3" />
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="32"    Target="khaje" Ram="3" />
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="32"    Target="khaje" Ram="4" />
+
+                <Prop Name="vendor.appcompact.enable_app_compact" Value="true" />
+                <Prop Name="vendor.appcompact.full_compact_type"  Value="2" />
+                <Prop Name="vendor.appcompact.some_compact_type"  Value="4" />
+                <Prop Name="vendor.appcompact.compact_throttle_somesome" Value="5000" />
+                <Prop Name="vendor.appcompact.compact_throttle_somefull" Value="10000" />
+                <Prop Name="vendor.appcompact.compact_throttle_fullsome" Value="500" />
+                <Prop Name="vendor.appcompact.compact_throttle_fullfull" Value="10000" />
+                <Prop Name="vendor.appcompact.compact_throttle_bfgs" Value="600000" />
+                <Prop Name="vendor.appcompact.compact_throttle_persistent" Value="600000" />
+                <Prop Name="vendor.appcompact.rss_throttle_kb" Value="12000" />
+                <Prop Name="vendor.appcompact.delta_rss_throttle_kb" Value="8000" />
 
     </PerfConfigs>
 </PerfConfigsStore>
