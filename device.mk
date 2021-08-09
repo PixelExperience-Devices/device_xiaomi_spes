@@ -234,6 +234,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.xiaomi.bl.poll=true \
     vendor.display.defer_fps_frame_count=2 \
     vendor.display.idle_time=0 \
+    vendor.display.idle_time_inactive=0 \
     vendor.display.qdcm.mode_combine=2 \
     vendor.display.svi.config=1 \
     vendor.display.svi.config_path=/vendor/etc/SVIConfig.xml
