@@ -12,6 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+on early-init
+    # Boost schedtune
+    write /dev/stune/schedtune.boost 50
+    write /dev/stune/schedtune.prefer_idle 1
+
+    # Boost I/O performance
+    write /sys/block/mmcblk0/queue/scheduler "noop"
+    
 on property:vendor.post_boot.parsed=1
     # Setup runtime cpusets
     write /dev/cpuset/audio-app/cpus 1-2
@@ -41,6 +49,9 @@ on property:vendor.post_boot.parsed=1
 
     # Configure uclamp
     write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
+
+    # Restore default I/O tuning
+    write /sys/block/mmcblk0/queue/scheduler "cfq"
 
 on property:persist.sys.device_provisioned=1
     setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,7
