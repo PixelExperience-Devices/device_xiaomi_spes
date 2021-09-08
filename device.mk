@@ -502,7 +502,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     init.spes.post_boot.sh \
-    init.qti.dcvs.sh
+    init.qti.dcvs.sh \
+    init.qti.early_init.sh
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -548,9 +549,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # SoC
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.soc.manufacturer=QTI \
-    ro.soc.model=SM6225
-
+    ro.soc.manufacturer=QTI
+    
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
