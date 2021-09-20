@@ -444,7 +444,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-service.multihal \
+    android.hardware.sensors@2.1-service.xiaomi_bengal-multihal \
     libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
