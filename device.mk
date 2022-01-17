@@ -351,7 +351,8 @@ PRODUCT_PACKAGES += \
 
 # LMK
 PRODUCT_SYSTEM_PROPERTIES += \
-    ro.lmk.filecache_min_kb=153600
+    ro.lmk.filecache_min_kb=153600 \
+    ro.lmk.kill_timeout_ms=50
     
 # Media
 PRODUCT_ODM_PROPERTIES += \
