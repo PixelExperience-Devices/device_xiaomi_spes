@@ -13,6 +13,7 @@
 # limitations under the License.
 
 # the DIAG device node is not world writable/readable.
+/dev/diag                 0666   system     oem_2901
 /dev/st21nfc              0660   nfc        nfc
 
 #qvr
