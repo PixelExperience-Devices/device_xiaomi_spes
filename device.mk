@@ -511,7 +511,10 @@ PRODUCT_PACKAGES += \
     SpesFrameworksOverlay \
     SpesSettingsOverlay \
     SpesSystemUIOverlay \
-    SpesWifiOverlay
+    SpesWifiOverlay \
+    SettingsProvider2201117TG \
+    SettingsProvider2201117TI \
+    SettingsProvider2201117TY
 
 # Perf
 PRODUCT_COPY_FILES += \
