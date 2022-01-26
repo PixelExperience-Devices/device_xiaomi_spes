@@ -116,7 +116,7 @@ service stflashtool /vendor/bin/STFlashTool
     disabled
     oneshot
 
-service nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service.st
+service nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.st
     override
     class hal
     user nfc
