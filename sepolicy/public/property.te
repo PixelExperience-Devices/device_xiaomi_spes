@@ -3,3 +3,6 @@ vendor_public_prop(deviceid_prop)
 
 # Fingerprint
 vendor_public_prop(vendor_fp_prop)
+
+# SettingsLib
+system_public_prop(settingslib_prop)

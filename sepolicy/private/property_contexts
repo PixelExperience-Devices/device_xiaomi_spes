@@ -30,3 +30,6 @@ ro.hardware.chipname           u:object_r:exported_default_prop:s0
 audio.dirac.                   u:object_r:dirac_prop:s0
 audio.dirac.logging            u:object_r:dirac_prop:s0
 persist.audio.dirac.           u:object_r:dirac_prop:s0
+
+# SettingsLib
+settingsdebug.instant.packages u:object_r:settingslib_prop:s0
