@@ -26,6 +26,12 @@ on init
     chown system system /proc/tp_gesture
     chmod 0644 /proc/tp_gesture
 
+    # Bind mount fastrpc_shell_3 for labelling
+    mkdir /mnt/vendor/dsp 0770 root root
+    copy /vendor/dsp/cdsp/fastrpc_shell_3 /mnt/vendor/dsp/fastrpc_shell_3
+    chmod 0644 /mnt/vendor/dsp/fastrpc_shell_3
+    mount none /mnt/vendor/dsp/fastrpc_shell_3 /vendor/dsp/cdsp/fastrpc_shell_3 bind
+
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal
