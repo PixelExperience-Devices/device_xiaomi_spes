@@ -38,27 +38,28 @@
             android:id="@+id/app_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="2dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
             android:ellipsize="marquee"
             android:singleLine="true"
             android:textAlignment="viewStart"
-            android:textAppearance="@style/TextAppearance.Medium"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:textColor="?android:attr/textColorPrimary" />
 
         <Spinner
             android:id="@+id/app_mode"
-            android:layout_marginTop="2dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_marginTop="4dp"
+            android:layout_width="228dp"
+            android:layout_height="32dp" />
 
     </LinearLayout>
 
     <ImageView
         android:id="@+id/state"
+        android:layout_marginTop="30dp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:padding="8dp"
+        android:padding="6dp"
         android:scaleType="centerInside"
         android:src="@drawable/ic_refresh_default" />
 </LinearLayout>
