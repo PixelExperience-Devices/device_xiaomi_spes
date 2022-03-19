@@ -130,4 +130,8 @@ public class DiracUtils {
     public void setHeadsetType(int paramInt) {
         mDiracSound.setHeadsetType(paramInt);
     }
+
+    public void setScenario(int sceneInt) {
+        mDiracSound.setScenario(sceneInt);
+    }
 }
