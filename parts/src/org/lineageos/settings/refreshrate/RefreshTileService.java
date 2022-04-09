@@ -60,7 +60,7 @@ public class RefreshTileService extends TileService {
     }
 
     private int getSettingOf(String key) {
-        float rate = Settings.System.getFloat(context.getContentResolver(), key, 60);
+        float rate = Settings.System.getFloat(context.getContentResolver(), key, 90);
         int active = availableRates.indexOf((int) Math.round(rate));
         return Math.max(active, 0);
     }
