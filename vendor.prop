@@ -273,9 +273,6 @@ vendor.usb.use_ffs_mtp=0
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
 
-# Wi-Fi
-wifi.aware.interface=wifi-aware0
-
 # WLAN
 ro.telephony.iwlan_operation_mode=legacy
 
