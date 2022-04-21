@@ -3,3 +3,6 @@ vendor_internal_prop(vendor_device_prop)
 vendor_internal_prop(vendor_displayfeature_prop)
 
 vendor_internal_prop(vendor_thermal_normal_prop)
+
+# Dirac
+vendor_internal_prop(dirac_prop)
