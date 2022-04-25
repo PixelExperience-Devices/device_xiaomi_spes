@@ -404,7 +404,8 @@ DEVICE := spes
 TARGET_COMMON_QTI_COMPONENTS := \
     av \
     usb \
-    vibrator
+    vibrator \
+    wfd
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -556,8 +557,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libnl \
+    libdisplayconfig.system.qti \
+    libqdMetaData.system \
+    libdisplayconfig.vendor \
     libwfdaac_vendor
-
-#PRODUCT_BOOT_JARS += \
-    WfdCommon

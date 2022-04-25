@@ -59,3 +59,6 @@ ro.vendor.ril                                   u:object_r:vendor_public_vendor_
 
 # Thermal
 vendor.sys.thermal.                             u:object_r:vendor_thermal_normal_prop:s0
+
+# WFD QCOM
+persist.vendor.setWFDInfo.                      u:object_r:vendor_wfd_vendor_debug_prop:s0
