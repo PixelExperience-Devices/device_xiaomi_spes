@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/xiaomi/spes
+COMMON_PATH := device/qcom/common
 
 # A/B
 AB_OTA_UPDATER := true
@@ -78,9 +79,6 @@ BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 BUILD_BROKEN_VERIFY_USES_LIBRARIES := true
 RELAX_USES_LIBRARY_CHECK=true
 
-# Configs File System
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
-
 # Display
 TARGET_USES_COLOR_METADATA := true
 TARGET_USES_DISPLAY_RENDER_INTENTS := true
@@ -100,8 +98,8 @@ BOARD_USES_METADATA_PARTITION := true
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/configs/hidl/framework_compatibility_matrix.xml \
     $(DEVICE_PATH)/configs/hidl/xiaomi_framework_compatibility_matrix.xml
-    
-DEVICE_MATRIX_FILE += $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
+
+DEVICE_MATRIX_FILE += $(COMMON_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/xiaomi_manifest.xml
 
@@ -185,9 +183,6 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
-# Platform
-TARGET_BOARD_PLATFORM := bengal
-
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/tp_gesture"
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
@@ -198,8 +193,10 @@ TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
-# QCOM
-BOARD_USES_QCOM_HARDWARE := true
+# QC tree common
+include $(COMMON_PATH)/BoardConfigQcom.mk
+OVERRIDE_QCOM_HARDWARE_VARIANT := sm8250-common
+TARGET_SEPOLICY_DIR := bengal
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
