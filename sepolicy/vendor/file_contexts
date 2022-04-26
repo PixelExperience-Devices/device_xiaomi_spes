@@ -69,6 +69,9 @@
 # Persist subsystem
 /mnt/vendor/persist/subsys(/.*)?                                        u:object_r:persist_subsys_file:s0
 
+# Poweropt-service
+/(vendor|system/vendor)/bin/poweropt-service                            u:object_r:vendor_poweroptservice_exec:s0
+
 # Proximity
 /dev/elliptic[0-9]                                                                                                              u:object_r:sensors_device:s0
 /dev/mius(.*)?                                                                                                                  u:object_r:sound_device:s0
