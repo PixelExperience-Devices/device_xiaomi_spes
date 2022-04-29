@@ -26,11 +26,11 @@ on property:sys.boot_completed=1
     
 on property:vendor.post_boot.parsed=1
     # Setup runtime cpusets
-    write /dev/cpuset/audio-app/cpus 1-2
-    write /dev/cpuset/background/cpus 0-2
-    write /dev/cpuset/foreground/cpus 0-2,4-7
-    write /dev/cpuset/system-background/cpus 0-3
-    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/audio-app/cpus ${persist.device_config.vendor_system_native.audio-app_cpuset:1-2}
+    write /dev/cpuset/background/cpus ${persist.device_config.vendor_system_native.background_cpuset:-0-2}
+    write /dev/cpuset/foreground/cpus ${persist.device_config.vendor_system_native.foreground_cpuset:-0-2,4-7}
+    write /dev/cpuset/system-background/cpus ${persist.device_config.vendor_system_native.system-background_cpuset:-0-3}
+    write /dev/cpuset/top-app/cpus ${persist.device_config.vendor_system_native.top-app_cpuset:-0-7}
 
     # Configure CPU frequencies
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 940800
@@ -56,6 +56,18 @@ on property:vendor.post_boot.parsed=1
     # Report max frequency to unity tasks
     write /proc/sys/kernel/sched_lib_name "UnityMain,libunity.so"
     write /proc/sys/kernel/sched_lib_mask_force 255
+
+# Cpuset experiment
+on property:persist.device_config.vendor_system_native.audio-app_cpuset=*
+    write /dev/cpuset/top-app/cpus ${persist.device_config.vendor_system_native.audio-app_cpuset:-1-2}
+on property:persist.device_config.vendor_system_native.background_cpuset=*
+    write /dev/cpuset/background/cpus ${persist.device_config.vendor_system_native.background_cpuset:-0-2}
+on property:persist.device_config.vendor_system_native.foreground_cpusett=*
+    write /dev/cpuset/foreground/cpus ${persist.device_config.vendor_system_native.foreground_cpuset:-0-2,4-7}
+on property:persist.device_config.vendor_system_native.system-background_cpuset=*
+    write /dev/cpuset/system-background/cpus ${persist.device_config.vendor_system_native.system-background_cpuset:-0-3}
+on property:persist.device_config.vendor_system_native.top-app_cpuset=*
+    write /dev/cpuset/top-app/cpus ${persist.device_config.vendor_system_native.top-app_cpuset:-0-7}
 
 on property:persist.sys.device_provisioned=1
     setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,7
