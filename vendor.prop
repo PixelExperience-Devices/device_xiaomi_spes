@@ -287,5 +287,5 @@ wifi.aware.interface=wifi-aware0
 ro.telephony.iwlan_operation_mode=legacy
 
 # SoC
-ro.soc.manufacturer=Qualcomm
+ro.soc.manufacturer=QTI
 ro.soc.model=SM6225
