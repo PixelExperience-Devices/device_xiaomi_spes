@@ -264,7 +264,7 @@ ro.vendor.audio.soundtrigger.xatx.vop.level=10
 ro.vendor.audio.soundtrigger=sva
 
 # Thermal
-sys.thermal.data.path=/data/vendor/thermal/
+vendor.sys.thermal.data.path=/data/vendor/thermal/
 
 # Time
 sys.vendor.shutdown.waittime=500
