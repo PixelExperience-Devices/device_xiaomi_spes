@@ -10,7 +10,6 @@ ro.charger.disable_init_blank=true
 
 # Display
 debug.sf.enable_hwc_vds=1
-debug.sf.latch_unsignaled=1
 
 # CNE
 persist.vendor.cne.feature=1
