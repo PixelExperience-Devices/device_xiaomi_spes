@@ -70,6 +70,9 @@ on init
     chown root system /sys/fs/cgroup/memory/bg/tasks
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
+    # Allow access panel0 backlight
+    chown system system /sys/class/backlight/panel0-backlight/brightness
+
 on post-fs
     mkdir /mnt/vendor/dsp 0770 root root
     copy /vendor/dsp/cdsp/fastrpc_shell_3 /mnt/vendor/dsp/fastrpc_shell_3
@@ -187,11 +190,6 @@ on boot
 
     # bond0 used by FST Manager
     chown wifi wifi /sys/class/net/bond0/bonding/queue_id
-
-    chown system system /sys/class/backlight/panel0-backlight/brightness
-    chown system system /sys/class/backlight/panel0-backlight/max_brightness
-    chown system system /sys/class/backlight/panel1-backlight/brightness
-    chown system system /sys/class/backlight/panel1-backlight/max_brightness
 
     # Allow access to sensors device attributes
     chown system system /sys/class/sensors/MPU6050-accel/enable
