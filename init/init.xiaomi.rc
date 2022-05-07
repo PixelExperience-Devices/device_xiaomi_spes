@@ -47,6 +47,10 @@ on post-fs-data
     chmod 0666 /sys/class/backlight/panel0-backlight/brightness
     chmod 0666 /sys/class/drm/card0-DSI-1/disp_param
 
+    # for proximity sensor
+    chmod 0644 /dev/elliptic0
+    chmod 0644 /dev/elliptic1
+
 on boot
     # Xiaomi Camera
     # Add a cpuset for the camera daemon
