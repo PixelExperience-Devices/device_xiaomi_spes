@@ -202,7 +202,6 @@ persist.backup.ntpServer=0.pool.ntp.org
 # PERF
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.perf-hal.ver=2.2
-ro.vendor.perf.scroll_opt=1
 
 # Radio
 DEVICE_PROVISIONED=1

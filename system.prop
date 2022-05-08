@@ -51,9 +51,6 @@ persist.data.netmgrd.qos.enable=true
 persist.vendor.data.mode=concurrent
 ro.vendor.use_data_netmgrd=true
 
-# Pre-Rendering
-ro.vendor.perf.scroll_opt=true
-
 # Radio
 persist.sys.fflag.override.settings_provider_model=false
 
