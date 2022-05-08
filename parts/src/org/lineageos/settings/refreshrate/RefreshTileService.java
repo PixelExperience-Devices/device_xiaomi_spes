@@ -30,7 +30,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
-public class RefreshRateTileService extends TileService {
+public class RefreshTileService extends TileService {
     private static final String KEY_MIN_REFRESH_RATE = "min_refresh_rate";
     private static final String KEY_PEAK_REFRESH_RATE = "peak_refresh_rate";
 
