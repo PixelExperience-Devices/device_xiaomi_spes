@@ -13,7 +13,7 @@ $(call inherit-product, device/xiaomi/spes/device.mk)
 
 # Inherit some common Nusantara stuff.
 $(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
-
+NAD_BUILD_TYPE := OFFICIAL
 TARGET_USES_BLUR := true
 USE_PIXEL_CHARGING := true
 
