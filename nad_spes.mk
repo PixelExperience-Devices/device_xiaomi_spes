@@ -15,6 +15,8 @@ $(call inherit-product, device/xiaomi/spes/device.mk)
 $(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
 NAD_BUILD_TYPE := OFFICIAL
 TARGET_USES_BLUR := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_FACE_UNLOCK_SUPPORTED := true
 USE_PIXEL_CHARGING := true
 
 # Product Specifics
