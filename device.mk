@@ -447,6 +447,7 @@ PRODUCT_PACKAGES += \
     fstab.qcom_ramdisk \
     init.qcom.rc \
     init.recovery.qcom.rc \
+    init.spes.perf.rc \
     init.stnfc.rc \
     init.target.rc \
     ueventd.qcom.rc
