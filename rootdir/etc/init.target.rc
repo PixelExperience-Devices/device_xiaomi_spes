@@ -67,6 +67,14 @@ on post-fs
     setrlimit 8 67108864 67108864
 
 on late-fs
+    # Start services for bootanim
+    start servicemanager
+    start surfaceflinger
+    start bootanim
+    start vendor.configstore-hal
+    start vendor.qti.hardware.display.composer
+    start vendor.qti.hardware.display.allocator
+
     wait_for_prop hwservicemanager.ready true
     exec_start wait_for_keymaster
     mount_all /vendor/etc/fstab.qcom --late
