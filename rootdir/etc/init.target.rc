@@ -209,13 +209,13 @@ service vendor.displayfeature /vendor/bin/displayfeature
     writepid /dev/cpuset/system-background/tasks
 
 on property:init.svc.surfaceflinger=stopped
-    stop displayfeature
+    stop vendor.displayfeature
 
 on property:init.svc.surfaceflinger=running
-    start displayfeature
+    start vendor.displayfeature
 
 on property:init.svc.surfaceflinger=restarting
-    stop displayfeature
+    stop vendor.displayfeature
 
 service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
     class main
