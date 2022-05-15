@@ -438,16 +438,19 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.mdm.sh \
     init.qcom.post_boot.sh \
-    init.qcom.sh
+    init.qcom.sh \
+    init.qti.dcvs.sh
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.qcom_ramdisk \
     init.qcom.rc \
     init.recovery.qcom.rc \
+    init.spes.rc \
     init.spes.perf.rc \
     init.stnfc.rc \
     init.target.rc \
+    init.xiaomi.rc \
     ueventd.qcom.rc
 
 # Sensors

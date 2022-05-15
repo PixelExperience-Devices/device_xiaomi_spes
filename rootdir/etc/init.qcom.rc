@@ -69,12 +69,6 @@ on init
     # Allow access panel0 backlight
     chown system system /sys/class/backlight/panel0-backlight/brightness
 
-on post-fs
-    mkdir /mnt/vendor/dsp 0770 root root
-    copy /vendor/dsp/cdsp/fastrpc_shell_3 /mnt/vendor/dsp/fastrpc_shell_3
-    chmod 0644 /mnt/vendor/dsp/fastrpc_shell_3
-    mount none /mnt/vendor/dsp/fastrpc_shell_3 /vendor/dsp/cdsp/fastrpc_shell_3 bind
-
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
@@ -378,20 +372,17 @@ service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
     user vendor_qrtr
     group vendor_qrtr
     capabilities NET_BIND_SERVICE
-    writepid /dev/cpuset/system-background/tasks
 
 service vendor.irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
     user root
     oneshot
-    writepid /dev/cpuset/system-background/tasks
 
 service vendor.cnss-daemon /vendor/bin/cnss-daemon -n -l
     class late_start
     user system
     group system inet net_admin wifi
     capabilities NET_ADMIN
-    writepid /dev/cpuset/system-background/tasks
 
 on property:sys.shutdown.requested=*
     write /sys/kernel/shutdown_wlan/shutdown 1
@@ -407,7 +398,6 @@ service loc_launcher /system/vendor/bin/loc_launcher
     class late_start
     user gps
     group gps
-    writepid /dev/cpuset/system-background/tasks
 
 service vendor.qcom-sh /vendor/bin/init.qcom.sh
     class late_start
@@ -459,6 +449,11 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/m
     group root
     disabled
 
+on charger
+    setprop persist.sys.usb.config mass_storage
+    start vendor.qcom-post-boot
+    chown system system /sys/class/backlight/panel0-backlight/brightness
+
 service time_daemon /vendor/bin/time_daemon
     class main
     user system
@@ -470,22 +465,3 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     group system
     disabled
     oneshot
-    writepid /dev/cpuset/system-background/tasks
-
-service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
-    override
-    class hal
-    user audioserver
-    # media gid needed for /dev/fm (radio) and for /data/misc/media (tee)
-    group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock
-    capabilities BLOCK_SUSPEND
-    ioprio rt 4
-    writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
-    socket audio_hw_socket seqpacket 0666 system system
-    onrestart restart audioserver
-
-service vendor.power /vendor/bin/hw/android.hardware.power-service-qti
-    override
-    class hal
-    user system
-    group system input
