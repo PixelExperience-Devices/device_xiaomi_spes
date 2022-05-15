@@ -192,11 +192,9 @@ PRODUCT_PACKAGES += \
     XiaomiParts
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/parts/init.xiaomiparts.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.xiaomiparts.rc \
-    $(LOCAL_PATH)/parts/init.xiaomiparts.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.xiaomiparts.rc \
-    $(LOCAL_PATH)/parts/privapp-permissions-parts.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-parts.xml
+    $(LOCAL_PATH)/parts/privapp-permissions-parts.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-parts.xml
 
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.audio.soundfx.dirac=true \
     persist.audio.dirac.speaker=true \
     persist.dirac.acs.controller=qem \
