@@ -180,6 +180,7 @@ vendor.display.use_layer_ext=0
 vendor.display.use_smooth_motion=0
 vendor.gralloc.disable_ubwc=0
 vendor.display.disable_offline_rotator=1
+vendor.display.qdcm.mode_combine=2
 
 # Media Codecs
 debug.stagefright.ccodec=1
