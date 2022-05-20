@@ -189,6 +189,10 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.dirac.acs.storeSettings=1 \
     persist.dirac.acs.ignore_error=1
 
+# Dexpreopt
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI
+    
 # Display
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor
