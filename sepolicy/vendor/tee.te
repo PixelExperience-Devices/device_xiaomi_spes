@@ -1,6 +1,6 @@
-allow tee fingerprint_data_file:dir create_dir_perms;
+allow tee vendor_fingerprint_data_file:dir create_dir_perms;
 allow tee {
-  fingerprint_data_file
+  vendor_fingerprint_data_file
   mnt_vendor_file
 }:file create_file_perms;
 

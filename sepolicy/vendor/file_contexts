@@ -5,7 +5,7 @@
 /dev/block/platform/soc/1d84000.ufshc/by-name/vendor_boot_[ab]          u:object_r:boot_block_device:s0
 
 # Camera
-/mnt/vendor/persist/camera(/.*)?                                        u:object_r:camera_persist_file:s0
+/mnt/vendor/persist/camera(/.*)?                                        u:object_r:vendor_persist_camera_file:s0
 
 # Charger
 /vendor/bin/batterysecret                                               u:object_r:batterysecret_exec:s0
@@ -19,9 +19,6 @@
 /sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/disp_param        u:object_r:vendor_sysfs_graphics:s0
 /sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/panel_info        u:object_r:vendor_sysfs_graphics:s0
 
-# Elliptic
-/dev/elliptic[0-9]                                                      u:object_r:sensors_device:s0
-
 # Files in rootfs
 /avb(/.*)?                                                              u:object_r:avb_file:s0
 
@@ -29,13 +26,13 @@
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2.1-service\.spes                             u:object_r:hal_fingerprint_default_exec:s0
 
 # Fingerprint - devices
-/dev/goodix_fp                                                          u:object_r:fingerprint_device:s0
+/dev/goodix_fp					                        u:object_r:vendor_fingerprint_device:s0
 
-# Fingerprint - data
+# Fingerprint - data dir
 /data/gf_data(/.*)?                                                     u:object_r:goodix_fingerprint_data_file:s0
-/data/vendor/goodix(/.*)?                                               u:object_r:fingerprint_data_file:s0
-/data/vendor/fpc(/.*)?                                                  u:object_r:fingerprint_data_file:s0
-/data/vendor/fpdump(/.*)?                                               u:object_r:fingerprint_data_file:s0
+/data/vendor/goodix(/.*)?                                               u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/fpc(/.*)?                                                  u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/fpdump(/.*)?                                               u:object_r:vendor_fingerprint_data_file:s0
 
 # Hexagon DSP-side executable needed for Halide operation
 # This is labeled as public_adsprpcd_file as it needs to be read by apps
@@ -71,9 +68,12 @@
 # Power Stats HAL
 /vendor/bin/hw/android\.hardware\.power\.stats@1\.0-service\.mock    u:object_r:hal_power_stats_default_exec:s0
 
-# Sensors
+# Proximity
+/dev/elliptic[0-9]                                                                                                              u:object_r:sensors_device:s0
+/dev/mius(.*)?                                                                                                                  u:object_r:sound_device:s0
 /sys/bus/iio/devices                                                                                                            u:object_r:vendor_sysfs_iio:s0
 /sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:vadc@3100/iio:device0(/.*)?         u:object_r:vendor_sysfs_iio:s0
+/sys/devices/platform/us_prox.0/iio:device1(/.*)?                                                                               u:object_r:vendor_sysfs_iio:s0
 
 # SSR
 /sys/devices(/platform)?/soc/[a-z0-9\.:]+,[a-z0-9\-\_]+/subsys[0-9]+/name         u:object_r:vendor_sysfs_ssr:s0

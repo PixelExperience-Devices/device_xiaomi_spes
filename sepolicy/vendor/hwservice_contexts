@@ -1,14 +1,10 @@
-::vppService                                                                  u:object_r:hal_vpp_hwservice:s0
-com.fingerprints.extension::IFingerprintNavigation                            u:object_r:hal_fingerprint_hwservice:s0
-com.fingerprints.extension::IFingerprintSensorTest                            u:object_r:hal_fingerprint_hwservice:s0
+::vppService                                                                             u:object_r:hal_vpp_hwservice:s0
+com.fingerprints.extension::IFingerprintNavigation                                       u:object_r:hal_fingerprint_hwservice:s0
+com.fingerprints.extension::IFingerprintSensorTest                                       u:object_r:hal_fingerprint_hwservice:s0
 vendor.goodix.hardware.cap.biometrics.fingerprint::IGoodixFingerprintDaemon              u:object_r:hal_fingerprint_hwservice:s0
 vendor.goodix.hardware.cap.biometrics.fingerprint::IGoodixFingerprintDaemonExt           u:object_r:hal_fingerprint_hwservice:s0
 vendor.goodix.hardware.interfaces.biometrics.fingerprint::IGoodixFingerprintDaemon       u:object_r:hal_fingerprint_hwservice:s0
 vendor.goodix.hardware.interfaces.biometrics.fingerprint::IGoodixFingerprintDaemonExt    u:object_r:hal_fingerprint_hwservice:s0
 vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon                  u:object_r:hal_fingerprint_hwservice:s0
-vendor.xiaomi.hardware.mlipay::IMlipayService                                 u:object_r:hal_mlipay_hwservice:s0
-vendor.xiaomi.hardware.displayfeature::IDisplayFeature                        u:object_r:hal_displayfeature_hwservice:s0
-
-# NFC
-vendor.nxp.nxpese::INxpEse                                                    u:object_r:nxpese_hwservice:s0
-vendor.nxp.nxpnfc::INxpNfc                                                    u:object_r:nxpnfc_hwservice:s0
+vendor.xiaomi.hardware.mlipay::IMlipayService                                            u:object_r:hal_mlipay_hwservice:s0
+vendor.xiaomi.hardware.displayfeature::IDisplayFeature                                   u:object_r:hal_displayfeature_hwservice:s0

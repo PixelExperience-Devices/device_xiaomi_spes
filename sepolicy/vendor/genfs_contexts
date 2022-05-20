@@ -31,6 +31,11 @@ genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify 
 # kmsg
 genfscon proc /last_kmsg                                                        u:object_r:proc_last_kmsg:s0
 
+# Proximity
+genfscon sysfs /devices/virtual/touch/touch_dev/ear_sensor                     u:object_r:vendor_sysfs_prox:s0
+genfscon sysfs /devices/virtual/touch/touch_dev/palm_sensor                    u:object_r:vendor_sysfs_prox:s0
+genfscon sysfs /devices/virtual/touch/touch_dev/ear_sensor_data                u:object_r:vendor_sysfs_prox:s0
+
 # UFS
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/clkgate_enable               u:object_r:vendor_sysfs_scsi_host:s0
 
