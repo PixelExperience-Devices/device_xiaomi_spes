@@ -158,6 +158,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libsuspend
     
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.charger.enable_suspend=true
+    
 # Configs File System
 PRODUCT_PACKAGES += \
     fs_config_files
