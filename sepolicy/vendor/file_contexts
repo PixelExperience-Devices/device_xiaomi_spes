@@ -65,9 +65,6 @@
 # Persist subsystem
 /mnt/vendor/persist/subsys(/.*)?                                        u:object_r:persist_subsys_file:s0
 
-# Power Stats HAL
-/vendor/bin/hw/android\.hardware\.power\.stats@1\.0-service\.mock    u:object_r:hal_power_stats_default_exec:s0
-
 # Proximity
 /dev/elliptic[0-9]                                                                                                              u:object_r:sensors_device:s0
 /dev/mius(.*)?                                                                                                                  u:object_r:sound_device:s0
