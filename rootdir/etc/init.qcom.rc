@@ -195,12 +195,6 @@ on boot
     # Create hvdcp_opti directory
     mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
 
-    # Enable qcrild and data services
-    enable vendor.qcrild
-    enable vendor.qcrild2
-    enable vendor.dataqti
-    enable vendor.dataadpl
-
     # limit discard size to 128MB in order to avoid long IO latency
     write /sys/block/sda/queue/discard_max_bytes 134217728
 
@@ -366,6 +360,16 @@ on property:persist.vendor.radio.atfwd.start=false
 
 on property:vendor.radio.atfwd.start=false
     stop vendor.atfwd
+
+service qcom-c_main-sh /vendor/bin/init.class_main.sh
+    class main
+    user root
+    group root system
+    oneshot
+
+on property:vold.decrypt=trigger_restart_framework
+    start qcom-c_main-sh
+    start wcnss-service
 
 service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
     class core
