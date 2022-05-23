@@ -949,7 +949,6 @@ vendor/lib64/vendor.qti.hardware.iop@2.0.so
 
 # IRQ balance
 vendor/bin/msm_irqbalance
-vendor/etc/msm_irqbalance.conf
 
 # IPA firmware
 vendor/etc/init/ipa_fws.rc
