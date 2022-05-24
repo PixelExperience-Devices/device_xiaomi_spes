@@ -111,9 +111,12 @@ BOARD_USES_METADATA_PARTITION := true
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(DEVICE_PATH)/configs/hidl/framework_compatibility_matrix.xml
+    $(DEVICE_PATH)/configs/hidl/framework_compatibility_matrix.xml \
+    $(DEVICE_PATH)/configs/hidl/xiaomi_framework_compatibility_matrix.xml
+    
 DEVICE_MATRIX_FILE += $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/xiaomi_manifest.xml
 
 ODM_MANIFEST_SKUS += k7tn
 ODM_MANIFEST_K7TN_FILES := $(DEVICE_PATH)/configs/hidl/manifest_k7tn.xml
