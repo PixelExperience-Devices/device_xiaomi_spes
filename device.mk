@@ -380,6 +380,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.qcom_ramdisk \
+    fstab.zram \
     init.spes.rc \
     init.spes.perf.rc \
     init.stnfc.rc \
