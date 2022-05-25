@@ -19,7 +19,19 @@ on boot
     chown cameraserver cameraserver /dev/cpuset/camera-daemon
     chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
     chmod 0660 /dev/cpuset/camera-daemon/tasks
-    
+
+on property:sys.boot_completed=1
+    # Read only one page at a time
+    write /proc/sys/vm/page-cluster 0
+    # Swap more aggressively
+    write /proc/sys/vm/swappiness 100
+    # Set zRAM compression algorithm to LZ4
+    write /sys/block/zram0/comp_algorithm lz4
+    # Enable zRAM data deduplication feature
+    write /sys/block/zram0/use_dedup 1
+    # Mount swap partitions specified in fstab
+    swapon_all /vendor/etc/fstab.zram
+
 on property:vendor.post_boot.parsed=1
     # Setup runtime cpusets
     write /dev/cpuset/background/cpus 0-2
