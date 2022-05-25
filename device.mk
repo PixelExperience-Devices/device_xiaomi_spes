@@ -492,6 +492,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
+# USB
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.qcom.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.usb.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/bin/init.mi.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mi.usb.sh \
+    $(LOCAL_PATH)/rootdir/bin/init.qcom.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.usb.sh
+
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.usb.config=mtp,adb
+
 # Vendor service manager
 PRODUCT_PACKAGES += \
     vndservicemanager
