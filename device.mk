@@ -393,6 +393,7 @@ DEVICE := spes
 TARGET_COMMON_QTI_COMPONENTS := \
     av \
     gps \
+    init \
     usb \
     vibrator \
     wfd
@@ -413,23 +414,22 @@ PRODUCT_PACKAGES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    init.class_main.sh \
-    init.mdm.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.sh \
     init.qti.dcvs.sh
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.qcom_ramdisk \
-    init.qcom.rc \
-    init.recovery.qcom.rc \
     init.spes.rc \
     init.spes.perf.rc \
     init.stnfc.rc \
     init.target.rc \
-    init.xiaomi.rc \
-    ueventd.qcom.rc
+    ueventd.xiaomi.rc \
+    init.xiaomi.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc \
+    $(LOCAL_PATH)/rootdir/etc/ueventd.spes.rc:$(TARGET_COPY_OUT_ODM)/etc/ueventd.rc
+
 
 # Sensors
 PRODUCT_PACKAGES += \
