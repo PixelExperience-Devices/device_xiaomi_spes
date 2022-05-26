@@ -10,14 +10,26 @@
 #include "vendor_init.h"
 
 static const variant_info_t spes_info = {
-    .hwc_value = "",
-    .sku_value = "",
+    .hwc_value = "Global",
+    .sku_value = "k7t",
 
     .brand = "Redmi",
     .device = "spes",
     .marketname = "Redmi Note 11",
     .model = "2201117TG",
 
+    .nfc = false,
+};
+
+static const variant_info_t spes_in_info = {
+    .hwc_value = "India",
+    .sku_value = "k7tin",
+
+    .brand = "Redmi",
+    .device = "spes",
+    .marketname = "Redmi Note 11",
+    .model = "2201117TI",
+    
     .nfc = false,
 };
 
@@ -35,6 +47,7 @@ static const variant_info_t spesn_info = {
 
 static const std::vector<variant_info_t> variants = {
     spes_info,
+    spes_in_info,
     spesn_info,
 };
 
