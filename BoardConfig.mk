@@ -80,7 +80,6 @@ RELAX_USES_LIBRARY_CHECK=true
 
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
-USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Configs File System
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
