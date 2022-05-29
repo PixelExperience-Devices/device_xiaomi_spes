@@ -1,6 +1,3 @@
-# Bluetooth
-vendor.bluetooth.soc=cherokee
-
 # Camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
 
