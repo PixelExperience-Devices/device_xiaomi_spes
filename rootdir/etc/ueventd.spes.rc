@@ -65,3 +65,6 @@
 
 # silead fingerprint
 /dev/silead_fp            0660   system   system
+
+#KGSL
+/sys/class/kgsl/kgsl-3d0    perfcounter              0660    root    shell
