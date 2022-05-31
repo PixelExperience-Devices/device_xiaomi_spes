@@ -1,3 +1,25 @@
 soong_namespace {
      imports: ["hardware/qcom-caf/bootctrl"],
 }
+
+prebuilt_hidl_interfaces {
+    name: "hidl_dpmQmi_interface",
+    interfaces: [
+        "com.qualcomm.qti.dpm.api@1.0::IdpmQmi",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_DspSerivce_interface",
+    interfaces: [
+        "vendor.qti.hardware.dsp@1.0::IDspService",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_Factory_interface",
+    interfaces: [
+        "vendor.qti.hardware.factory@1.0::IFactory",
+        "vendor.qti.hardware.factory@1.1::IFactory",
+    ],
+}

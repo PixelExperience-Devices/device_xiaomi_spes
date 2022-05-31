@@ -194,10 +194,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
-# DPM
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    persist.vendor.dpm.feature=11
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
@@ -229,13 +225,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl-qti \
     android.hardware.health@2.1-service
-
-# IPACM
-PRODUCT_PACKAGES += \
-    ipacm \
-    IPACM_cfg.xml \
-    libipanat \
-    liboffloadhal
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -325,24 +314,41 @@ TARGET_COMMON_QTI_COMPONENTS := \
     init \
     media-legacy \
     overlay \
+    telephony \
     usb \
     vibrator \
     wfd
 
-# QMI
+# Radio
 PRODUCT_PACKAGES += \
-    libjson
+    libwpa_client
 
-# RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
     android.hardware.radio.config@1.3.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.secure_element@1.2.vendor \
-    libprotobuf-cpp-full \
-    librmnetctl \
-    libxml2
+    android.hardware.radio.deprecated@1.0.vendor
 
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.data.iwlan.enable=true \
+    persist.vendor.radio.add_power_save=1 \
+    persist.vendor.radio.atfwd.start=true \
+    persist.vendor.radio.data_con_rprt=1 \
+    persist.vendor.radio.force_on_dc=true \
+    persist.vendor.radio.manual_nw_rej_ct=1 \
+    persist.vendor.radio.mt_sms_ack=30 \
+    persist.vendor.radio.process_sups_ind=1 \
+    persist.vendor.radio.redir_party_num=1 \
+    persist.vendor.radio.report_codec=1 \
+    persist.vendor.radio.snapshot_enabled=1 \
+    persist.vendor.radio.snapshot_timer=5 \
+    rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
+    ro.telephony.default_network=22,20 \
+    ro.vendor.se.type=HCE,UICC \
+    telephony.lteOnCdmaDevice=1
+
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.radio.process_sups_ind=1
+    
 # Rootdir
 PRODUCT_PACKAGES += \
     init.qti.dcvs.sh
@@ -384,24 +390,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/qcom-caf/bootctrl \
     hardware/xiaomi
-
-# Telephony
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
-    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml
 
 # Update Engine
 PRODUCT_PACKAGES += \
@@ -446,7 +434,6 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 30
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
-    libwpa_client \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
     vendor.qti.hardware.wifi.hostapd@1.2.vendor \
