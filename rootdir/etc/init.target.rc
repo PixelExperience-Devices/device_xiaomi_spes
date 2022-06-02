@@ -92,6 +92,13 @@ on charger
     chown system system /sys/class/backlight/panel0-backlight/brightness
     setprop persist.sys.usb.config mass_storage
     
+service charger /system/bin/chargeonlymode
+    class charger
+    user system
+    group system graphics input
+    capabilities SYS_BOOT
+    seclabel u:r:charger:s0
+    
 #pd-mapper
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
