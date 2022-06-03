@@ -53,13 +53,13 @@ on init
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/wakeup_enable
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/modalias
    
-on post-fs
+on post-fs-data
+    # Bind mount fastrpc_shell_3 for labelling
     mkdir /mnt/vendor/dsp 0770 root root
     copy /vendor/dsp/cdsp/fastrpc_shell_3 /mnt/vendor/dsp/fastrpc_shell_3
     chmod 0644 /mnt/vendor/dsp/fastrpc_shell_3
     mount none /mnt/vendor/dsp/fastrpc_shell_3 /vendor/dsp/cdsp/fastrpc_shell_3 bind
-
-on post-fs-data
+    
     # Charger
     chmod 0664 /sys/class/power_supply/battery/input_suspend
     chmod 0664 /sys/class/power_supply/battery/battery_charging_enabled
