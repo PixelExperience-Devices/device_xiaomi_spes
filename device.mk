@@ -274,7 +274,6 @@ PRODUCT_PACKAGES += \
     SpesFrameworksOverlay \
     SpesSettingsOverlay \
     SpesSystemUIOverlay \
-    SpesTelephonyOverlay \
     SpesWifiOverlay
 
 # ParanoidDoze
