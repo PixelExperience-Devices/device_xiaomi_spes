@@ -1,9 +1,17 @@
+allow init same_process_hal_file:file execute;
+allow init vendor_file:file execute;
 allow init proc_last_kmsg:file {
   r_file_perms
   setattr
 };
 
 allow init sysfs:file setattr;
-
+allow init adsprpcd_file:file mounton;
+allow init device:chr_file ioctl;
+allow init hal_displayfeature_default : binder {call};
+allow init hwservicemanager:binder { call transfer };
+allow init hwservicemanager:binder { transfer };
+allow init nfc:binder { call };
+allow init proc:file { write };
 allow init per_boot_file:file ioctl;
 allowxperm init per_boot_file:file ioctl { F2FS_IOC_SET_PIN_FILE };
