@@ -193,7 +193,7 @@ VENDOR_SECURITY_PATCH := 2022-01-01
 BOARD_VNDK_VERSION := current
 
 # Sepolicy
-include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/xiaomi/spes/sepolicy/vndr/SEPolicy.mk
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
