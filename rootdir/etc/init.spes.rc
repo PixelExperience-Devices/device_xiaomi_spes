@@ -17,10 +17,6 @@ on boot
     write /dev/stune/camera-daemon/schedtune.prefer_idle 1
     write /dev/stune/camera-daemon/schedtune.boost 0
     
-    # DT2W
-    chown system system /proc/tp_gesture
-    chmod 0644 /proc/tp_gesture
-
 on late-fs
     # Start services for bootanim
     start servicemanager
@@ -42,6 +38,11 @@ on early-boot
     write /sys/bus/msm_subsys/devices/subsys7/restart_level RELATED
 
 on init
+    # DT2W
+    chown system system /proc/tp_gesture
+    chmod 0644 /proc/tp_gesture
+
+    # fpc1020 and goodix_fp permissions
     chown system system /dev/goodix_fp
     chmod 0644 /dev/goodix_fp
 
