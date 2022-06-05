@@ -61,14 +61,6 @@ on post-fs-data
     chmod 0644 /mnt/vendor/dsp/fastrpc_shell_3
     mount none /mnt/vendor/dsp/fastrpc_shell_3 /vendor/dsp/cdsp/fastrpc_shell_3 bind
     
-    # Charger
-    chmod 0664 /sys/class/power_supply/battery/input_suspend
-    chmod 0664 /sys/class/power_supply/battery/battery_charging_enabled
-    chmod 0664 /sys/class/power_supply/usb/typec_cc_orientation
-    chown system system /sys/class/power_supply/battery/input_suspend
-    chown system system /sys/class/power_supply/battery/battery_charging_enabled
-    chown system system /sys/class/power_supply/usb/typec_cc_orientation
-
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal
