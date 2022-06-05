@@ -51,9 +51,6 @@ on boot
     chown system system /sys/class/drm/card0-DSI-1/doze_brightness
     chown system system /sys/class/drm/card0-DSI-1/doze_backlight
 
-    #Start mi_thermald
-    start mi_thermald
-    
     # Vibrator
     chmod 0777 /sys/class/leds/vibrator/state
     chmod 0777 /sys/class/leds/vibrator/duration
@@ -61,9 +58,6 @@ on boot
 
     #Load exfat driver
     insmod /vendor/lib/modules/exfat.ko
-
-on charger
-    start mi_thermald
 
 service mi_thermald /system/vendor/bin/mi_thermald
     class main
