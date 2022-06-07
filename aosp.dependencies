@@ -1,0 +1,30 @@
+[
+   {
+       "remote"      : "pixel-devices",
+       "repository"  : "device_qcom_common",
+       "target_path" : "device/qcom/common",
+       "branch"      : "twelve"
+   },
+   {
+       "remote"      : "pixel-devices",
+       "repository"  : "kernel_xiaomi_spes",
+       "target_path" : "kernel/xiaomi/spes",
+       "branch"      : "twelve"
+   },
+   {
+       "remote"      : "pixel-devices-blobs",
+       "repository"  : "vendor_xiaomi_spes",
+       "target_path" : "vendor/xiaomi/spes",
+       "branch"      : "twelve"
+   },
+   {   "remote"      : "pixel",
+       "repository"  : "hardware_xiaomi",
+       "target_path" : "hardware/xiaomi",
+       "branch"      : "twelve"
+   },
+   {   "remote"      : "github",
+       "repository"  : "CHRISL7/android_packages_apps_ParanoidDoze",
+       "target_path" : "packages/apps/ParanoidDoze",
+       "branch"      : "twelve"
+   }
+]
