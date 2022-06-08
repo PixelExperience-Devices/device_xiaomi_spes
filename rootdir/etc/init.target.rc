@@ -69,8 +69,6 @@ on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
 
 on boot
-    write /dev/cpuset/audio-app/cpus 1-2
-
     # USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"

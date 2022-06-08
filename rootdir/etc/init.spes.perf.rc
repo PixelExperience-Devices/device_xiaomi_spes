@@ -14,6 +14,7 @@
 
 on property:vendor.post_boot.parsed=1
     # Setup runtime cpusets
+    write /dev/cpuset/audio-app/cpus 1-2
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/foreground/cpus 0-2,4-6
     write /dev/cpuset/background/cpus 0-2
