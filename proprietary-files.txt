@@ -96,7 +96,7 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 # ANT+
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
-# Audio Dirac
+# Audio Dirac - from xiaomi
 lib/libDiracAPI_SHARED.so:vendor/lib/libDiracAPI_SHARED.so
 lib/soundfx/libdirac.so:vendor/lib/soundfx/libdirac.so
 vendor/etc/diracmobile.config
