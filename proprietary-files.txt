@@ -101,6 +101,9 @@ lib/libDiracAPI_SHARED.so:vendor/lib/libDiracAPI_SHARED.so
 lib/soundfx/libdirac.so:vendor/lib/soundfx/libdirac.so
 vendor/etc/diracmobile.config
 
+# Audio Firmware
+vendor/firmware/aw87xxx_acf.bin
+
 # Audio FX
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libmisoundfx.so
@@ -853,7 +856,6 @@ vendor/firmware/a702_zap.b01
 vendor/firmware/a702_zap.b02
 vendor/firmware/a702_zap.elf
 vendor/firmware/a702_zap.mdt
-vendor/firmware/aw87xxx_acf.bin
 
 # Graphics Vulkan
 vendor/lib/hw/vulkan.adreno.so
