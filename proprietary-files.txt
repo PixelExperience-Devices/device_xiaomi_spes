@@ -49,6 +49,7 @@ vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp
 # ADSP
 vendor/bin/adsprpcd
 vendor/bin/dspservice
+vendor/bin/loadalgo
 vendor/etc/init/vendor.qti.adsprpc-service.rc
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
@@ -57,6 +58,7 @@ vendor/lib/libadsprpc.so
 vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
+vendor/lib64/libloadalgo_stub.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # ADSP Modules
@@ -212,6 +214,7 @@ vendor/lib64/camera/com.qti.sensormodule.k7t_ofilm_s5kjn1_wide_i.bin
 vendor/lib64/camera/com.qti.sensormodule.k7t_qtech_gc08a3_ultra_ii.bin
 vendor/lib64/camera/com.qti.sensormodule.k7t_qtech_s5k3l6_front_i.bin
 vendor/lib64/camera/com.qti.sensormodule.k7t_sunny_ov02b1b_depth_i.bin
+vendor/lib64/camera/com.qti.sensormodule.k7t_sunny_ov02b1b_depth_iii.bin
 vendor/lib64/camera/com.qti.sensormodule.k7t_truly_ov02b1b_depth_ii.bin
 vendor/lib64/camera/com.qti.sensor.ov12a10_front.so
 vendor/lib64/camera/com.qti.sensor.ov12a10.so
@@ -279,6 +282,10 @@ vendor/lib64/camera/com.qti.tuned.k7t_sunny_ov02b1b_depth_i.bin
 vendor/lib64/camera/com.qti.tuned.k7t_sunny_ov02b1b_depth_i_factory.bin
 vendor/lib64/camera/com.qti.tuned.k7t_sunny_ov02b1b_depth_i_global.bin
 vendor/lib64/camera/com.qti.tuned.k7t_sunny_ov02b1b_depth_i_india.bin
+vendor/lib64/camera/com.qti.tuned.k7t_sunny_ov02b1b_depth_iii.bin
+vendor/lib64/camera/com.qti.tuned.k7t_sunny_ov02b1b_depth_iii_factory.bin
+vendor/lib64/camera/com.qti.tuned.k7t_sunny_ov02b1b_depth_iii_global.bin
+vendor/lib64/camera/com.qti.tuned.k7t_sunny_ov02b1b_depth_iii_india.bin
 vendor/lib64/camera/com.qti.tuned.k7t_truly_ov02b1b_depth_ii.bin
 vendor/lib64/camera/com.qti.tuned.k7t_truly_ov02b1b_depth_ii_factory.bin
 vendor/lib64/camera/com.qti.tuned.k7t_truly_ov02b1b_depth_ii_global.bin
@@ -307,6 +314,7 @@ vendor/lib64/libcamera_nn_stub.so
 vendor/lib64/libcamera_scene.so
 vendor/lib64/libcamerapostproc.so
 vendor/lib64/libcapiv2svacnn.so
+vendor/lib64/libcapiv2svarnn.so
 vendor/lib64/libcapiv2vop.so
 vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
@@ -442,6 +450,9 @@ vendor/etc/camera/126_Fantasy2.png
 vendor/etc/camera/127_Creamy.png
 vendor/etc/camera/128_Sepia.png
 vendor/etc/camera/camxoverridesettings.txt
+vendor/etc/camera/com.xiaomi.dcal.wd.golden
+vendor/etc/camera/com.xiaomi.dcal.wd.golden_2
+vendor/etc/camera/com.xiaomi.dcal.wd.golden_3
 vendor/etc/camera/dof_mecp.bin
 vendor/etc/camera/hdrcheckerparamsettings.yml
 vendor/etc/camera/intsense_config_undistort.bin
@@ -509,9 +520,12 @@ vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
 vendor/lib/libcdsp_default_listener.so
 vendor/lib/libcdsprpc.so
+vendor/lib/libfastcrc.so
 vendor/lib/libmdsprpc.so
 vendor/lib/libsdsprpc.so
 vendor/lib/libsysmon_cdsp_skel.so
+vendor/lib64/libcdfw.so
+vendor/lib64/libcdfw_remote_api.so
 vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libmdsprpc.so
@@ -568,6 +582,7 @@ vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
 vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
+vendor/lib64/libcneqmiutils.so
 vendor/lib64/libwms.so
 vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
@@ -948,6 +963,7 @@ vendor/lib64/libqtikeymaster4.so
 vendor/lib/hw/sound_trigger.primary.bengal.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libcapiv2svacnn.so
+vendor/lib/libcapiv2svarnn.so
 vendor/lib/libcapiv2vop.so
 vendor/lib/libgcs-calwrapper.so
 vendor/lib/libgcs-ipc.so
@@ -1055,6 +1071,7 @@ vendor/lib/modules/rdbg.ko
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc
 -vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
+vendor/lib64/libhexagon_nn_stub.so
 vendor/lib64/unnhal-acc-adreno.so
 vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hvx.so
@@ -1105,6 +1122,7 @@ vendor/lib64/libsoc_helper_jni.so
 
 # QMI
 vendor/bin/irsc_util
+vendor/etc/seccomp_policy/qti-systemd.policy
 vendor/etc/sec_config
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
