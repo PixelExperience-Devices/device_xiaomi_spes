@@ -638,4 +638,14 @@
         </interface>
         <fqname>@1.0::IWifiStats/wifiStats</fqname>
     </hal>
+    <!-- VPP Service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.vpp</name>
+        <transport>hwbinder</transport>
+        <version>1.3</version>
+        <interface>
+            <name>IHidlVppService</name>
+            <instance>vppService</instance>
+        </interface>
+    </hal>
 </manifest>

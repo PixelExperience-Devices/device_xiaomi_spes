@@ -1393,11 +1393,26 @@ vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
-# VPP
-vendor/lib/vendor.qti.hardware.vpp@1.1.so
-vendor/lib/vendor.qti.hardware.vpp@1.2.so
-vendor/lib64/vendor.qti.hardware.vpp@1.1.so
-vendor/lib64/vendor.qti.hardware.vpp@1.2.so
+# VPP - from LA.UM.9.12.r1-14200.02-SMxx50.QSSI12.0
+vendor/bin/vppservice|004a03d724b58b7ba14fe76f91207766f4530d6a
+vendor/etc/configstore/vpp.configstore.xml|ed961545186c66fd9523f25866c74f2e11ee63d7
+vendor/etc/init/vppservice.rc|24c089e0e413cbb3fa6daaf0af4215870bdf1b8e
+vendor/lib/libOmxVpp.so|7ee2ea57a5c9d053f508f114e25c59d10627a613
+vendor/lib/libvppclient.so|ec684dc6ba4bff55e66e17309fe34cafafa18dae
+vendor/lib/libvpphcp.so|b1639d2b19c09530780e8d30b389140e9c7d2214
+vendor/lib/libvpphvx.so|35257fe4939c9a408aaab7533789711539192c9e
+vendor/lib/libvpplibrary.so|02d3b07211b2f44f10fc438d20d5f80e9cfe07a2
+vendor/lib/vendor.qti.hardware.vpp@1.1.so|cd8a417c5df0770a90d77d5a5fb46930ea0e10bd
+vendor/lib/vendor.qti.hardware.vpp@1.2.so|693faf4cc53a007e729b8ec48738940a57a2b240
+vendor/lib/vendor.qti.hardware.vpp@1.3.so|6cd86d67f264e1f96890763ac947f77b755a9514
+vendor/lib64/libOmxVpp.so|85299c02bb0f830d5144fb0b01e2bf819169b3cb
+vendor/lib64/libvppclient.so|358115ac3ff8a47ebbbf841fb62fd34172530ae8
+vendor/lib64/libvpphcp.so|aa35a907b9f33099d986d17795664a2fd02ea889
+vendor/lib64/libvpphvx.so|db8e49746c082ff37c0eb31ec1428e5e7df4ca9c
+vendor/lib64/libvpplibrary.so|b13d712f8a9d9a43015bb7c79f6e53532f19060e
+vendor/lib64/vendor.qti.hardware.vpp@1.1.so|3caf062498db60c9018eaf685cc023e381ffc171
+vendor/lib64/vendor.qti.hardware.vpp@1.2.so|7f4e9e8097cb421bc20881910a77e540d9effd30
+vendor/lib64/vendor.qti.hardware.vpp@1.3.so|f41500bd64308e0df2e0cb2cfc932b69bae2c81c
 
 # Widevine DRM
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
