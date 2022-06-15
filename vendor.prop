@@ -13,6 +13,7 @@ ro.vendor.audio.us.proximity=true
 ro.vendor.audio.vocal.support=flase
 ro.vendor.audio.voice.change.support=true
 vendor.audio.chk.cal.us=0
+ro.audio.monitorRotation=true
 
 # Camera
 camera.disable_zsl_mode=1 
