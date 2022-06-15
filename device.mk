@@ -72,7 +72,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
 PRODUCT_PACKAGES += \
-    audio.bluetooth.default
+    audio.bluetooth.default \
+    libbluetooth_audio_session
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.fflag.override.settings_bluetooth_hearing_aid=true \
