@@ -162,6 +162,9 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 
 # Display
 PRODUCT_PACKAGES += \
+    android.frameworks.displayservice@1.0.vendor
+    
+PRODUCT_PACKAGES += \
     vendor.display.config@1.14 \
     vendor.display.config@1.11.vendor \
     vendor.display.config@2.0 \
