@@ -249,6 +249,18 @@ PRODUCT_PACKAGES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
+    
+# Media
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    media.aac_51_output_enabled=true \
+    media.stagefright.enable-aac=true \
+    media.stagefright.enable-fma2dp=true \
+    media.stagefright.enable-http=true \
+    media.stagefright.enable-player=true \
+    media.stagefright.enable-qcp=true \
+    media.stagefright.enable-scan=true \
+    mmp.enable.3g2=true \
+    persist.mm.enable.prefetch=true
 
 # Network
 PRODUCT_PACKAGES += \
