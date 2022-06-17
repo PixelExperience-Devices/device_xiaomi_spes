@@ -355,6 +355,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.snapshot_timer=5 \
     rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
     ro.telephony.default_network=22,20 \
+    ro.vendor.radio.features_common=3 \
     ro.vendor.se.type=HCE,UICC \
     telephony.lteOnCdmaDevice=1
 
