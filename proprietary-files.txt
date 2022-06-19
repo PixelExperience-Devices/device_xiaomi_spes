@@ -324,7 +324,6 @@ vendor/lib64/libsns_registry_skel.so
 vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libswregistrationalgo.so
-vendor/lib64/libswvdec.so
 vendor/lib64/libtfestriping.so
 vendor/lib64/libvideofilter_only.so
 vendor/lib64/libvidhance.so
@@ -488,7 +487,6 @@ vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
 vendor/lib/libcdsp_default_listener.so
 vendor/lib/libcdsprpc.so
-vendor/lib/libfastcrc.so
 vendor/lib/libmdsprpc.so
 vendor/lib/libsdsprpc.so
 vendor/lib/libsysmon_cdsp_skel.so
@@ -953,7 +951,6 @@ vendor/lib64/libmmosal.so
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libFlacSwDec.so
-vendor/lib/libMpeg4SwEncoder.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxAlacDec.so
 vendor/lib/libOmxAlacDecSw.so
@@ -972,7 +969,6 @@ vendor/lib/libdsd2pcm.so
 vendor/lib64/libAlacSwDec.so
 vendor/lib64/libApeSwDec.so
 vendor/lib64/libFlacSwDec.so
-vendor/lib64/libMpeg4SwEncoder.so
 vendor/lib64/libOmxAacDec.so
 vendor/lib64/libOmxAlacDec.so
 vendor/lib64/libOmxAlacDecSw.so
@@ -1428,8 +1424,6 @@ vendor/lib64/libwvhidl.so
 
 # Wi-Fi
 vendor/bin/cnss-daemon
-vendor/etc/wifi/aoa_cldb_falcon.bin
-vendor/etc/wifi/aoa_cldb_swl14.bin
 
 # WiFi Display
 vendor/bin/wfdhdcphalservice
@@ -1469,13 +1463,3 @@ vendor/lib/libwfduibcsrcinterface_proprietary.so
 vendor/lib/libwfdutils_proprietary.so
 vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
-
-# WifiStats HAL service
-vendor/bin/wifilearner
-vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
-vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
-
-#  WIGIG network performance tuner service
-vendor/etc/configstore/wigig.xml 
-vendor/lib/vendor.qti.hardware.wigig.netperftuner@1.0.so
-vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
