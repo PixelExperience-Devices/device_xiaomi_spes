@@ -39,7 +39,7 @@ static const variant_info_t spesn_info = {
 
     .brand = "Redmi",
     .device = "spesn",
-    .marketname = "Redmi Note 11",
+    .marketname = "Redmi Note 11 NFC",
     .model = "2201117TY",
 
     .nfc = true,
