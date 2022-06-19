@@ -1074,7 +1074,7 @@ vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 
-# Power-off charging daemon
+# Power-off charging daemon - from xiaomi
 system/bin/charger:system/bin/chargeonlymode
 
 # QCC
