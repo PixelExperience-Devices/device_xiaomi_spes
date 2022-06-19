@@ -57,6 +57,8 @@ PRODUCT_PACKAGES += \
     com.dsi.ant@1.0.vendor
 
 # Audio
+BOARD_SUPPORTS_OPENSOURCE_STHAL := true 
+
 PRODUCT_PACKAGES += \
     android.hardware.audio.service
 
