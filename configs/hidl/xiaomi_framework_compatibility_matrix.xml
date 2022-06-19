@@ -96,15 +96,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>android.hardware.secure_element</name>
-        <version>1.2</version>
-        <interface>
-            <name>ISecureElement</name>
-            <instance>SIM1</instance>
-            <instance>SIM2</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>android.hardware.wifi</name>
         <version>1.5</version>
         <interface>
@@ -136,13 +127,4 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
-       <name>android.hardware.media.c2</name>
-       <version>1.0</version>
-       <interface>
-           <name>IComponentStore</name>
-           <instance>default</instance>
-           <instance>software</instance>
-       </interface>
-   </hal>
 </compatibility-matrix>
