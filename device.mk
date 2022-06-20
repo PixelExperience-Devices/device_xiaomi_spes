@@ -191,6 +191,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.sys.sf.native_mode=2 \
+    vendor.display.qdcm.disable_factory_mode=1 \
+    vendor.display.qdcm.mode_combine=1
+
+PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_backpressure=1 
     
 PRODUCT_PACKAGES += \
