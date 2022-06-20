@@ -28,6 +28,11 @@
 #
 #
 
+import /vendor/etc/init/init.spes.rc
+import /vendor/etc/init/init.spes.perf.rc
+import /vendor/etc/init/hw/init.stnfc.rc
+import /vendor/etc/init/hw/init.xiaomi.rc
+
 on early-init
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules audio_q6_pdr audio_q6_notifier audio_snd_event audio_apr audio_adsp_loader audio_q6 audio_native audio_usf audio_pinctrl_lpi audio_swr audio_swr_ctrl audio_platform audio_stub audio_wcd_core audio_lct_pinctrl audio_aw87xxx audio_wcd9xxx audio_bolero_cdc audio_va_macro audio_rx_macro audio_tx_macro audio_mbhc audio_wcd937x audio_wcd937x_slave audio_pm2250_spmi audio_rouleur audio_rouleur_slave audio_machine_bengal
     write /proc/sys/kernel/sched_boost 1
