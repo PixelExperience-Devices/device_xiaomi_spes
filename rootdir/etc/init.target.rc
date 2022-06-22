@@ -51,12 +51,6 @@ on init
     start vendor.qseecomd
     start keymaster-4-0
 
-    # Xiaomi Thermal Profiles permissions
-    chmod 0664 /sys/class/thermal/thermal_message/sconfig
-    chown system system /sys/class/thermal/thermal_message/sconfig
-    chmod 0666 /sys/class/thermal/thermal_message/temp_state
-    chown system system /sys/class/thermal/thermal_message/temp_state
-
 on fs
     start hwservicemanager
     mount_all /vendor/etc/fstab.qcom --early
