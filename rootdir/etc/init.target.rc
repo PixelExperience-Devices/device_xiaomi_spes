@@ -93,7 +93,6 @@ on charger
     setprop vendor.usb.controller 4e00000.dwc3
     setprop sys.usb.configfs 1
     chown system system /sys/class/backlight/panel0-backlight/brightness
-    setprop persist.sys.usb.config mass_storage
     
 service charger /system/bin/chargeonlymode
     class charger
