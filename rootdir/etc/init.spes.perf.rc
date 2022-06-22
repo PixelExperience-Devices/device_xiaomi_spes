@@ -28,26 +28,41 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/restricted/cpus 0-3
 
-    # Configure Min CPU frequencies
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 300000
+    # Configure CPU frequencies
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 691200
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq 1516800
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1056000
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq 1344000
+
+    # Configure governor parameters
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load 90
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 4000
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 16000
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/pl 1
+    write /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load 90
+    write /sys/devices/system/cpu/cpu6/cpufreq/schedutil/up_rate_limit_us 4000
+    write /sys/devices/system/cpu/cpu6/cpufreq/schedutil/down_rate_limit_us 16000
+    write /sys/devices/system/cpu/cpu6/cpufreq/schedutil/pl 1
 
     # Configure CPU input boost
-    write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0:1324800 4:1228800"
-    write /sys/devices/system/cpu/cpu_boost/input_boost_ms 100
-
-    # Configure schedutil ratelimits
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 5000
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 20000
+    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1344000 4:1344000"
+    write /sys/module/cpu_boost/parameters/input_boost_ms 100
+    write /sys/module/cpu_boost/parameters/powerkey_input_boost_freq "0:1900800 4:2400800"
+    write /sys/module/cpu_boost/parameters/powerkey_input_boost_ms 500
 
     # Configure scheduler
     write /proc/sys/kernel/sched_child_runs_first 1
-    write /proc/sys/kernel/sched_group_downmigrate 25
-    write /sys/devices/system/cpu/cpu0/core_ctl/enable 0
-    write /sys/devices/system/cpu/cpu4/core_ctl/enable 0
+    write /proc/sys/kernel/sched_tunable_scaling 1
+    write /proc/sys/kernel/sched_downmigrate 85
+    write /proc/sys/kernel/sched_upmigrate 95
 
+    # Setup default schedtune values for foreground/top-app
+    write /dev/stune/schedtune.boost 0
+    write /dev/stune/schedtune.prefer_idle 0
+    write /dev/stune/foreground/schedtune.prefer_idle 1
+    write /dev/stune/top-app/schedtune.prefer_idle 1
+    write /dev/stune/top-app/schedtune.boost 1
+    
     # Configure uclamp
     write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
 
@@ -64,4 +79,4 @@ on property:vendor.post_boot.parsed=1
 
 on property:persist.sys.device_provisioned=1
     setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5
-    setprop dalvik.vm.dex2oat-threads 6 
+    setprop dalvik.vm.dex2oat-threads 6
