@@ -55,6 +55,9 @@ on boot
     #Load exfat driver
     insmod /vendor/lib/modules/exfat.ko
 
+    # Xiaomi Thermal permissions
+    chown system system /sys/class/thermal/thermal_message/sconfig
+
 service mi_thermald /system/vendor/bin/mi_thermald
     class main
     user root
