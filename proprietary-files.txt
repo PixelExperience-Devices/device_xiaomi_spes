@@ -1374,6 +1374,12 @@ vendor/etc/thermal-engine.conf|c6c9312b7c7b52926cf7d0fc9bff933d90967100
 vendor/etc/thermal-map.conf|d63ca30e61be3cf5c778d7330ca673268a034b8f
 vendor/etc/thermal-normal.conf|21423cf169562ebadf7ae0e29e4c1d17e7f816ee
 
+# Thermal (limits-hal) - from LA.UM.9.12.r1-14200.02-SMxx50.QSSI12.0
+vendor/bin/hw/vendor.qti.hardware.limits@1.0-service|0b8947b9f6ddc6953a324ea43e33bcc8f7edab26
+vendor/etc/init/vendor.qti.hardware.limits@1.0-service.rc|77c989d8d59b99716b900e96d94a4aa9bcab6aa6
+vendor/lib64/vendor.qti.hardware.limits@1.0.so|8fef74ce2bef2e064e0ccef4a302c995cdfca7c8
+-vendor/etc/vintf/manifest/vendor.qti.hardware.limits@1.0-service.xml|6109f13748cb74b7d042e2604a9883a1b071e810
+
 # Time services
 -vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
