@@ -167,22 +167,6 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor
     
-PRODUCT_PACKAGES += \
-    vendor.display.config@1.14 \
-    vendor.display.config@1.11.vendor \
-    vendor.display.config@2.0 \
-    vendor.display.config@2.0.vendor
-
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.display.allocator@1.0.vendor \
-    vendor.qti.hardware.display.allocator@3.0.vendor \
-    vendor.qti.hardware.display.allocator@4.0.vendor \
-    vendor.qti.hardware.display.composer@1.0.vendor \
-    vendor.qti.hardware.display.composer@2.0.vendor \
-    vendor.qti.hardware.display.composer@3.0.vendor \
-    vendor.qti.hardware.display.mapper@1.1.vendor \
-    vendor.qti.hardware.display.mapperextensions@1.1.vendor
-
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.frame_rate_multiple_threshold=90
     
@@ -198,12 +182,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_backpressure=1 
     
 PRODUCT_PACKAGES += \
-    libdisplayconfig.qti
-
-PRODUCT_PACKAGES += \
-    libvulkan
-
-PRODUCT_PACKAGES += \
+    libdisplayconfig.qti \
     disable_configstore
 
 # DRM
@@ -472,7 +451,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libdisplayconfig.system.qti \
-    libqdMetaData.system \
-    libdisplayconfig.vendor \
     libwfdaac_vendor
