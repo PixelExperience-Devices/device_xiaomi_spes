@@ -80,3 +80,13 @@ on property:vendor.post_boot.parsed=1
 on property:persist.sys.device_provisioned=1
     setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5
     setprop dalvik.vm.dex2oat-threads 6
+
+service spes-post-boot /vendor/bin/sh /vendor/bin/init.spes.post_boot.sh
+    class core
+    user root
+    group root system wakelock graphics
+    disabled
+    oneshot
+
+on property:sys.boot_completed=1
+    start spes-post-boot

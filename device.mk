@@ -374,6 +374,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     
 # Rootdir
 PRODUCT_PACKAGES += \
+    init.spes.post_boot.sh \
     init.qti.dcvs.sh
 
 PRODUCT_PACKAGES += \
@@ -390,6 +391,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc \
     $(LOCAL_PATH)/rootdir/etc/ueventd.spes.rc:$(TARGET_COPY_OUT_ODM)/etc/ueventd.rc
 
+PRODUCT_VENDOR_OVERRIDES += \
+    vendor.post_boot.custom=true
+    
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.xiaomi-multihal \
