@@ -31,6 +31,7 @@
 import /vendor/etc/init/init.spes.rc
 import /vendor/etc/init/init.spes.perf.rc
 import /vendor/etc/init/hw/init.stnfc.rc
+import /vendor/etc/init/hw/init.xiaomi.fingerprint.rc
 import /vendor/etc/init/hw/init.xiaomi.rc
 
 on early-init
