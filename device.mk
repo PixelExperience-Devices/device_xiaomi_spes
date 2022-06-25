@@ -10,6 +10,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+PRODUCT_SYSTEM_PROPERTIES += \
+    pm.dexopt.install=speed-profile \
+    pm.dexopt.bg-dexopt=speed-profile \
+    pm.dexopt.boot=verify \
+    pm.dexopt.first-boot=quicken
+
 # Enable Virtual A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
@@ -65,6 +71,45 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    audio.offload.min.duration.secs=30 \
+    audio.sys.offload.pstimeout.secs=3 \
+    ro.config.vc_call_vol_steps=11
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.audio.monitorRotation=true \
+    ro.vendor.audio.afe.record=true \
+    ro.vendor.audio.scenario.support=false \
+    ro.vendor.audio.sfx.earadj=true \
+    ro.vendor.audio.sfx.scenario=false \
+    ro.vendor.audio.sos=true \
+    ro.vendor.audio.soundfx.type=mi \
+    ro.vendor.audio.soundfx.usb=true \
+    ro.vendor.audio.spk.clean=true \
+    ro.vendor.audio.spk.stereo=true \
+    ro.vendor.audio.surround.support=flase \
+    ro.vendor.audio.us.proximity=true \
+    ro.vendor.audio.vocal.support=flase \
+    ro.vendor.audio.voice.change.support=true \
+    vendor.audio.chk.cal.us=0
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.audio.soundtrigger.appdefine.cnn.level=31 \
+    ro.vendor.audio.soundtrigger.appdefine.gmm.level=55 \
+    ro.vendor.audio.soundtrigger.appdefine.gmm.user.level=50 \
+    ro.vendor.audio.soundtrigger.appdefine.vop.level=10 \
+    ro.vendor.audio.soundtrigger.lowpower=true \
+    ro.vendor.audio.soundtrigger.training.level=50 \
+    ro.vendor.audio.soundtrigger.xanzn.cnn.level=70 \
+    ro.vendor.audio.soundtrigger.xanzn.gmm.level=45 \
+    ro.vendor.audio.soundtrigger.xanzn.gmm.user.level=30 \
+    ro.vendor.audio.soundtrigger.xanzn.vop.level=10 \
+    ro.vendor.audio.soundtrigger.xatx.cnn.level=27 \
+    ro.vendor.audio.soundtrigger.xatx.gmm.level=50 \
+    ro.vendor.audio.soundtrigger.xatx.gmm.user.level=40 \
+    ro.vendor.audio.soundtrigger.xatx.vop.level=10 \
+    ro.vendor.audio.soundtrigger=sva
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -128,6 +173,13 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
+PRODUCT_SYSTEM_PROPERTIES += \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
+
+PRODUCT_VENDOR_PROPERTIES += \
+    camera.disable_zsl_mode=1 \
+    persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
@@ -141,6 +193,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.charger.enable_suspend=true
 
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.vendor.quick.charge=1 \
+    ro.charger.disable_init_blank=true
+
 # Consumer IR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
@@ -149,6 +205,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
 
+# Crypto
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.crypto.allow_encrypt_override=true \
+    ro.crypto.volume.filenames_mode=aes-256-cts
+    
 # Device Settings
 PRODUCT_PACKAGES += \
     XiaomiParts
@@ -174,27 +235,49 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.sf.color_mode=0
 
 PRODUCT_VENDOR_PROPERTIES += \
+    debug.sf.disable_backpressure=1 \
     persist.sys.sf.native_mode=2 \
+    ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg \
+    ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg \
+    ro.vendor.display.sensortype=2 \
+    ro.vendor.display.svi=1 \
+    vendor.display.idle_time=0 \
+    vendor.display.idle_time_inactive=0 \
     vendor.display.qdcm.disable_factory_mode=1 \
-    vendor.display.qdcm.mode_combine=1
+    vendor.display.qdcm.mode_combine=1 \
+    vendor.display.svi.config=1 \
+    vendor.display.svi.config_path=/vendor/etc/SVIConfig.xml
 
-PRODUCT_VENDOR_PROPERTIES += \
-    debug.sf.disable_backpressure=1 
-    
 PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
     disable_configstore
+
+# DPM
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.dpm.feature=1 \
+    persist.vendor.dpm.feature=11 \
+    persist.vendor.dpmhalservice.enable=1
 
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
     android.hardware.drm@1.4-service.clearkey
 
+PRODUCT_VENDOR_PROPERTIES += \
+    drm.service.enabled=true
+
 # Fastboot
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
 
+# Fwk detect
+PRODUCT_ODM_PROPERTIES += \
+    ro.vendor.qti.va_odm.support=1
+
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.vendor.qti.va_aosp.support=1
+  
 # GPS
 LOC_HIDL_VERSION := 4.0
 
@@ -205,12 +288,25 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.hardware.fp.sideCap=true
+
 # FM
 BOARD_HAVE_QCOM_FM := true
+
+# FRP
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
+
+# Graphics
+PRODUCT_VENDOR_PROPERTIES += \
+   ro.hardware.egl=adreno \
+   ro.hardware.vulkan=adreno \
+   ro.opengles.version=196610
 
 # Health
 PRODUCT_PACKAGES += \
@@ -251,6 +347,16 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml
     
+# Netflix
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.netflix.bsp_rev=Q6115-31409-1
+
+# Netmgr
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.data.netmgrd.qos.enable=true \
+    persist.vendor.data.mode=concurrent \
+    ro.vendor.use_data_netmgrd=true
+
 # Network
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
@@ -278,6 +384,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_k7tn/android.hardware.se.omapi.ese.xml \
     frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_k7tn/android.hardware.se.omapi.uicc.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_k7tn/com.android.nfc_extras.xml
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.nfc.port=I2C
+
+# NTP
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.backup.ntpServer=0.pool.ntp.org
 
 # Overlays
 PRODUCT_PACKAGES += \
@@ -320,6 +433,10 @@ TARGET_COMMON_QTI_COMPONENTS := \
     vibrator \
     wfd \
     wlan
+
+# QMI
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.qcomsysd.enabled=1
 
 # Radio
 PRODUCT_PACKAGES += \
@@ -391,11 +508,35 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml
 
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.sensors.debug.ssc_qmi_debug=true \
+    persist.vendor.sensors.enable.bypass_worker=true \
+    persist.vendor.sensors.enable.rt_task=false \
+    persist.vendor.sensors.hal_trigger_ssr=false \
+    persist.vendor.sensors.support_direct_channel=false
+
+# SoC
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.soc.manufacturer=QTI \
+    ro.soc.model=SM6225
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/qcom-caf/bootctrl \
     hardware/xiaomi
+
+# Storage.xml moment
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.binary_xml=false
+
+# Thermal
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.sys.thermal.data.path=/data/vendor/thermal/
+    
+# Time-services
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.timed.enable=true
 
 # Update Engine
 PRODUCT_PACKAGES += \
@@ -452,3 +593,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # WiFi Display
 PRODUCT_PACKAGES += \
     libwfdaac_vendor
+
+# WLAN
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.data.iwlan.enable=true \
+    ro.hardware.wlan.dbs=2 \
+    ro.telephony.iwlan_operation_mode=legacy
+
+# Zygote
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.device_config.runtime_native.usap_pool_enabled=true

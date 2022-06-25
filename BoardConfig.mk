@@ -165,12 +165,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_TAP_TO_WAKE_NODE := "/proc/tp_gesture"
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 
-# Properties
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
-TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-
 # QC tree common
 include $(COMMON_PATH)/BoardConfigQcom.mk
 OVERRIDE_QCOM_HARDWARE_VARIANT := sm8250-common
