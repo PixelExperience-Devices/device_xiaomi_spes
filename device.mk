@@ -124,7 +124,7 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     libbluetooth_audio_session
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.sys.fflag.override.settings_bluetooth_hearing_aid=true \
     persist.vendor.bluetooth.modem_nv_support=true \
     persist.vendor.bt.a2dp.mac_whitelist=false \
@@ -584,7 +584,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.rtt.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.rtt.xml
     
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 	wifi.aware.interface=wifi-aware0
 
 # WiFi Display
