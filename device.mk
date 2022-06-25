@@ -348,7 +348,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml
     
 # Netflix
-PRODUCT_SYSTEM_PROPERTIES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.netflix.bsp_rev=Q6115-31409-1
 
 # Netmgr
