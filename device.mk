@@ -88,9 +88,9 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.soundfx.usb=true \
     ro.vendor.audio.spk.clean=true \
     ro.vendor.audio.spk.stereo=true \
-    ro.vendor.audio.surround.support=flase \
+    ro.vendor.audio.surround.support=false \
     ro.vendor.audio.us.proximity=true \
-    ro.vendor.audio.vocal.support=flase \
+    ro.vendor.audio.vocal.support=false \
     ro.vendor.audio.voice.change.support=true \
     vendor.audio.chk.cal.us=0
 
