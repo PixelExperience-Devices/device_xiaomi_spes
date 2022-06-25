@@ -34,7 +34,7 @@ user=_app seinfo=platform name=com.qualcomm.timeservice domain=vendor_timeservic
 user=_app seinfo=platform name=.qtidataservices domain=vendor_qtidataservices_app type=app_data_file levelFrom=all
 
 #Add new domain for imshelper service
-user=radio seinfo=platform name=.imshelperservice domain=vendor_imshelper_app type=vendor_radio_data_file
+user=radio seinfo=platform name=.imshelperservice domain=vendor_imshelper_app type=radio_data_file
 
 #Add new domain for power off alarm app
 user=_app seinfo=platform name=com.qualcomm.qti.poweroffalarm domain=vendor_poweroffalarm_app type=app_data_file levelFrom=all

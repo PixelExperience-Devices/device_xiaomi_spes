@@ -107,7 +107,7 @@ type vendor_wifihal_socket, file_type;
 type vendor_pps_socket, file_type;
 
 # imshelper_app file types
-type vendor_imshelper_app_data_file, file_type, data_file_type;
+#type vendor_imshelper_app_data_file, file_type, data_file_type;
 
 type vendor_imsd_data_file, file_type, data_file_type;
 
