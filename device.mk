@@ -465,9 +465,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.se.type=HCE,UICC \
     telephony.lteOnCdmaDevice=1
 
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.radio.process_sups_ind=1
-    
 # Rootdir
 PRODUCT_PACKAGES += \
     init.spes.post_boot.sh \
