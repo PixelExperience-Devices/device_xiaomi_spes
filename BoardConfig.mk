@@ -201,3 +201,6 @@ CONFIG_ACS := true
 
 # Inherit from the proprietary version
 include vendor/xiaomi/spes/BoardConfigVendor.mk
+
+# Inherit from the firmware
+include vendor/xiaomi/spes-firmware/BoardConfigVendor.mk
