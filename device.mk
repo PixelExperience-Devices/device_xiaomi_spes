@@ -22,6 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 # Inherit from vendor if exists
 $(call inherit-product-if-exists, vendor/xiaomi/spes/spes-vendor.mk)
 
+# Inherit Google Camera
+$(call inherit-product, vendor/xiaomi/spes-gcam/spes-gcam-vendor.mk)
+
 # Enable Dynamic partition
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -165,9 +168,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libstdc++.vendor
-
-PRODUCT_PACKAGES += \
-    Snap
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0.vendor \
