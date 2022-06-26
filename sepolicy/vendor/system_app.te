@@ -1,15 +1,11 @@
 allow system_app vendor_hal_pasrmanager_qti:binder call;
-allow system_app proc_pagetypeinfo:file { read };
-allow system_app proc_pagetypeinfo:file { open };
-allow system_app vendor_sysfs_battery_supply:dir { search };
-allow system_app vendor_sysfs_battery_supply:file { read };
-allow system_app vendor_sysfs_battery_supply:file { open };
-allow system_app vendor_sysfs_battery_supply:file { getattr };
-
+allow system_app proc_pagetypeinfo:file r_file_perms;
+allow system_app vendor_sysfs_battery_supply:dir r_dir_perms;
+allow system_app vendor_sysfs_battery_supply:file r_file_perms;
 allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file r_file_perms;
-
-r_dir_file(system_app, vendor_sysfs_battery_supply)
+allow system_app proc_tp_gesture:file rw_file_perms;
+allow system_app sysfs_msm_subsys:dir search;
 
 get_prop(system_app, vendor_persist_camera_prop)
 

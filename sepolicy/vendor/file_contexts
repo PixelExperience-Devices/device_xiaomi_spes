@@ -2,16 +2,17 @@
 /dev/socket/audio_hw_socket                                             u:object_r:audio_socket:s0
 
 # Boot devices
-/dev/block/platform/soc/4804000.ufshc/by-name/vendor_boot_[ab]         u:object_r:boot_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/vendor_boot_[ab]          u:object_r:boot_block_device:s0
 
 # Camera
 /mnt/vendor/persist/camera(/.*)?                                        u:object_r:vendor_persist_camera_file:s0
+/vendor/bin/f2player                                                    u:object_r:hal_camera_default_exec:s0
 
 # Charger
 /vendor/bin/batterysecret                                               u:object_r:batterysecret_exec:s0
 
 # Data files
-/data/per_boot(/.*)?                                                 u:object_r:per_boot_file:s0
+/data/per_boot(/.*)?                                                    u:object_r:per_boot_file:s0
 
 # Display
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.displayfeature@1\.0-service                                    u:object_r:hal_displayfeature_default_exec:s0
@@ -75,14 +76,13 @@
 # Poweropt-service
 /(vendor|system/vendor)/bin/poweropt-service                            u:object_r:vendor_poweroptservice_exec:s0
 
-# Proximity
+# Sensors
 /dev/elliptic[0-9]                                                                                                              u:object_r:sensors_device:s0
-/dev/mius(.*)?                                                                                                                  u:object_r:sound_device:s0
 /sys/bus/iio/devices                                                                                                            u:object_r:vendor_sysfs_iio:s0
 /sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:vadc@3100/iio:device0(/.*)?         u:object_r:vendor_sysfs_iio:s0
 /sys/devices/platform/us_prox.0/iio:device1(/.*)?                                                                               u:object_r:vendor_sysfs_iio:s0
 
-# Sensors
+# Sensors Hal
 /vendor/bin/hw/android\.hardware\.sensors@2.1-service\.xiaomi-multihal			                                u:object_r:hal_sensors_default_exec:s0
 
 # Shell
@@ -101,5 +101,4 @@
 /vendor/bin/init\.mi\.usb\.sh		                                u:object_r:vendor_qti_init_shell_exec:s0
 
 # WiFi
-/vendor/bin/nv_mac                                                      u:object_r:vendor_wcnss_service_exec:s0
 /data/vendor/mac_addr(/.*)?                                             u:object_r:vendor_wifi_vendor_data_file:s0

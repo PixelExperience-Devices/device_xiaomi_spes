@@ -1,29 +1,21 @@
+unix_socket_connect(hal_sensors_default, audio, hal_audio_default)
+
 hal_client_domain(hal_sensors_default, hal_audio)
 binder_call(hal_sensors_default, hal_audio_default)
 
-# Allow hal_sensors_default to read and write to
-# iio_device/sound_device
+allow hal_sensors_default {
+  audio_socket
+  socket_device
+}:sock_file rw_file_perms;
+
 allow hal_sensors_default {
   iio_device
-  sound_device
-}: chr_file rw_file_perms;
+  sensors_device
+}:chr_file rw_file_perms;
 
-# Allow a local socket connection from hal_sensors_default via
-# audio to hal_audio_default
-unix_socket_connect(hal_sensors_default, audio, hal_audio_default)
-
-# Allow the sensor HAL to use audio_hw_socket
-allow hal_sensors_default audio_socket:sock_file rw_file_perms;
-allow hal_sensors_default socket_device:sock_file rw_file_perms;
-allow hal_sensors_default iio_device:chr_file rw_file_perms;
-allow hal_sensors_default sensors_device:chr_file rw_file_perms;
+allow hal_sensors_default vendor_sysfs_iio:dir r_dir_perms;
+allow hal_sensors_default vendor_sysfs_iio:file rw_file_perms;
 
 allow hal_sensors_default hal_audio_hwservice:hwservice_manager find;
 
-# Allow hal_sensors_default to access proximity sysfs
-r_dir_file(hal_sensors_default, vendor_sysfs_prox)
-allow hal_sensors_default vendor_sysfs_prox:file rw_file_perms;
-
-# Allow hal_sensors_default to access iio sysfs
-r_dir_file(hal_sensors_default, vendor_sysfs_iio)
-allow hal_sensors_default vendor_sysfs_iio:file rw_file_perms;
+get_prop(hal_sensors_default, vendor_adsprpc_prop)

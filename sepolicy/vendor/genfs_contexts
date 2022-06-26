@@ -1,8 +1,14 @@
 # Battery
-genfscon sysfs /class/power_supply/bms                                          u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /class/power_supply/bms                                                              u:object_r:vendor_sysfs_battery_supply:s0
+
+# Block
+genfscon sysfs /devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:0/block/                 u:object_r:sysfs_devices_block:s0
+
+# Charger
+genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/Charging_Adapter/pd_adapter           u:object_r:vendor_sysfs_usbpd_device:s0
 
 # DSP
-genfscon sysfs /kernel/boot_cdsp/boot                                           u:object_r:sysfs_msm_boot:s0
+genfscon sysfs /kernel/boot_cdsp/boot                                                               u:object_r:sysfs_msm_boot:s0
 
 # Display
 genfscon sysfs /devices/platform/soc/5900000.qcom,kgsl-3d0                                          u:object_r:sysfs_msm_subsys:s0
@@ -18,7 +24,7 @@ genfscon sysfs /devices/platform/soc/soc:qcom,gpubw                             
 genfscon sysfs /devices/platform/soc/soc:qcom,gpubw/devfreq                                         u:object_r:sysfs_msm_subsys:s0
 
 # DT2W
-genfscon proc /tp_gesture                                                      u:object_r:proc_tp_gesture:s0
+genfscon proc /tp_gesture                                                                           u:object_r:proc_tp_gesture:s0
 
 # Fingerprint
 genfscon sysfs /devices/platform/soc/soc:fpc1020/device_prepare                                     u:object_r:vendor_sysfs_fingerprint:s0
@@ -49,15 +55,10 @@ genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify 
 genfscon sysfs /devices/platform/soc/soc:qcom,nopmi-chg/power_supply/usb/real_type                  u:object_r:vendor_sysfs_battery_supply:s0
 
 # kmsg
-genfscon proc /last_kmsg                                                        u:object_r:proc_last_kmsg:s0
-
-# Proximity
-genfscon sysfs /devices/virtual/touch/touch_dev/ear_sensor                     u:object_r:vendor_sysfs_prox:s0
-genfscon sysfs /devices/virtual/touch/touch_dev/palm_sensor                    u:object_r:vendor_sysfs_prox:s0
-genfscon sysfs /devices/virtual/touch/touch_dev/ear_sensor_data                u:object_r:vendor_sysfs_prox:s0
+genfscon proc /last_kmsg                                                                            u:object_r:proc_last_kmsg:s0
 
 # UFS
-genfscon sysfs /devices/platform/soc/4804000.ufshc/clkgate_enable               u:object_r:vendor_sysfs_scsi_host:s0
+genfscon sysfs /devices/platform/soc/4804000.ufshc/clkgate_enable                                   u:object_r:vendor_sysfs_scsi_host:s0
 
 # Wakeup source stats
 genfscon sysfs /devices/platform/soc/soc:ant_check/wakeup                                                                                                                            u:object_r:sysfs_wakeup:s0
@@ -82,21 +83,9 @@ genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/max77729-charger/w
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/max77729-charger/power_supply/bbc/power/wakeup                                                                         u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/max77729-charger/power_supply/otg/power/wakeup                                                                         u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/max77729-fuelgauge/power_supply/bms/wakeup29                                                                           u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/max77729-fuelgauge/power_supply/bms/wakeup29/active_count                                                              u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/max77729-fuelgauge/power_supply/bms/wakeup29/event_count                                                               u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/max77729-fuelgauge/power_supply/bms/wakeup29/wakeup_count                                                              u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0071/power_supply/bms/wakeup39                                                                                              u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0071/power_supply/bms/wakeup39/active_count                                                                                 u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0071/power_supply/bms/wakeup39/event_count                                                                                  u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0071/power_supply/bms/wakeup39/wakeup_count                                                                                 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,nopmi-chg/power_supply/battery/wakeup38                                                                                                u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,nopmi-chg/power_supply/battery/wakeup38/active_count                                                                                   u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,nopmi-chg/power_supply/battery/wakeup38/event_count                                                                                    u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,nopmi-chg/power_supply/battery/wakeup38/wakeup_count                                                                                   u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/wakeup1                                                                                              u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/wakeup1/active_count                                                                                 u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/wakeup1/event_count                                                                                  u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/wakeup1/wakeup_count                                                                                 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/4a8c000.qcom,qup_uart/tty/ttyHS0/power/wakeup                                                                                                   u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/power/wakeup                                                                                         u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c800000.qcom,icnss/power/wakeup                                                                                                                 u:object_r:sysfs_wakeup:s0
@@ -125,6 +114,10 @@ genfscon sysfs /devices/platform/soc/soc:ant_check/wakeup/wakeup                
 
 # vibrate
 genfscon sysfs /devices/platform/soc/soc:pwm_vibrator/leds/vibrator/activate                                                                                                         u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/soc:pwm_vibrator/leds/vibrator/duration                                                                                                         u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/soc:pwm_vibrator/leds/vibrator/trigger                                                                                                          u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/soc:pwm_vibrator/leds/vibrator/state                                                                                                            u:object_r:sysfs_leds:s0
 genfscon sysfs /class/leds/vibrator/activate                                                                                                                                         u:object_r:sysfs_leds:s0
 genfscon sysfs /class/leds/vibrator/state                                                                                                                                            u:object_r:sysfs_leds:s0
 genfscon sysfs /class/leds/vibrator/duration                                                                                                                                         u:object_r:sysfs_leds:s0
+genfscon sysfs /class/leds/vibrator/trigger                                                                                                                                          u:object_r:sysfs_leds:s0

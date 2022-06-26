@@ -1,17 +1,13 @@
-type sysfs_io_sched_tuneable, fs_type, sysfs_type;
-allow vendor_qti_init_shell sysfs_io_sched_tuneable:file rw_file_perms;
-
-allow vendor_qti_init_shell sysfs_wakeup:file setattr;
 allow vendor_qti_init_shell configfs:dir rw_dir_perms;
-allow vendor_qti_init_shell configfs:dir create_file_perms;
 allow vendor_qti_init_shell configfs:file create_file_perms;
-allow vendor_qti_init_shell configfs:lnk_file create_file_perms;
-allow vendor_qti_init_shell ctl_start_prop:property_service set;
-allow vendor_qti_init_shell ctl_stop_prop:property_service set;
 allow vendor_qti_init_shell sysfs_wakeup:file setattr;
-allow vendor_qti_init_shell sysfs:file setattr;
+allow vendor_qti_init_shell sysfs:file { setattr write };
+
+r_dir_file(vendor_qti_init_shell, vendor_sysfs_process_reclaim)
 
 # allow init.mi.btmac.sh to read hex-encoded mac address and set it
-allow vendor_qti_init_shell vendor_bluetooth_prop:property_service set;
 allow vendor_qti_init_shell vendor_wifi_vendor_data_file:dir search;
 allow vendor_qti_init_shell vendor_wifi_vendor_data_file:file r_file_perms;
+
+set_prop(vendor_qti_init_shell, ctl_stop_prop)
+set_prop(vendor_qti_init_shell, vendor_bluetooth_prop)
