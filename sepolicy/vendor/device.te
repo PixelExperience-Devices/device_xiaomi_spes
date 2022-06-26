@@ -1,4 +1,4 @@
-type vendor_fingerprint_device, dev_type;
+type fingerprint_device, dev_type;
 
 type lirc_device, dev_type;
 
