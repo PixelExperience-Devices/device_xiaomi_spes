@@ -76,9 +76,25 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 PRODUCT_PRODUCT_PROPERTIES += \
+    aaudio.hw_burst_min_usec=2000 \
+    aaudio.mmap_exclusive_policy=2 \
+    aaudio.mmap_policy=2 \
+    af.fast_track_multiplier=1 \
+    audio.deep_buffer.media=true \
     audio.offload.min.duration.secs=30 \
+    audio.offload.video=true \
+    audio.sys.mute.latency.factor=2 \
+    audio.sys.noisy.broadcast.delay=500 \
     audio.sys.offload.pstimeout.secs=3 \
-    ro.config.vc_call_vol_steps=11
+    audio.sys.routing.latency=0 \
+    media.stagefright.audio.deep=false \
+    ro.af.client_heap_size_kbyte=7168
+
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.audio.button_jack.profile=volume \
+    persist.audio.button_jack.switch=0 \
+    ro.config.media_vol_default=10 \
+    ro.config.vc_call_vol_steps=11 
 
 PRODUCT_VENDOR_PROPERTIES += \
     ro.audio.monitorRotation=true \
@@ -175,11 +191,12 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 PRODUCT_SYSTEM_PROPERTIES += \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera \
+    vendor.camera.aux.packagelist.ext=com.android.camera \
+    persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera
 
 PRODUCT_VENDOR_PROPERTIES += \
     camera.disable_zsl_mode=1 \
-    persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -230,18 +247,26 @@ PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor
     
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    debug.sf.frame_rate_multiple_threshold=90
+    debug.sf.frame_rate_multiple_threshold=90 \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+    ro.surface_flinger.max_virtual_display_dimension=4096
     
 PRODUCT_PRODUCT_PROPERTIES += \
-    persist.sys.sf.color_mode=0
-
+    persist.sys.sf.color_mode=0 \
+    debug.sf.disable_backpressure=1
+    
+PRODUCT_SYSTEM_PROPERTIES += \
+    debug.sf.latch_unsignaled=1
+    
 PRODUCT_VENDOR_PROPERTIES += \
-    debug.sf.disable_backpressure=1 \
     persist.sys.sf.native_mode=2 \
     ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg \
     ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg \
     ro.vendor.display.sensortype=2 \
     ro.vendor.display.svi=1 \
+    ro.vendor.display.type=oled \
+    ro.vendor.histogram.enable=true \
+    ro.vendor.whitepoint_calibration_enable=true \
     vendor.display.idle_time=0 \
     vendor.display.idle_time_inactive=0 \
     vendor.display.qdcm.disable_factory_mode=1 \
@@ -353,6 +378,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml
     
 # Netflix
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.netflix.channel=004ee050-1a17-11e9-bb61-6f1da27fb55b
+
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.netflix.bsp_rev=Q6115-31409-1
 
