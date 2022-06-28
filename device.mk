@@ -349,7 +349,7 @@ PRODUCT_COPY_FILES += \
     
 # Netflix
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.netflix.bsp_rev=Q6115-31409-1
+    vendor.netflix.bsp_rev=Q6115-31409-1
 
 # Netmgr
 PRODUCT_SYSTEM_PROPERTIES += \
