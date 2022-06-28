@@ -272,6 +272,10 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
 
+# FUSE passthrough
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.fuse.passthrough.enable=true
+
 # Fwk detect
 PRODUCT_ODM_PROPERTIES += \
     ro.vendor.qti.va_odm.support=1
