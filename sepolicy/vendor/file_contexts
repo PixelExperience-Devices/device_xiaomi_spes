@@ -10,6 +10,7 @@
 
 # Charger
 /vendor/bin/batterysecret                                               u:object_r:batterysecret_exec:s0
+/vendor/bin/hw/vendor.xiaomi.hardware.micharge@1.0-service              u:object_r:hal_micharge_default_exec:s0
 
 # Data files
 /data/per_boot(/.*)?                                                    u:object_r:per_boot_file:s0
