@@ -13,6 +13,7 @@
 # limitations under the License.
 
 import /vendor/etc/init/init.batterysecret.rc
+import /vendor/etc/init/vendor.xiaomi.hardware.micharge@1.0-service.rc
 
 on init
     chmod 0664 /sys/class/thermal/thermal_message/sconfig
