@@ -428,7 +428,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlay \
     SpesFrameworksOverlay \
     SpesSettingsOverlay \
     SpesSystemUIOverlay \
