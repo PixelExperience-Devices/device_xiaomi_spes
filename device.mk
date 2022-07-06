@@ -474,6 +474,11 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio.deprecated@1.0.vendor
 
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.vendor.radio.report_codec=1 \
+    persist.vendor.radio.vdp_on_ims_cap=1 \
+    persist.vendor.qti.telephony.vt_cam_interface=2
+
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.data.iwlan.enable=true \
     persist.vendor.radio.add_power_save=1 \
