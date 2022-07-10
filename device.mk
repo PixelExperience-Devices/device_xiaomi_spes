@@ -495,6 +495,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
     ro.vendor.radio.features_common=3 \
     ro.vendor.se.type=HCE,UICC \
+    sys.vendor.shutdown.waittime=500 \
     telephony.lteOnCdmaDevice=1
 
 # Rootdir
