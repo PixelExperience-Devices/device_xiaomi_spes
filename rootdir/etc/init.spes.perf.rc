@@ -40,12 +40,6 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/restricted/cpus 0-3
 
-    # Configure CPU frequencies
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 691200
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq 1516800
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1056000
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq 1344000
-
     # Configure governor parameters
     write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load 90
     write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 4000
