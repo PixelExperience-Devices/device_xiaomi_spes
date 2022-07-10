@@ -45,10 +45,10 @@ on property:vendor.post_boot.parsed=1
     write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 4000
     write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 16000
     write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/pl 1
-    write /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load 90
-    write /sys/devices/system/cpu/cpu6/cpufreq/schedutil/up_rate_limit_us 4000
-    write /sys/devices/system/cpu/cpu6/cpufreq/schedutil/down_rate_limit_us 16000
-    write /sys/devices/system/cpu/cpu6/cpufreq/schedutil/pl 1
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_load 90
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 4000
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 16000
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/pl 1
 
     # Configure CPU input boost
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:1190000 4:1344000"
