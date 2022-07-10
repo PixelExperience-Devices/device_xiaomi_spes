@@ -28,13 +28,8 @@
 # the DIAG device node is not world writable/readable.
 /dev/st21nfc              0660   nfc        nfc
 
-#permsissions for BT/FM
-/dev/btfmslim             0660   bluetooth  system
-
 #qvr
 /sys/kernel/qvr_external_sensor fd  0660  system  system
-/dev/bus/usb/*                      0660  root    usb
-/dev/hidraw*                        0660  root    usb
 
 # wlan
 /dev/spidev0.1            0660   system     system
@@ -45,9 +40,6 @@
 
 # silead fingerprint
 /dev/silead_fp            0660   system   system
-
-#KGSL
-/sys/class/kgsl/kgsl-3d0    perfcounter              0660    root    shell
 
 # Fingerprint
 /dev/goodix_fp            0660   system   system
