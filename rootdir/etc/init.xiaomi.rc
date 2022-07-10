@@ -46,6 +46,9 @@ on post-fs-data
     chmod 0666 /sys/class/backlight/panel0-backlight/brightness
     chmod 0666 /sys/class/drm/card0-DSI-1/disp_param
 
+    #chmod 777 for gsort
+    chmod 777 /dev/block/sde59
+
 on boot
     chown system system /sys/class/drm/card0-DSI-1/disp_param
     chmod 0664 /sys/class/drm/card0-DSI-1/disp_param
@@ -70,6 +73,20 @@ on boot
     # Xiaomi Thermal permissions
     chown system system /sys/class/thermal/thermal_message/sconfig
 
+    #add flashlight
+    chmod 0660 /sys/class/leds/led:torch/brightness
+    chown system system /sys/class/leds/led:torch/brightness
+
+    #add C3Q flashlight
+    chmod 0660 /sys/class/leds/flashlight-back/brightness 
+    chown system system /sys/class/leds/flashlight-back/brightness
+
+    #add ant_check
+    chmod 0777 /sys/class/ant_class/ant_state
+    chmod 0777 /sys/class/ant_div_class/ant_div_state
+    chown system system /sys/class/ant_class/ant_state
+    chown system system /sys/class/ant_div_class/ant_div_state
+
 on charger
     start mi_thermald
     chown system system /sys/class/backlight/panel0-backlight/brightness
@@ -89,3 +106,6 @@ on property:init.svc.surfaceflinger=stopped
 
 on property:init.svc.surfaceflinger=running
     start vendor.displayfeature
+
+on property:persist.debug.trace=1
+    write /proc/sys/kernel/core_pattern "/data/core/core-%e-%p"
