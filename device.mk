@@ -482,6 +482,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.add_power_save=1 \
     persist.vendor.radio.atfwd.start=true \
     persist.vendor.radio.data_con_rprt=1 \
+    persist.vendor.radio.enableadvancedscan=true \
     persist.vendor.radio.enable_temp_dds=true \
     persist.vendor.radio.force_on_dc=true \
     persist.vendor.radio.manual_nw_rej_ct=1 \
