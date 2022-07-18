@@ -38,7 +38,7 @@ property Name is called. -->
                 <Prop Name="ro.vendor.qti.sys.fw.trim_cache_percent" Value="100" />
                 <Prop Name="ro.vendor.qti.sys.fw.trim_enable_memory" Value="2147483648" />
                 <Prop Name="ro.vendor.qti.am.reschedule_service" Value="true" />
-                <Prop Name="ro.vendor.iocgrp.config" Value="0" />
+                <Prop Name="ro.vendor.iocgrp.config" Value="1" />
                 <Prop Name="ro.lmk.kill_heaviest_task_dup" Value="true" />
                 <Prop Name="ro.lmk.enhance_batch_kill" Value="false" />
                 <Prop Name="ro.lmk.enable_watermark_check" Value="true" />
