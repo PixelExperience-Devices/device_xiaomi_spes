@@ -47,7 +47,7 @@ on property:vendor.post_boot.parsed=1
     write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 20000
 
     # Configure CPU input boost
-    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1344000 4:1344000"
+    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1190000 4:1344000"
     write /sys/module/cpu_boost/parameters/input_boost_ms 100
     write /sys/module/cpu_boost/parameters/powerkey_input_boost_freq "0:1900800 4:2400000"
     write /sys/module/cpu_boost/parameters/powerkey_input_boost_ms 500
