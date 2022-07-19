@@ -41,6 +41,8 @@ on property:vendor.post_boot.parsed=1
 
     # Configure input boost settings
     write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0:1190000"
+    write /sys/devices/system/cpu/cpu_boost/input_boost_ms 120
+    write /sys/devices/system/cpu/cpu_boost/sched_boost_on_input 1
     write /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_freq "0:1900800 1:0 2:0 3:0 4:2400000 5:0 6:0 7:0"
     write /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_ms 400
 
@@ -49,6 +51,12 @@ on property:vendor.post_boot.parsed=1
     write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 5000
     write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 500
     write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 20000
+    
+    # Configure scheduler
+    write /proc/sys/kernel/sched_upmigrate "65 85"
+    write /proc/sys/kernel/sched_downmigrate "60 75"
+    write /proc/sys/kernel/sched_group_upmigrate 95
+    write /proc/sys/kernel/sched_group_downmigrate 75
     
     # Back to default VM settings
     write /proc/sys/vm/dirty_expire_centisecs 3000
