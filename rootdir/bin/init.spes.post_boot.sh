@@ -89,6 +89,7 @@ echo 4 > /sys/devices/system/cpu/cpu4/core_ctl/task_thres
 echo 0-3 > /dev/cpuset/background/cpus
 echo 0-3 > /dev/cpuset/system-background/cpus
 echo 0-3 > /dev/cpuset/restricted/cpus
+echo 4-7     > /dev/cpuset/foreground/boost/cpus
 echo 0-7 > /dev/cpuset/top-app/cpus
 
 # Setting b.L scheduler parameters
