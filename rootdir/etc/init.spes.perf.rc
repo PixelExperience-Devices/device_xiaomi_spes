@@ -32,34 +32,10 @@ on early-init
 on property:vendor.post_boot.parsed=1
     # Setup runtime cpusets
     write /dev/cpuset/audio-app/cpus 1-2
-    write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/background/cpus 0-3
-    write /dev/cpuset/system-background/cpus 0-3
-    write /dev/cpuset/restricted/cpus 0-3
-
-    # Configure governor parameters
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 20000
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 20000
-
-     # Configure CPU frequencies
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 940800
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq 1804800
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1056000
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq 2208000
-
-    # Configure CPU input boost
-    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1190000 4:1344000"
-    write /sys/module/cpu_boost/parameters/input_boost_ms 100
-    write /sys/module/cpu_boost/parameters/powerkey_input_boost_freq "0:1900800 4:2400000"
-    write /sys/module/cpu_boost/parameters/powerkey_input_boost_ms 500
 
     # Configure scheduler
     write /proc/sys/kernel/sched_child_runs_first 1
     write /proc/sys/kernel/sched_tunable_scaling 1
-    write /proc/sys/kernel/sched_downmigrate 85
-    write /proc/sys/kernel/sched_upmigrate 95
 
     # Setup default schedtune values for foreground/top-app
     write /dev/stune/schedtune.boost 0
