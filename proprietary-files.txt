@@ -470,7 +470,6 @@ vendor/etc/camera/125_Latin.png
 vendor/etc/camera/126_Fantasy2.png
 vendor/etc/camera/127_Creamy.png
 vendor/etc/camera/128_Sepia.png
-vendor/etc/camera/camxoverridesettings.txt
 vendor/etc/camera/com.xiaomi.dcal.wd.golden
 vendor/etc/camera/com.xiaomi.dcal.wd.golden_2
 vendor/etc/camera/com.xiaomi.dcal.wd.golden_3
