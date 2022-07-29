@@ -252,6 +252,20 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.set_touch_timer_ms=800 \
     ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    debug.sf.use_phase_offsets_as_durations=1 \
+    debug.sf.late.sf.duration=10500000 \
+    debug.sf.late.app.duration=20500000 \
+    debug.sf.early.sf.duration=16000000 \
+    debug.sf.early.app.duration=16500000 \
+    debug.sf.earlyGl.sf.duration=13500000 \
+    debug.sf.earlyGl.app.duration=21000000
+
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.sf.enable_gl_backpressure=1 \
+    vendor.display.idle_time=0 \
+    vendor.display.idle_time_inactive=0
+
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.sf.color_mode=0 \
     debug.sf.disable_backpressure=1
@@ -268,8 +282,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.display.type=oled \
     ro.vendor.histogram.enable=true \
     ro.vendor.whitepoint_calibration_enable=true \
-    vendor.display.idle_time=0 \
-    vendor.display.idle_time_inactive=0 \
     vendor.display.qdcm.disable_factory_mode=1 \
     vendor.display.qdcm.mode_combine=1 \
     vendor.display.svi.config=1 \
