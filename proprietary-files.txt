@@ -1,5 +1,6 @@
 # All unpinned blobs below are extracted from miui_SPESGlobal_V13.0.4.0.SGCMIXM_bc890fc589_12.0
 # LA.UM.9.12.r1-14200.02-SMxx50.QSSI12.0 blobs from lito
+# LA.UM.9.12.r1-13300-SMxx50.QSSI12.0 blobs from kona
 
 # ACDB
 vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Bluetooth_cal.acdb
