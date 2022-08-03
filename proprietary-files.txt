@@ -87,10 +87,13 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 # Audio Configs
 vendor/etc/audio_diag.cfg
 vendor/etc/audio_effects.conf
+vendor/etc/audio_io_policy.conf
+vendor/etc/audio_platform_info_intcodec.xml
 vendor/etc/audio_platform_info_qrd.xml
 vendor/etc/audio_platform_info_scubaidp.xml
 vendor/etc/audio_platform_info_scubaqrd.xml
 vendor/etc/audio_platform_info.xml
+vendor/etc/audio_policy_configuration.xml
 vendor/etc/mixer_paths_idp_india.xml
 vendor/etc/mixer_paths_qrd.xml
 vendor/etc/mixer_paths_scubaidp.xml
