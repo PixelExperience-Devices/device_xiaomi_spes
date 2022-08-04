@@ -266,7 +266,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.idle_time_inactive=0
 
 PRODUCT_PRODUCT_PROPERTIES += \
-    persist.sys.sf.color_mode=0 \
+    persist.sys.sf.color_mode=9 \
     debug.sf.disable_backpressure=1
     
 PRODUCT_SYSTEM_PROPERTIES += \
