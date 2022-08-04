@@ -261,14 +261,14 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.earlyGl.app.duration=21000000
 
 PRODUCT_VENDOR_PROPERTIES += \
+    debug.sf.disable_backpressure=0 \
     debug.sf.enable_gl_backpressure=1 \
     vendor.display.idle_time=0 \
     vendor.display.idle_time_inactive=0
 
 PRODUCT_PRODUCT_PROPERTIES += \
-    persist.sys.sf.color_mode=9 \
-    debug.sf.disable_backpressure=1
-    
+    persist.sys.sf.color_mode=9
+
 PRODUCT_SYSTEM_PROPERTIES += \
     debug.sf.latch_unsignaled=1
     
