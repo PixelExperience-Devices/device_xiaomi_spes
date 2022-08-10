@@ -94,17 +94,13 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.audio.monitorRotation=true \
     ro.vendor.audio.afe.record=true \
     ro.vendor.audio.misound.bluetooth.enable=true \
-    ro.vendor.audio.scenario.support=false \
     ro.vendor.audio.sfx.earadj=true \
-    ro.vendor.audio.sfx.scenario=false \
     ro.vendor.audio.sos=true \
     ro.vendor.audio.soundfx.type=mi \
     ro.vendor.audio.soundfx.usb=true \
     ro.vendor.audio.spk.clean=true \
     ro.vendor.audio.spk.stereo=true \
-    ro.vendor.audio.surround.support=false \
     ro.vendor.audio.us.proximity=true \
-    ro.vendor.audio.vocal.support=false \
     ro.vendor.audio.voice.change.support=true \
     vendor.audio.chk.cal.us=0
 
