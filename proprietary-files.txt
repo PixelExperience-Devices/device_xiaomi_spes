@@ -662,38 +662,57 @@ vendor/etc/dsi_panel_k7_38_0c_0b_fhdp_video_display_mi.xml
 vendor/etc/qdcm_calib_data_k7_38_0c_0a_video_mode_fhdp_dsi_panel.xml
 vendor/etc/qdcm_calib_data_k7_38_0c_0b_video_mode_fhdp_dsi_panel.xml
 
-# Display HDR - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/lib64/libhdr_tm.so|4be3cfff1ef40cbc6ad329b79c60881263aa6723
+# Displayfeature
+vendor/bin/displayfeature
+vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
+vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
+vendor/lib64/hw/displayfeature.default.so
+vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
+vendor/lib64/libdisplayfeatureservice.so
+vendor/lib64/libdisplayfeature.so
+vendor/lib64/libtinyxml.so
+vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
 
-# Display SDM - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/lib64/libdisplayconfig.qti.so|312734b9df2b9b4d7afd828147726a1783dd3746
-vendor/lib64/libdisplayqos.so|15701f18257c43be5657bbd867a8acf1f469e373
-vendor/lib64/libdisplayskuutils.so|30dc405f5c127c9af7b5c9e6697db896f0b13693
-vendor/lib64/libdpps.so|103f4647f5311c6bf40ae498fefdaa98c0532417
-vendor/lib64/libhistogram.so|6e485b85a8908b492982fc9a00ff447d7742970f
-vendor/lib64/libqdutils.so|a1ac3455ab9ab0281776f1d6f2ba66c80973f056
-vendor/lib64/libqseed3.so|c9fb729cf48278d0c87d27c0af17ae3a8ccb1bf7
-vendor/lib64/libsdedrm.so|40aa49fbff546526e5a01a69cbef82e19255887b
-vendor/lib64/libsdm-color.so|09e14227de5d3690a11d523d9e76148ed3327e97
-vendor/lib64/libsdm-colormgr-algo.so|1fb7f3cb11557bbf677afb5d6eda0e4e9fd3ac58
-vendor/lib64/libsdm-diag.so|d602a56edde3fb2cf7de81d5ab18ef2ef3cf3814
-vendor/lib64/libsdm-disp-vndapis.so|2f1abd975b1f1dbabcc410e56c29ac296adcc411
-vendor/lib64/libsdmextension.so|8627c97f04b0d542dfcfe98a212097e7d5e8c297
-vendor/lib64/libtinyxml2_1.so|fb0a2b16e5cfd28515268edc5c2345190d1ef4e5
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|75ea187b76895fb3726b1b0b22f0fafedb5959e5
+# Display - stock
+vendor/lib64/libhistogram.so
 
-# Display postprocessing - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/hw/vendor.display.color@1.0-service|9c77c3655befc1c53f842e1b9605b83e3dc64259
-vendor/bin/ppd|c478fa8957564bf1b2649b6ba80c07f72b0b318f
-vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
-vendor/lib64/libdisp-aba.so|41fc61cdc8821ed206f649dd2eb5562b346ade77
-vendor/lib64/vendor.display.color@1.0.so|a404c41c1bbb827309e4be1576c7c7b493a6f6d6
-vendor/lib64/vendor.display.color@1.1.so|3e5f53e9d8fcf7eae6dcd1cc7eb7609a78647c2e
-vendor/lib64/vendor.display.color@1.2.so|030faf2b0da2dd7bce50b737456046e3a18569ac
-vendor/lib64/vendor.display.color@1.3.so|d62b2d195dd11489f54c6566dbe8765e2884bb81
-vendor/lib64/vendor.display.color@1.4.so|1f7ba10ae1770692a5cced3421cdc0e951301995
-vendor/lib64/vendor.display.color@1.5.so|c990c7fef7d69cee083554312d2ebf8ce56d5e4b
-vendor/lib64/vendor.display.postproc@1.0.so|42b17608cb441af528513f257b75dfdf01cc6d45
+# Display
+vendor/bin/hw/vendor.qti.hardware.display.composer-service|c6b2c3424c803c9bd9fe16dd205c394e956d1439
+vendor/lib64/libdisplayconfig.qti.so
+vendor/lib64/libdisp-aba.so
+vendor/lib64/libdisplaydebug.so
+vendor/lib64/libdisplayqos.so
+vendor/lib64/libdisplayskuutils.so
+vendor/lib64/libdpps.so
+vendor/lib64/libdrmutils.so
+vendor/lib64/libgpu_tonemapper.so
+vendor/lib64/libhdr_tm.so
+vendor/lib64/libqdutils.so
+vendor/lib64/libqseed3.so
+vendor/lib64/libqservice.so
+vendor/lib64/librcmask.so
+vendor/lib64/libsdedrm.so
+vendor/lib64/libsdm-color.so
+vendor/lib64/libsdm-colormgr-algo.so
+vendor/lib64/libsdm-diag.so
+vendor/lib64/libsdm-disp-vndapis.so
+vendor/lib64/libsdmcore.so
+vendor/lib64/libsdmextension.so
+vendor/lib64/libsdmutils.so
+vendor/lib64/libtinyxml2_1.so
+
+# Display postprocessing
+vendor/bin/hw/vendor.display.color@1.0-service
+vendor/bin/qdcmss
+vendor/etc/init/qdcmss.rc
+vendor/etc/init/vendor.display.color@1.0-service.rc
+vendor/lib64/vendor.display.color@1.0.so
+vendor/lib64/vendor.display.color@1.1.so
+vendor/lib64/vendor.display.color@1.2.so
+vendor/lib64/vendor.display.color@1.3.so
+vendor/lib64/vendor.display.color@1.4.so
+vendor/lib64/vendor.display.color@1.5.so
+vendor/lib64/vendor.display.postproc@1.0.so
 
 # DPM - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/bin/dpmQmiMgr|df41c54776abef6edb12b1cd6d250abf5ea6c0a5
@@ -999,6 +1018,10 @@ vendor/lib/libsmwrapper.so
 # Media OSAL - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/lib/libmmosal.so|dd0d1a01f4934e519d86c1e43ab2cfd2cc11f524
 vendor/lib64/libmmosal.so|60b7a94d6cd73c6d5be0e76dd503179adafd79a7
+
+# Media OMX 
+vendor/lib/libOmxVdec.so
+vendor/lib64/libOmxVdec.so
 
 # Media OMX - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/lib/libAlacSwDec.so|cb41b0945e57b349e6aa476cdac4315ee13a2def

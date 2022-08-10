@@ -235,11 +235,13 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_backpressure=1 \
-    persist.sys.sf.native_mode=2 \
+    ro.vendor.display.dither=true \
+    ro.vendor.display.mi_calib.enable=true \
     ro.vendor.display.sensortype=2 \
     ro.vendor.display.svi=1 \
-    vendor.display.qdcm.disable_factory_mode=1 \
-    vendor.display.qdcm.mode_combine=1 \
+    ro.vendor.histogram.enable=true \
+    ro.vendor.xiaomi.bl.poll=true \
+    vendor.display.qdcm.mode_combine=2 \
     vendor.display.svi.config=1 \
     vendor.display.svi.config_path=/vendor/etc/SVIConfig.xml
 
