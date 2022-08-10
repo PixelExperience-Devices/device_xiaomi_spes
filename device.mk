@@ -163,9 +163,6 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti.recovery \
     android.hardware.boot@1.1-service
 
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
-
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
@@ -564,9 +561,6 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
     update_verifier
-
-PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client
 
 # USB
 PRODUCT_COPY_FILES += \
