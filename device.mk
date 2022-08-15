@@ -69,21 +69,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
-PRODUCT_PRODUCT_PROPERTIES += \
-    aaudio.hw_burst_min_usec=2000 \
-    aaudio.mmap_exclusive_policy=2 \
-    aaudio.mmap_policy=2 \
-    af.fast_track_multiplier=1 \
-    audio.deep_buffer.media=true \
-    audio.offload.min.duration.secs=30 \
-    audio.offload.video=true \
-    audio.sys.mute.latency.factor=2 \
-    audio.sys.noisy.broadcast.delay=500 \
-    audio.sys.offload.pstimeout.secs=3 \
-    audio.sys.routing.latency=0 \
-    media.stagefright.audio.deep=false \
-    ro.af.client_heap_size_kbyte=7168
-
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.audio.button_jack.profile=volume \
     persist.audio.button_jack.switch=0 \
@@ -92,17 +77,10 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 PRODUCT_VENDOR_PROPERTIES += \
     ro.audio.monitorRotation=true \
-    ro.vendor.audio.afe.record=true \
     ro.vendor.audio.misound.bluetooth.enable=true \
-    ro.vendor.audio.sfx.earadj=true \
-    ro.vendor.audio.sos=true \
     ro.vendor.audio.soundfx.type=mi \
     ro.vendor.audio.soundfx.usb=true \
-    ro.vendor.audio.spk.clean=true \
-    ro.vendor.audio.spk.stereo=true \
-    ro.vendor.audio.us.proximity=true \
-    ro.vendor.audio.voice.change.support=true \
-    vendor.audio.chk.cal.us=0
+    ro.vendor.audio.us.proximity=true
 
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.soundtrigger.appdefine.cnn.level=31 \
