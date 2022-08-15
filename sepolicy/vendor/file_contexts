@@ -49,9 +49,6 @@
 /dev/lirc[0-9]                                                          u:object_r:lirc_device:s0
 /dev/spidev[0-9]\.1                                                     u:object_r:lirc_device:s0
 
-# Mlipay
-/vendor/bin/mlipayd@1\.1                                                u:object_r:hal_mlipay_default_exec:s0
-
 # NFC
 /vendor/bin/STFlashTool                                                 u:object_r:stflashtool_exec:s0
 /vendor/bin/hw/android\.hardware\.nfc@1\.2-service\.st                  u:object_r:hal_nfc_default_exec:s0
