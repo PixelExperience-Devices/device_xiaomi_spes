@@ -416,10 +416,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.nfc.port=I2C
 
-# NTP
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.backup.ntpServer=0.pool.ntp.org
-
 # Overlays
 PRODUCT_PACKAGES += \
     SpesFrameworksOverlay \
