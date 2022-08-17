@@ -220,9 +220,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.sf.color_mode=9
 
-PRODUCT_SYSTEM_PROPERTIES += \
-    debug.sf.latch_unsignaled=1
-    
 PRODUCT_VENDOR_PROPERTIES += \
     persist.sys.sf.native_mode=2 \
     ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg \
