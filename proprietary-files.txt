@@ -1066,7 +1066,6 @@ vendor/lib64/unnhal-acc-hvx.so
 
 # NFC
 vendor/bin/STFlashTool
-vendor/etc/libnfc-hal-st.conf
 vendor/etc/libnfc-nci.conf
 vendor/etc/st21nfc_conf.txt
 vendor/lib/libsn100u_fw.so
