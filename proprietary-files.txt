@@ -716,7 +716,7 @@ vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
 vendor/lib64/libmifpext.so
-vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
+vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so|04fa410eb6ca960489911021327aa0fd745e09d7|8034b67ff67e649d3978e34b0a657c49daa94418
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
 # FM
