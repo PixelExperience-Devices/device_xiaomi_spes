@@ -5,6 +5,7 @@ allow hal_fingerprint_default goodix_fingerprint_data_file:file create_file_perm
 allow hal_fingerprint_default fingerprint_data_file:dir create_dir_perms;
 allow hal_fingerprint_default fingerprint_data_file:dir rw_dir_perms;
 allow hal_fingerprint_default fingerprint_data_file:file create_file_perms;
+allow hal_fingerprint_default vendor_system_prop:property_service set;
 
 allow hal_fingerprint_default {
   fingerprint_device
