@@ -73,10 +73,18 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 PRODUCT_VENDOR_PROPERTIES += \
     ro.audio.monitorRotation=true \
+    ro.vendor.audio.afe.record=true \
     ro.vendor.audio.misound.bluetooth.enable=true \
+    ro.vendor.audio.sfx.earadj=true \
+    ro.vendor.audio.sos=true \
     ro.vendor.audio.soundfx.type=mi \
     ro.vendor.audio.soundfx.usb=true \
-    ro.vendor.audio.us.proximity=true
+    ro.vendor.audio.spk.clean=true \
+    ro.vendor.audio.spk.stereo=true \
+    ro.vendor.audio.us.proximity=true \
+    ro.vendor.audio.voice.change.support=true \
+    vendor.audio.chk.cal.us=0
+
 
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.soundtrigger.appdefine.cnn.level=31 \
