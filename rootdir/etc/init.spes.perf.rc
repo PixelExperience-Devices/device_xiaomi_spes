@@ -47,7 +47,7 @@ on property:vendor.post_boot.parsed=1
     write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq 2208000
 
     # Configure input boost settings
-    write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0:1190000"
+    write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0:1190000 4:1344000"
     write /sys/devices/system/cpu/cpu_boost/input_boost_ms 120
     write /sys/devices/system/cpu/cpu_boost/sched_boost_on_input 1
     write /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_freq "0:1900800 1:0 2:0 3:0 4:2400000 5:0 6:0 7:0"
