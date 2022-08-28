@@ -1241,13 +1241,6 @@ vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/sensors.ssc.so
 
-# Sensors Calibrate
-vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
-vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
-vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
-vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
-
 # Sensors Config
 vendor/etc/sensors/config/bengal_adux1050_0.json
 vendor/etc/sensors/config/bengal_bu27030_0.json
