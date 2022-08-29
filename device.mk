@@ -683,8 +683,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libwfdaac_vendor
-
+    libwfdaac_vendor:32
+    
 # WLAN
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.data.iwlan.enable=true \
