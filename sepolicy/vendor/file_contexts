@@ -52,6 +52,9 @@
 # Label read_ahead_kb in /data partition
 /sys/devices/platform/soc/4a84000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/read_ahead_kb u:object_r:vendor_sysfs_scsi_host:s0
 
+# Label discard_max_bytes in /data partition
+/sys/devices/platform/soc/4a84000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes u:object_r:vendor_sysfs_scsi_host:s0
+
 # NFC
 /vendor/bin/STFlashTool                                                 u:object_r:stflashtool_exec:s0
 /vendor/bin/hw/android\.hardware\.nfc@1\.2-service\.st                  u:object_r:hal_nfc_default_exec:s0
