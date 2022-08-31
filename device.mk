@@ -52,25 +52,58 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.opengles.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
 
+# ANT+
+PRODUCT_PACKAGES += \
+    AntHalService-Soong \
+    com.dsi.ant@1.0.vendor
+
 # Attestation
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
 
 # Audio
-BOARD_SUPPORTS_OPENSOURCE_STHAL := true 
+PRODUCT_PACKAGES += \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio.service \
+    android.hardware.soundtrigger@2.3-impl
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio.service
+    android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth.audio-impl \
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@2.0.vendor
 
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
+PRODUCT_PACKAGES += \
+    audio.bluetooth.default \
+    audio.r_submix.default \
+    audio.primary.bengal \
+    audio.usb.default
+
+PRODUCT_PACKAGES += \
+    libaudio-resampler \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libtinycompress
+
+PRODUCT_PACKAGES += \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    ibOmxEvrcEnc \
+    libOmxG711Enc \
+    libOmxQcelp13Enc
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    audio.offload.min.duration.secs=30 \
+    audio.sys.offload.pstimeout.secs=3
 
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.audio.button_jack.profile=volume \
     persist.audio.button_jack.switch=0 \
     ro.config.media_vol_default=10 \
     ro.config.vc_call_vol_steps=11 
-
+    
 PRODUCT_VENDOR_PROPERTIES += \
     ro.audio.monitorRotation=true \
     ro.vendor.audio.afe.record=true \
@@ -84,7 +117,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.us.proximity=true \
     ro.vendor.audio.voice.change.support=true \
     vendor.audio.chk.cal.us=0
-
 
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.soundtrigger.appdefine.cnn.level=31 \
@@ -103,25 +135,101 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.soundtrigger.xatx.vop.level=10 \
     ro.vendor.audio.soundtrigger=sva
 
-# Bluetooth
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.sys.fflag.override.settings_bluetooth_hearing_aid=true \
-    persist.vendor.bluetooth.modem_nv_support=true \
-    persist.vendor.bt.a2dp.mac_whitelist=false \
-    persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false \
-    persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2 \
-    persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true \
-    persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true \
-    persist.vendor.qcom.bluetooth.enable.splita2dp=true \
-    persist.vendor.qcom.bluetooth.scram.enabled=false \
-    persist.vendor.qcom.bluetooth.soc=cherokee \
-    persist.vendor.qcom.bluetooth.twsp_state.enabled=false \
-    ro.vendor.bluetooth.wipower=false \
-    vendor.qcom.bluetooth.soc=cherokee
+# Set the Bluetooth Class of Device
+# Service Field: 0x5A -> 90
+#    Bit 17: Networking
+#    Bit 19: Capturing
+#    Bit 20: Object Transfer
+#    Bit 22: Telephony
+# MAJOR_CLASS: 0x02 -> 2 (Phone)
+# MINOR_CLASS: 0x0C -> 12 (Smart Phone)
+PRODUCT_PRODUCT_PROPERTIES += \
+    bluetooth.device.class_of_device=90,2,12
+
+# Bluetooth power overlays to sysprops
+PRODUCT_PRODUCT_PROPERTIES += \
+    bluetooth.hardware.power.idle_cur_ma=7 \
+    bluetooth.hardware.power.operating_voltage_mv=3700 \
+    bluetooth.hardware.power.rx_cur_ma=75 \
+    bluetooth.hardware.power.tx_cur_ma=93
+
+# Bluetooth profiles
+PRODUCT_PRODUCT_PROPERTIES += \
+    bluetooth.profile.asha.central.enabled?=true \
+    bluetooth.profile.a2dp.source.enabled?=true \
+    bluetooth.profile.avrcp.target.enabled?=true \
+    bluetooth.profile.bap.broadcast.assist.enabled?=true \
+    bluetooth.profile.bap.unicast.client.enabled?=true \
+    bluetooth.profile.bas.client.enabled?=true \
+    bluetooth.profile.csip.set_coordinator.enabled?=true \
+    bluetooth.profile.gatt.enabled?=true \
+    bluetooth.profile.hap.client.enabled?=true \
+    bluetooth.profile.hfp.ag.enabled?=true \
+    bluetooth.profile.hid.device.enabled?=true \
+    bluetooth.profile.hid.host.enabled?=true \
+    bluetooth.profile.map.server.enabled?=true \
+    bluetooth.profile.mcp.server.enabled?=true \
+    bluetooth.profile.opp.enabled?=true \
+    bluetooth.profile.pan.nap.enabled?=true \
+    bluetooth.profile.pan.panu.enabled?=true \
+    bluetooth.profile.pbap.server.enabled?=true \
+    bluetooth.profile.sap.server.enabled?=true \
+    bluetooth.profile.ccp.server.enabled?=true \
+    bluetooth.profile.vcp.controller.enabled?=true
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.btstack.enable.lpa=true \
     persist.vendor.btstack.enable.twsplus=true
+
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.bluetooth.emb_wp_mode=false \
+    ro.bluetooth.wipower=false \
+    persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aac \
+    persist.vendor.btstack.aac_frm_ctl.enabled=true \
+    persist.vendor.btstack.connect.peer_earbud=true \
+    persist.vendor.btstack.enable.swb=true \
+    persist.vendor.btstack.enable.swbpm=true \
+    persist.vendor.service.bdroid.soc.alwayson=true
+
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
+    persist.bluetooth.a2dp_offload.disabled=false \
+    persist.vendor.btstack.enable.splita2dp=true \
+    persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
+    persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
+    persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=false \
+    persist.vendor.qcom.bluetooth.twsp_state.enabled=false \
+    persist.vendor.qcom.bluetooth.scram.enabled=false \
+    persist.vendor.qcom.bluetooth.soc=cherokee \
+    ro.bluetooth.a2dp_offload.supported=true \
+    vendor.bluetooth.soc=cherokee \
+    vendor.qcom.bluetooth.soc=cherokee
+
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.bluetooth.modem_nv_support=true \
+    persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false \
+    persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true \
+    persist.vendor.qcom.bluetooth.enable.splita2dp=true \
+    ro.vendor.bluetooth.wipower=false
+    
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
+    frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
+    frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
+    
+PRODUCT_COPY_FILES += \
+    frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
+    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
+    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
@@ -302,7 +410,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.fp.sideCap=true
 
 # FM
-BOARD_HAVE_QCOM_FM := true
+BOARD_HAVE_QCOM_FM := false
 
 # FRP
 PRODUCT_VENDOR_PROPERTIES += \
@@ -417,9 +525,7 @@ TARGET_BOARD_PLATFORM := bengal
 TARGET_USE_SM8250_HALS := true
 
 TARGET_COMMON_QTI_COMPONENTS := \
-    audio \
     av \
-    bt \
     display \
     gps \
     init \
