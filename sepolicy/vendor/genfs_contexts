@@ -26,6 +26,12 @@ genfscon sysfs /devices/platform/soc/soc:qcom,gpubw/devfreq                     
 # DT2W
 genfscon proc /tp_gesture                                                                           u:object_r:proc_tp_gesture:s0
 
+# Extcon sysfs
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/soc/88e0000.qcom,msm-eud/extcon  u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,usb-pdphy@1700/extcon  u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/extcon       u:object_r:sysfs_extcon:s0
+
 # Fingerprint
 genfscon sysfs /devices/platform/soc/soc:fpc1020/device_prepare                                     u:object_r:vendor_sysfs_fingerprint:s0
 genfscon sysfs /devices/platform/soc/soc:fpc1020/fingerdown_wait                                    u:object_r:vendor_sysfs_fingerprint:s0
