@@ -14,3 +14,6 @@ allow vendor_init sysfs_devices_system_cpu:file rw_file_perms;
 allow vendor_init proc_tp_gesture:file write;
 
 allow vendor_init input_device:chr_file { create setattr unlink rw_file_perms };
+
+# Allow init.qcom.post_boot.sh to set watermark_scale_factor
+allow vendor_qti_init_shell proc_watermark_scale_factor:file w_file_perms;
