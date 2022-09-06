@@ -53,6 +53,7 @@ void property_override(string prop, string value)
 }
 
 void load_redmi_spes() {
+    property_override("bluetooth.device.default_name", "Redmi Note 11");
     property_override("ro.product.brand", "Redmi");
     property_override("ro.product.device", "spes");
     property_override("ro.product.manufacturer", "Xiaomi");
@@ -63,6 +64,7 @@ void load_redmi_spes() {
 }
 
 void load_redmi_spes_in() {
+    property_override("bluetooth.device.default_name", "Redmi Note 11");
     property_override("ro.product.brand", "Redmi");
     property_override("ro.product.device", "spes");
     property_override("ro.product.manufacturer", "Xiaomi");
@@ -73,6 +75,7 @@ void load_redmi_spes_in() {
 }
 
 void load_redmi_spesn() {
+    property_override("bluetooth.device.default_name", "Redmi Note 11 NFC");
     property_override("ro.product.brand", "Redmi");
     property_override("ro.product.device", "spesn");
     property_override("ro.product.manufacturer", "Xiaomi");
