@@ -102,6 +102,7 @@ on charger
     setprop sys.usb.configfs 1
     
 service charger /system/bin/chargeonlymode
+    override
     class charger
     user system
     group system graphics input
