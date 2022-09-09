@@ -80,6 +80,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
 PRODUCT_PACKAGES += \
+    libldacBT_enc \
+    libldacBT_abr
+        
+PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.primary.bengal \
