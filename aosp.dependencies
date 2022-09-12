@@ -3,24 +3,24 @@
        "remote"      : "pixel-devices",
        "repository"  : "device_qcom_common",
        "target_path" : "device/qcom/common",
-       "branch"      : "twelve"
+       "branch"      : "thirteen"
    },
    {
        "remote"      : "pixel-devices",
        "repository"  : "kernel_xiaomi_spes",
        "target_path" : "kernel/xiaomi/spes",
-       "branch"      : "twelve"
+       "branch"      : "thirteen"
    },
    {
        "remote"      : "pixel-devices-blobs",
        "repository"  : "vendor_xiaomi_spes",
        "target_path" : "vendor/xiaomi/spes",
-       "branch"      : "twelve"
+       "branch"      : "thirteen"
    },
    {
        "remote"      : "pixel",
        "repository"  : "hardware_xiaomi",
        "target_path" : "hardware/xiaomi",
-       "branch"      : "twelve"
+       "branch"      : "thirteen"
    }
 ]
