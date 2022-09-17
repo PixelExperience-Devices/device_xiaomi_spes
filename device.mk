@@ -305,6 +305,12 @@ PRODUCT_VENDOR_KERNEL_HEADERS += $(LOCAL_PATH)-kernel/kernel-headers
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
+# LMK
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.lmk.use_minfree_levels=true \
+    ro.lmk.psi_complete_stall_ms=70 \
+    ro.lmk.swap_free_low_percentage=20
+    
 # Media
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.aac_51_output_enabled=true \
