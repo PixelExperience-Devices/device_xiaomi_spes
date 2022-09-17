@@ -106,9 +106,9 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.bluetooth.wipower=false \
     vendor.bluetooth.soc=cherokee
 
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    persist.vendor.btstack.enable.lpa=true \
-    persist.vendor.btstack.enable.twsplus=true
+#PRODUCT_SYSTEM_EXT_PROPERTIES += \
+#    persist.vendor.btstack.enable.lpa=true \
+#    persist.vendor.btstack.enable.twsplus=true
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.bluetooth.modem_nv_support=true \
