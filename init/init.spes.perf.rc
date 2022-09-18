@@ -1,0 +1,65 @@
+# Copyright (C) 2022 Paranoid Android
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+on boot
+    mkdir /dev/cpuset/camera-daemon
+    write /dev/cpuset/camera-daemon/cpus 0-7
+    write /dev/cpuset/camera-daemon/mems 0
+    chown cameraserver cameraserver /dev/cpuset/camera-daemon
+    chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
+    chmod 0660 /dev/cpuset/camera-daemon/tasks
+    
+on property:vendor.post_boot.parsed=1
+    # Setup runtime cpusets
+    write /dev/cpuset/background/cpus 0-2
+    write /dev/cpuset/foreground/cpus 0-2,4-7
+    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/top-app/cpus 0-7
+
+    # Configure CPU frequencies
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 940800
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq 1804800
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1056000
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq 2208000
+
+    # Configure input boost settings
+    write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0:1190000 4:1344000"
+    write /sys/devices/system/cpu/cpu_boost/input_boost_ms 120
+    write /sys/devices/system/cpu/cpu_boost/sched_boost_on_input 1
+    write /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_freq "0:1900800 1:0 2:0 3:0 4:2400000 5:0 6:0 7:0"
+    write /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_ms 400
+
+    # Configure schedutil ratelimits
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 5000
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 20000
+    
+    # Configure scheduler
+    write /proc/sys/kernel/sched_upmigrate "65 85"
+    write /proc/sys/kernel/sched_downmigrate "60 75"
+    write /proc/sys/kernel/sched_group_upmigrate 95
+    write /proc/sys/kernel/sched_group_downmigrate 75
+    
+    # Back to default VM settings
+    write /proc/sys/vm/dirty_expire_centisecs 3000
+    write /proc/sys/vm/dirty_background_ratio 10
+    
+    # Report max frequency to unity tasks
+    write /proc/sys/kernel/sched_lib_name "UnityMain,libunity.so"
+    write /proc/sys/kernel/sched_lib_mask_force 255
+
+on property:persist.sys.device_provisioned=1
+    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,7
+    setprop dalvik.vm.dex2oat-threads 6

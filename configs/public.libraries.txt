@@ -1,0 +1,25 @@
+libqti-perfd-client.so
+libadsprpc.so
+libcdsprpc.so
+libsdsprpc.so
+libfastcvopt.so
+liblistensoundmodel2.so
+libOpenCL.so
+
+libflaw.so 64
+libarcsoft_high_dynamic_range.so 64
+libarcsoft_low_light_hdr.so 64
+libarcsoft_hdr_detection.so 64
+libanc_dc_base.so 64
+libwa_dof.so 64
+libmialgoengine.so 64
+libxmi_high_dynamic_range.so 64
+libmiai_supernight.so 64
+libmibokeh_712.so 64
+libarcsoft_supernight.so 64
+libwa_widelens_undistort.so 64
+libarcsoft_beautyshot.so 64
+libwa_depth.so 64
+
+libmpbase.so
+libalCFR.so
