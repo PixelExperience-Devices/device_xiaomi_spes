@@ -173,7 +173,10 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.qcom_ramdisk \
     init.spes.rc \
-    init.spes.perf.rc
+    init.spes.perf.rc \
+    init.target.rc \
+    init.xiaomi.rc \
+    ueventd.spes.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
@@ -208,6 +211,17 @@ PRODUCT_PACKAGES += \
     update_engine_sideload \
     update_verifier
 
+# USB
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.qcom.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.usb.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.mi.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mi.usb.sh \
+    $(LOCAL_PATH)/init/init.qcom.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.usb.sh
+
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.usb.config=mtp,adb
+    
 # Verified Boot
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml

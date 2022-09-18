@@ -28,8 +28,10 @@
 #
 #
 
+import /vendor/etc/init/hw/init.xiaomi.rc
+
 on early-init
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules audio_q6_pdr audio_q6_notifier audio_snd_event audio_apr audio_adsp_loader audio_q6 audio_native audio_usf audio_pinctrl_lpi audio_swr audio_swr_ctrl audio_platform audio_stub audio_wcd_core audio_wcd9xxx audio_wsa881x_analog audio_bolero_cdc audio_va_macro audio_rx_macro audio_tx_macro audio_mbhc audio_wcd937x audio_wcd937x_slave audio_pm2250_spmi audio_rouleur audio_rouleur_slave audio_machine_bengal
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules audio_q6_pdr audio_q6_notifier audio_snd_event audio_apr audio_adsp_loader audio_q6 audio_native audio_usf audio_pinctrl_lpi audio_swr audio_swr_ctrl audio_platform audio_stub audio_wcd_core audio_lct_pinctrl audio_aw87xxx audio_wcd9xxx audio_bolero_cdc audio_va_macro audio_rx_macro audio_tx_macro audio_mbhc audio_wcd937x audio_wcd937x_slave audio_pm2250_spmi audio_rouleur audio_rouleur_slave audio_machine_bengal
     write /proc/sys/kernel/sched_boost 1
     exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qti.early_init.sh
     setprop ro.soc.model ${ro.vendor.qti.soc_model}
@@ -53,7 +55,7 @@ on early-fs
 
 on fs
     start hwservicemanager
-    mount_all --early
+    mount_all /vendor/etc/fstab.qcom --early
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
     restorecon_recursive /mnt/vendor/persist
@@ -66,7 +68,7 @@ on post-fs
 on late-fs
     wait_for_prop hwservicemanager.ready true
     exec_start wait_for_keymaster
-    mount_all --late
+    mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
@@ -75,8 +77,6 @@ on early-boot
     start vendor.sensors
 
 on boot
-    write /dev/cpuset/audio-app/cpus 1-2
-#USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
     setprop vendor.usb.rmnet.inst.name "rmnet"
@@ -84,7 +84,7 @@ on boot
     setprop vendor.usb.qdss.inst.name "qdss"
     setprop vendor.usb.controller 4e00000.dwc3
 
-#Load WLAN driver
+# Load WLAN driver
     insmod /vendor/lib/modules/qca_cld3_wlan.ko
 
 on boot && property:persist.vendor.usb.controller.default=*
@@ -97,7 +97,15 @@ on charger
     start vendor.power_off_alarm
     setprop vendor.usb.controller 4e00000.dwc3
     setprop sys.usb.configfs 1
-
+    
+service charger /system/bin/chargeonlymode
+    override
+    class charger
+    user system
+    group system graphics input
+    capabilities SYS_BOOT
+    seclabel u:r:charger:s0
+    
 #pd-mapper
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
