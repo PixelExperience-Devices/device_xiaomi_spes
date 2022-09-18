@@ -21,6 +21,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# Inherit from vendor
+$(call inherit-product, vendor/xiaomi/spes/spes-vendor.mk)
+
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
@@ -50,6 +53,12 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # Attestation
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
+
+# Audio
+BOARD_SUPPORTS_OPENSOURCE_STHAL := true 
+
+PRODUCT_PACKAGES += \
+    android.hardware.audio.service
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
@@ -84,6 +93,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
 
+# Display
+PRODUCT_PACKAGES += \
+    android.frameworks.displayservice@1.0.vendor \
+    libdisplayconfig.qti \
+    disable_configstore
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
@@ -105,6 +120,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
+# FM
+BOARD_HAVE_QCOM_FM := true
+
 # FUSE passthrough
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.fuse.passthrough.enable=true
@@ -121,6 +139,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml \
     frameworks/native/data/etc/android.software.opengles.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
+
+# GPS
+LOC_HIDL_VERSION := 4.0
 
 # Health
 PRODUCT_PACKAGES += \
@@ -209,6 +230,25 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
 
+# QC common
+TARGET_BOARD_PLATFORM := bengal
+
+TARGET_COMMON_QTI_COMPONENTS := \
+    audio \
+    av \
+    bt \
+    display \
+    gps \
+    init \
+    media-legacy \
+    overlay \
+    perf \
+    telephony \
+    usb \
+    vibrator \
+    wfd \
+    wlan
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.xiaomi-multihal \
@@ -258,3 +298,7 @@ PRODUCT_COPY_FILES += \
 
 # VNDK
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
+
+# WiFi Display
+PRODUCT_PACKAGES += \
+    libwfdaac_vendor:32

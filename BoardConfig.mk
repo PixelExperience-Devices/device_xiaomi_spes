@@ -49,6 +49,9 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a73
 
+# Audio
+TARGET_PROVIDES_AUDIO_EXTNS := true
+
 # AVB
 BOARD_AVB_ENABLE := true
 BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
@@ -131,6 +134,9 @@ BOARD_KERNEL_CMDLINE += \
     swiotlb=2048 \
     kpti=off
 
+# Media
+TARGET_DISABLED_UBWC := true
+
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := spes,spesn
 
@@ -183,3 +189,6 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Treble flag
 BOARD_VNDK_VERSION := current
+
+# Inherit from the proprietary version
+include vendor/xiaomi/spes/BoardConfigVendor.mk

@@ -212,12 +212,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
            <instance>default</instance>
        </interface>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.drm</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.3::ICryptoFactory/wfdhdcp</fqname>
-        <fqname>@1.3::IDrmFactory/wfdhdcp</fqname>
-    </hal>
    <!-- IMS UCE Service -->
    <hal format="hidl">
        <name>com.qualcomm.qti.uceservice</name>
@@ -275,6 +269,16 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           <instance>default</instance>
       </interface>
    </hal>
+   <hal format="hidl">
+        <name>vendor.qti.hardware.data.iwlan</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IIWlan</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
    <!-- Data Link Latency -->
    <hal format="hidl">
         <name>vendor.qti.hardware.data.latency</name>
@@ -359,8 +363,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
-        <fqname>@1.4::IRadio/slot1</fqname>
-        <fqname>@1.4::IRadio/slot2</fqname>
+        <fqname>@1.5::IRadio/slot1</fqname>
+        <fqname>@1.5::IRadio/slot2</fqname>
         <fqname>@1.2::ISap/slot1</fqname>
         <fqname>@1.2::ISap/slot2</fqname>
     </hal>
@@ -440,7 +444,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.lpa</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.2</version>
         <interface>
             <name>IUimLpa</name>
             <instance>UimLpa0</instance>
@@ -495,7 +499,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
         <transport>hwbinder</transport>
-        <version>2.4</version>
+        <version>2.6</version>
         <interface>
             <name>IQtiRadio</name>
             <instance>slot1</instance>
@@ -525,7 +529,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>vendor.qti.hardware.bluetooth_audio</name>
         <transport>hwbinder</transport>
-        <version>2.0</version>
+        <version>2.1</version>
         <interface>
             <name>IBluetoothAudioProvidersFactory</name>
             <instance>default</instance>
@@ -632,6 +636,36 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <interface>
             <name>IQspmhal</name>
             <instance>default</instance>
+        </interface>
+    </hal>
+    <!-- PASR Manager -->
+    <hal format="hidl">
+       <name>vendor.qti.power.pasrmanager</name>
+       <transport>hwbinder</transport>
+       <version>1.0</version>
+       <interface>
+           <name>IPasrManager</name>
+           <instance>default</instance>
+       </interface>
+    </hal>
+    <!-- MwqemAdapter HAL service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.mwqemadapter</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMwqemAdapter</name>
+            <instance>MwqemAdapter</instance>
+        </interface>
+    </hal>
+    <!-- VPP Service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.vpp</name>
+        <transport>hwbinder</transport>
+        <version>1.3</version>
+        <interface>
+            <name>IHidlVppService</name>
+            <instance>vppService</instance>
         </interface>
     </hal>
 </manifest>
