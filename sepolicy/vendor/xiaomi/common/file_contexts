@@ -1,0 +1,5 @@
+# Files in rootfs
+/avb(/.*)?                                                              u:object_r:avb_file:s0
+
+# Boot devices
+/dev/block/platform/soc/4804000.ufshc/by-name/vendor_boot_[ab]          u:object_r:boot_block_device:s0

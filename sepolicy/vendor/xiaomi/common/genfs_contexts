@@ -1,0 +1,5 @@
+# Block
+genfscon sysfs /devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:0/block/                 u:object_r:sysfs_devices_block:s0
+
+# UFS
+genfscon sysfs /devices/platform/soc/4804000.ufshc/clkgate_enable                                   u:object_r:vendor_sysfs_scsi_host:s0

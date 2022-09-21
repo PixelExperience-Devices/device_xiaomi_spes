@@ -1,0 +1,2 @@
+allow system_server vendor_persist_camera_prop:file { open read getattr };
+get_prop(system_server, vendor_persist_camera_prop)

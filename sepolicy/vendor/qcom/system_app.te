@@ -1,0 +1,2 @@
+allow system_app vendor_hal_pasrmanager_qti:binder call;
+allow system_app sysfs_kgsl:dir { read getattr search open };
