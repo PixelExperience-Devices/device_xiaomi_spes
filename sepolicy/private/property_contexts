@@ -4,6 +4,11 @@ ro.camera.res.fmq.             u:object_r:exported_default_prop:s0
 sys.cameratest.cameralevel     u:object_r:exported_camera_prop:s0
 vendor.sys.camerainfo          u:object_r:exported_system_prop:s0
 
+# Dirac
+audio.dirac.                   u:object_r:dirac_prop:s0
+audio.dirac.logging            u:object_r:dirac_prop:s0
+persist.audio.dirac.           u:object_r:dirac_prop:s0
+
 # Fingerprint
 gf.debug.                      u:object_r:vendor_fingerprint_prop:s0
 
@@ -21,3 +26,6 @@ ro.hardware.chipname           u:object_r:exported_default_prop:s0
 # MIUI
 ro.cust.test                    u:object_r:exported_system_prop:s0
 ro.miui.                        u:object_r:exported_system_prop:s0
+
+# SettingsLib
+settingsdebug.instant.packages  u:object_r:settingslib_prop:s0
