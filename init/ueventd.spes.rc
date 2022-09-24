@@ -25,5 +25,6 @@
 /dev/elliptic0            0644   system     system
 /dev/elliptic1            0644   system     system
 
-# silead fingerprint
+# fingerprint
 /dev/silead_fp            0660   system   system
+/dev/goodix_fp            0660   system   system

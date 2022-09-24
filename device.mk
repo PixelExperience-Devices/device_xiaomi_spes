@@ -99,6 +99,9 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 # Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.3-service.xiaomi
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
@@ -175,6 +178,7 @@ PRODUCT_PACKAGES += \
     init.spes.rc \
     init.spes.perf.rc \
     init.target.rc \
+    init.xiaomi.fingerprint.rc \
     init.xiaomi.rc \
     ueventd.spes.rc
 
@@ -183,6 +187,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.1-service.xiaomi-multihal \
     android.frameworks.sensorservice@1.0 \
     android.frameworks.sensorservice@1.0.vendor \
     libsensorndkbridge
@@ -204,7 +209,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-
+    hardware/xiaomi
+    
 # Update Engine
 PRODUCT_PACKAGES += \
     update_engine \
