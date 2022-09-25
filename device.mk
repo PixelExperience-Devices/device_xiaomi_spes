@@ -395,7 +395,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    AOSPASpesFrameworksOverlay \
     SpesFrameworksOverlay \
     SpesSettingsOverlay \
     SpesSystemUIOverlay \
@@ -474,10 +473,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.radio.features_common=3 \
     ro.vendor.se.type=HCE,UICC \
     sys.vendor.shutdown.waittime=500
-
-# Recovery
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.flash.recovery=0
 
 # Sensors
 PRODUCT_PACKAGES += \
