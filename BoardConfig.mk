@@ -173,6 +173,10 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
+# qcom/common tree
+include $(COMMON_PATH)/BoardConfigQcom.mk
+OVERRIDE_QCOM_HARDWARE_VARIANT := sm8250-common
+
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 

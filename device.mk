@@ -55,7 +55,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
 
 # Audio
--include vendor/qcom/opensource/audio-hal/primary-hal/configs/qssi/qssi.mk
+-include hardware/qcom-caf/$(TARGET_HALS_VARIANT)/audio/configs/qssi/qssi.mk
 
 BOARD_SUPPORTS_OPENSOURCE_STHAL := true 
 
@@ -430,8 +430,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
 
-# QC common
+# qcom/common tree
+$(call inherit-product, device/qcom/common/common.mk)
 TARGET_BOARD_PLATFORM := bengal
+TARGET_USE_SM8250_HALS := true
 
 TARGET_COMMON_QTI_COMPONENTS := \
     audio \
