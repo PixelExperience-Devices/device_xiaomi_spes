@@ -61,6 +61,7 @@ void load_redmi_spes() {
     property_override("ro.product.model", "2201117TG");
     property_override("ro.product.mod_device", "aospa_spes");
     property_override("ro.product.name", "spes_global");
+    property_override("vendor.usb.product_string", "Redmi Note 11");
 }
 
 void load_redmi_spes_in() {
@@ -72,6 +73,7 @@ void load_redmi_spes_in() {
     property_override("ro.product.model", "2201117TI");
     property_override("ro.product.mod_device", "aospa_spes_in");
     property_override("ro.product.name", "spes_in");
+    property_override("vendor.usb.product_string", "Redmi Note 11");
 }
 
 void load_redmi_spesn() {
@@ -83,6 +85,7 @@ void load_redmi_spesn() {
     property_override("ro.product.model", "2201117TY");
     property_override("ro.product.mod_device", "aospa_spesn");
     property_override("ro.product.name", "spesn");
+    property_override("vendor.usb.product_string", "Redmi Note 11 NFC");
 }
 
 void vendor_load_properties() {
