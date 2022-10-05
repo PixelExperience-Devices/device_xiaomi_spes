@@ -239,9 +239,11 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.set_touch_timer_ms=200 \
     ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.sf.force_hwc_brightness=1
+
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_backpressure=1 \
-    ro.sf.force_hwc_brightness=1 \
     ro.vendor.display.dither=true \
     ro.vendor.display.mi_calib.enable=true \
     ro.vendor.display.sensortype=2 \
