@@ -3201,6 +3201,9 @@
     <path name="afe-proxy">
     </path>
 
+    <path name="echo-ref-record">
+    </path>
+
     <path name="display-port">
     </path>
 
