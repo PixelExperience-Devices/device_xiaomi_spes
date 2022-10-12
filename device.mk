@@ -333,7 +333,8 @@ PRODUCT_SYSTEM_PROPERTIES += \
     
 # Media
 PRODUCT_ODM_PROPERTIES += \
-    media.settings.xml=/vendor/etc/media_profiles_khaje.xml
+    media.settings.xml=/vendor/etc/media_profiles_khaje.xml \
+    vendor.mm.enable.qcom_parser=63963135
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.aac_51_output_enabled=true \
