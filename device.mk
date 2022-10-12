@@ -332,6 +332,9 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.lmk.swap_free_low_percentage=20
     
 # Media
+PRODUCT_ODM_PROPERTIES += \
+    media.settings.xml=/vendor/etc/media_profiles_khaje.xml
+
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.aac_51_output_enabled=true \
     media.stagefright.enable-aac=true \
