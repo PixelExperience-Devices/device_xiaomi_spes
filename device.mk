@@ -59,6 +59,12 @@ PRODUCT_COPY_FILES += \
 
 BOARD_SUPPORTS_OPENSOURCE_STHAL := true 
 
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml
+
 PRODUCT_PACKAGES += \
     android.hardware.audio.service
 
