@@ -148,10 +148,4 @@ ALL_DEFAULT_INSTALLED_MODULES += \
     $(BT_FIRMWARE_MOUNT_POINT) \
     $(DSP_MOUNT_POINT)
 	
-# Kernel headers
-$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr: $(wildcard device/xiaomi/spes-kernel/kernel-headers/*)
-	rm -rf $@
-	mkdir -p $@/include
-	cp -a device/xiaomi/spes-kernel/kernel-headers/. $@/include
-	
 endif

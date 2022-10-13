@@ -132,6 +132,12 @@ BOARD_KERNEL_CMDLINE += \
     swiotlb=2048 \
     kpti=off
 
+TARGET_FORCE_PREBUILT_KERNEL := true
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_CONFIG := vendor/bengal_defconfig
+TARGET_KERNEL_HEADERS := kernel/xiaomi/spes
+TARGET_KERNEL_SOURCE := kernel/xiaomi/spes
+
 # Media
 TARGET_DISABLED_UBWC := true
 
