@@ -104,6 +104,12 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.soundtrigger=sva
 
 # Bluetooth
+TARGET_USE_QTI_BT_STACK := false
+
+PRODUCT_COPY_FILES += \
+    frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml
+
 PRODUCT_PRODUCT_PROPERTIES += \
     bluetooth.hardware.power.idle_cur_ma=7 \
     bluetooth.hardware.power.operating_voltage_mv=3700 \
@@ -118,7 +124,6 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
     ro.bluetooth.emb_wp_mode=false \
     ro.bluetooth.wipower=false \
-    vendor.bluetooth.soc=cherokee
 
 #PRODUCT_SYSTEM_EXT_PROPERTIES += \
 #    persist.vendor.btstack.enable.lpa=true \
@@ -128,10 +133,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.bluetooth.modem_nv_support=true \
     persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false \
     persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true \
-    persist.vendor.qcom.bluetooth.enable.splita2dp=true \
     persist.vendor.qcom.bluetooth.scram.enabled=false \
     persist.vendor.qcom.bluetooth.soc=cherokee \
-    persist.vendor.qcom.bluetooth.twsp_state.enabled=false \
     ro.vendor.bluetooth.wipower=false \
     vendor.qcom.bluetooth.soc=cherokee
 
