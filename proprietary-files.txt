@@ -673,8 +673,6 @@ vendor/etc/display/advanced_sf_offsets.xml
 vendor/etc/SVIConfig.xml
 vendor/etc/dsi_panel_k7_38_0c_0a_fhdp_video_display_mi.xml
 vendor/etc/dsi_panel_k7_38_0c_0b_fhdp_video_display_mi.xml
-vendor/etc/hdr_config.cfg
-vendor/etc/sdr_config.cfg
 
 # Display Calib Data
 vendor/etc/qdcm_calib_data_k7_38_0c_0a_video_mode_fhdp_dsi_panel.xml
