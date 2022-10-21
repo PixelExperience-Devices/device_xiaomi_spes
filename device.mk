@@ -367,9 +367,6 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.netflix.channel=004ee050-1a17-11e9-bb61-6f1da27fb55b
 
-PRODUCT_VENDOR_PROPERTIES += \
-    vendor.netflix.bsp_rev=Q6115-31409-1
-
 # Netmgr
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.data.netmgrd.qos.enable=true
