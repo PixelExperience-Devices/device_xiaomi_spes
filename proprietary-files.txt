@@ -48,20 +48,20 @@ vendor/etc/acdbdata/nn_ns_models/fai__2.2.0_0.1__3.0.0_0.0__eai_1.00.pmd
 vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
-# ADSP - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/adsprpcd|2886f08eb674b6ced8bf6e9bb54761094ee7b74c
-vendor/bin/dspservice|081468b9bc63cab921ac1e37a95eb93bd16e23f9
-vendor/bin/loadalgo|487e763413fecc0fb1d57f271df03ad5db824a46
-vendor/etc/init/vendor.qti.adsprpc-service.rc|54588df8e7da58c66838028d2284986b966c2d37
-vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc|fbf2bb38ca6bdddf98c7123da9e1f263a4eec55f
-vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5fc95e118f56a8ac15d
-vendor/lib/libadsp_default_listener.so|49d7644708419ea077ffd9d00901ebf6cdd4377c
-vendor/lib/libadsprpc.so|f972e65b574351a0a0fca0afd225cd46078f5b50
-vendor/lib/vendor.qti.hardware.dsp@1.0.so|0be8b21f30c8aba3381bb1e9279ba0ae9b730c60
-vendor/lib64/libadsp_default_listener.so|33f44a23edf2cf734658e762a19dfc207b1921b8
-vendor/lib64/libadsprpc.so|9caae322adf0c1b64bc923d164350d5b6a8293b3
-vendor/lib64/libloadalgo_stub.so|f544ef182d9cdc77e02eb8cc2a29ce4c02d0ddfc
-vendor/lib64/vendor.qti.hardware.dsp@1.0.so|e92a9bf499d31770f73cc35e56c6a9d77285ba7c
+# ADSP
+vendor/bin/adsprpcd
+vendor/bin/dspservice
+vendor/bin/loadalgo
+vendor/etc/init/vendor.qti.adsprpc-service.rc
+vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
+vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
+vendor/lib/libadsp_default_listener.so
+vendor/lib/libadsprpc.so
+vendor/lib/vendor.qti.hardware.dsp@1.0.so
+vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libadsprpc.so
+vendor/lib64/libloadalgo_stub.so
+vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # ADSP Modules
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
@@ -88,14 +88,14 @@ vendor/lib/rfsa/adsp/misound_res.bin
 vendor/lib/rfsa/adsp/misound_res_headphone.bin
 vendor/lib/rfsa/adsp/misound_res_spk.bin
 
-# Alarm - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
--product/app/PowerOffAlarm/PowerOffAlarm.apk|8408621f9b8a1616937f0b7e2a757666a375dc09
--system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar|53c8e43e6ab1db1c3824626b1503b92991c24e7e
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|6446a38537ceb4afdc2cdbbd7645e2616842ba6a
-vendor/bin/power_off_alarm|71e47e029ad444494c286dcd655f534c033a7ab1
-vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6ffb466e23a7fc3b05
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|c2b6cd79a2fdc28ea10dd3d357ffd14235222a7d
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so|8ac5e1e7ec700083a4bff481f8ebd9e362e94978
+# Alarm
+-product/app/PowerOffAlarm/PowerOffAlarm.apk
+-system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
+vendor/bin/power_off_alarm
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # ANT+ - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|ecdf9f24262c49031c470b14a27d3f99d2b47ff4
@@ -517,21 +517,21 @@ vendor/lib64/libmmcamera_mfnr_t4.so
 # Consumer IR
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.bengal.so
 
-# CDSP - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/cdsprpcd|2257675e907dce9ed4a328d66caae44096221bb8
-vendor/etc/init/vendor.qti.cdsprpc-service.rc|36772b70216796e8ef19376d9c6a81ee9ffff549
-vendor/lib/libcdsp_default_listener.so|6a3f97faf26da3d01f7895d37c09c8bc62030e0a
-vendor/lib/libcdsprpc.so|bef57c3978029e460f742bb81adaf44512e552e9
-vendor/lib/libmdsprpc.so|17bad786a8c29ff412722a308a996c88e1dfa19d
-vendor/lib/libsdsprpc.so|f5061af7b154060304e14e283d220f04c143a361
-vendor/lib/libsysmon_cdsp_skel.so|b0dd56ca83493e68dc7610d44045849bb3bd8c38
-vendor/lib64/libcdfw.so|76aa65aea92ef92e0c4e4a6700c049d5de549c18
-vendor/lib64/libcdfw_remote_api.so|e43217af385097ea8d939a7c0cc60c3e092ad086
-vendor/lib64/libcdsp_default_listener.so|23a8dff8e8ab66d23c5de9aa3574dd3c64d113b4
-vendor/lib64/libcdsprpc.so|b96ac84aee7f4592caf6af3fc3c96d6f925e0c79
-vendor/lib64/libmdsprpc.so|1ace0824fb46808afb9c225925d407139587fcda
-vendor/lib64/libsdsprpc.so|ec57a3858d3e2a2ee63dd23fffc8ca4b7923837d
-vendor/lib64/libsysmon_cdsp_skel.so|3ae87b24980f983ba83fd563134328bb0f6f62e8
+# CDSP 
+vendor/bin/cdsprpcd
+vendor/etc/init/vendor.qti.cdsprpc-service.rc
+vendor/lib/libcdsp_default_listener.so
+vendor/lib/libcdsprpc.so
+vendor/lib/libmdsprpc.so
+vendor/lib/libsdsprpc.so
+vendor/lib/libsysmon_cdsp_skel.so
+vendor/lib64/libcdfw.so
+vendor/lib64/libcdfw_remote_api.so
+vendor/lib64/libcdsp_default_listener.so
+vendor/lib64/libcdsprpc.so
+vendor/lib64/libmdsprpc.so
+vendor/lib64/libsdsprpc.so
+vendor/lib64/libsysmon_cdsp_skel.so
 
 # Charger
 vendor/bin/hvdcp_opti
@@ -613,27 +613,11 @@ vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so|3904e6ce6a6a551826e900eb29bc2
 vendor/lib64/vendor.qti.latency@2.0.so|f6dda15686055afd55c864b8578028096bfb3152
 vendor/lib64/vendor.qti.latency@2.1.so|963bf507c24a29014cba5065d00c97b91f61e804
 
-# Configstore - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|8faba5310d71eb9d67c5a5e0dbc22ba423f714e7
-vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede0250585a44b01d351bbc301d7a13cc3d783d
-vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|adae94cab65e5b91553ba8c76a4bdda7b4fdd1f6
-vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|2163df1cf52ef304f924bcc833947604036f4217o
-
-# Connection Security - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
--vendor/app/ConnectionSecurityService/ConnectionSecurityService.apk|826829e05cf05ec59b34572269697ba80bb9bfb1
--vendor/app/TrustZoneAccessService/TrustZoneAccessService.apk|da2d4eb23760b6c11e1f60e2953f9073577875f6
-vendor/bin/ssgqmigd|5769f2aef8fdf48f55b01e3d7d3d1aecb860d7e1
-vendor/bin/ssgtzd|1d906a379edc6df57aef7c3c2c55e285596ba8f7
-vendor/etc/init/ssgtzd.rc|140086da548acd74420c8f494c3351b4dedc1c80
-vendor/lib64/libminksocket.so|a347a693401d263290eb2706eee82830d3ceb673
-
-# CVP - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/lib/rfsa/adsp/libcvpdsp_skel.so|510791e46596949591fc283b5153fcf48c19c32c
-vendor/lib64/libcvp2.so|dde388db38b8f3dcf0018b7ed29870418119eb94
-vendor/lib64/libcvp2_hfi.so|87a89ac07b141ccac7051c809741317034023ad7
-vendor/lib64/libcvp_common.so|f702d19f14e018a74302f7e9b956b3ea2c505c61
-vendor/lib64/libcvpcpuRev_skel.so|ea7b8fd0dd563e68ef8debb9c15701a94a1b4b38
-vendor/lib64/vendor.qti.hardware.cvp@1.0.so|011cb17f3eedb9b1fa72cbb0f2017976e303f4dc
+# Configstore
+vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
+vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
+vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
 # Data - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/bin/ATFWD-daemon|94af1767c77ed9835cbb66b0ba729b71e0044e1a
@@ -664,9 +648,9 @@ vendor/lib64/libqdi.so|8778fb2ee9512872898f3afc5fe560b605983ba6
 vendor/lib64/libqdp.so|a5fa81e178350744d829fc3e5b59512e9c418920
 vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so|21f382e07844ec79b33950ec00f6a1bcd9a33611
 
-# Diag - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/lib/libdiag.so|d924893c1a9a022367745f9f8b483fde0563dc07
-vendor/lib64/libdiag.so|8c7de006d77b44ef24834adcd56e5cd2a3dc98b7
+# Diag
+vendor/lib/libdiag.so
+vendor/lib64/libdiag.so
 
 # Display Calibration
 vendor/etc/display/advanced_sf_offsets.xml
@@ -682,10 +666,6 @@ vendor/etc/qdcm_calib_data_k7_38_0c_0b_video_mode_fhdp_dsi_panel.xml
 vendor/lib64/libhdr_tm.so|4be3cfff1ef40cbc6ad329b79c60881263aa6723
 
 # Display SDM - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/feature_enabler_client|0e25e593af2f9f3520d28980ad60a67a5cc5385e
-vendor/bin/qdcmss|536c34abfbf7833df440bfcd264bacdc88318067
-vendor/etc/init/feature_enabler_client.rc|7c8e7cf20093d1a6d94d7de2debd53a7e51f8c29
-vendor/etc/init/qdcmss.rc|53d78d686678c4f923a9ec4ace7d4d3575b13788
 vendor/lib64/libdisplayconfig.qti.so|312734b9df2b9b4d7afd828147726a1783dd3746
 vendor/lib64/libdisplayqos.so|15701f18257c43be5657bbd867a8acf1f469e373
 vendor/lib64/libdisplayskuutils.so|30dc405f5c127c9af7b5c9e6697db896f0b13693
@@ -721,37 +701,34 @@ vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|ad06856903b163a28135d6c8fd354258e3f0292c
 vendor/lib64/libdpmqmihal.so|67a75d6bd39f4bc825e14d21fa5b61e26ac82b22
 
-# DRM - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service|d3d6ed383483747f8bec574adcac1c24ef1ac3a4
-vendor/bin/qseecomd|33a909924161d0478bbbe9a74c7b89838175960d
-vendor/etc/gpfspath_oem_config.xml|7aeade35b0bbe27530f6aca8c1ed5192a7acf59d
-vendor/etc/init/qseecomd.rc|0ebfb7c5d1d2459be4fdac951a182dc486f3bda7
-vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc|0f43244d70d5efc1e4f089b926a9dc4f59e53db1
-vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so|6825e9396f6e04d4739ca6dbeecd69502c01fa8a
-vendor/lib64/libGPreqcancel.so|b9efbc8623981e1249ad0a0f8964b2b655d2b334
-vendor/lib64/libGPreqcancel_svc.so|95d9dc2db6355d34fbc766f7c63e8e8832f3a11f
-vendor/lib64/libQSEEComAPI.so|edb65132da446e4bec18e3f09673e669efce22a0
-vendor/lib64/libSecureUILib.so|c87439b983b56804530e1e6b4f7e8c312ebdd94c
-vendor/lib64/libStDrvInt.so|6091f1f496b87730f9a77e9ede504c4fa99c608a
-vendor/lib64/libbase64.so|32279e9994333ae02f848000483e62bb15e8ff94
-vendor/lib64/libcpion.so|19fb60c620d91e0252596165f42fc6277f7e1fb3
-vendor/lib64/libdrmfs.so|587f73b4ffec2bb205e9647bb7b2e0947c21ad8c
-vendor/lib64/libdrmtime.so|f74a243d32606e69dc7c424eaecb19dcc7ee9605
-vendor/lib64/libops.so|fbfda5ddd143c4e29f7eddbeef07f68c35385e65
-vendor/lib64/libqisl.so|c79719eebc094c2af9561e8df2c158638b111b70
-vendor/lib64/librpmb.so|fd9b71d4be50ee890f9c26cea05fafe90ac5d420
-vendor/lib64/libsecureui.so|b1b1d90a2859aa99e1a151e43d102f52e0194bc0
-vendor/lib64/libsecureui_svcsock.so|6af612f057f4f28720d6db9b300b58c883da6539
-vendor/lib64/libsi.so|1b58928c6dc314f5e5dc42fd09d1c551c542ee68
-vendor/lib64/libssd.so|0d037418e3bdc6d9ba94ce7020a04e85a06fab96
-vendor/lib64/libtzdrmgenprov.so|e7655063b02bc7a5802a384a44238f9e874703d4
-vendor/lib64/vendor.qti.hardware.qseecom@1.0.so|5b1046bc7c8a3f590bfedde06490b51adfeca923
+# DRM
+vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service=
+vendor/bin/qseecomd
+vendor/etc/gpfspath_oem_config.xml
+vendor/etc/init/qseecomd.rc
+vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
+vendor/lib64/libGPreqcancel.so
+vendor/lib64/libGPreqcancel_svc.so
+vendor/lib64/libQSEEComAPI.so
+vendor/lib64/libSecureUILib.so
+vendor/lib64/libStDrvInt.so
+vendor/lib64/libbase64.so
+vendor/lib64/libcpion.so
+vendor/lib64/libdrmfs.so
+vendor/lib64/libdrmtime.so
+vendor/lib64/libops.so
+vendor/lib64/libqisl.so
+vendor/lib64/librpmb.so
+vendor/lib64/libsecureui.so
+vendor/lib64/libsecureui_svcsock.so
+vendor/lib64/libssd.so
+vendor/lib64/libtzdrmgenprov.so
+vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
-# Embedded Secure Element power manager - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/hw/vendor.qti.esepowermanager@1.1-service|040212c2c39ca3f2090291dd3a7f49979e5003df
-vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so|7b67b47030f00af1c2e207995eea05f05fb91b23
-vendor/lib64/vendor.qti.esepowermanager@1.0.so|6d4719779fd63c2500fbdf4cc94a3ec1a5cdd685
-vendor/lib64/vendor.qti.esepowermanager@1.1.so|bd6e25eef9269451ffdc4787a056aa0f0c0c9abf
+# Embedded Secure Element power manager
+vendor/lib64/vendor.qti.esepowermanager@1.0.so
+vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
 # EmbmsslServer - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/bin/embmsslServer|514b6a8550016ecc9e3607e2ea7ef32d9eef3f5b
@@ -762,13 +739,13 @@ vendor/lib64/vendor.qti.hardware.embmssl@1.0.so|e4fc8e5b0e7e9c609ed8c78309c3d6d8
 vendor/lib64/vendor.qti.hardware.embmssl@1.1-adapter-helper.so|86a03bcc9a34bff0bd29f6c862da248fb81d7d55
 vendor/lib64/vendor.qti.hardware.embmssl@1.1.so|a4f353cac95f9cf034a5a91fe6419f6fb85f3d70
 
-# Factory - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/hw/vendor.qti.hardware.factory@1.0-service|cacf96d37eb787d153ffaa3aa7312524045d8132
-vendor/bin/mmid|dd5fd065fae235b8eb05fbfad3f1ee910bf7316e
-vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc|b47de7097f6b81ad6a6b05f70a2678861fda69fb
-vendor/etc/permissions/vendor.qti.hardware.factory.xml|bedb01aed43b95943ac60f80cf351742ccb4a072
-vendor/lib64/vendor.qti.hardware.factory@1.0.so|c963c06703bb78600e49f98f3965cc615b2e44eb
-vendor/lib64/vendor.qti.hardware.factory@1.1.so|7e5e3b94aa502390fa2139d59ffa1ad49143066a
+# Factory
+vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
+vendor/bin/mmid
+vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc
+vendor/etc/permissions/vendor.qti.hardware.factory.xml
+vendor/lib64/vendor.qti.hardware.factory@1.0.so
+vendor/lib64/vendor.qti.hardware.factory@1.1.so
 
 # Fingerprint
 -vendor/framework/com.fingerprints.extension.jar
@@ -828,6 +805,7 @@ vendor/lib64/libgdtap.so|500675e4bee26627cda1f1cc87b8a6838f65b7a7
 vendor/lib64/libgnss.so|455b9e16feff54f654de4c76e0d2811c337a4da1
 vendor/lib64/libgnsspps.so|fe828f1be73b674601f2be29c41aca0de32c0dea
 vendor/lib64/libgps.utils.so|267b16cf6e2bbba7175d6bb830b33046bcdc8cf7
+vendor/lib64/libminksocket.so|a347a693401d263290eb2706eee82830d3ceb673
 vendor/lib64/libizat_client_api.so|4a982ffe253557b58934df0e9278f97fef5862f2
 vendor/lib64/libizat_core.so|b1af81fb2a6ccaccf1d8e89b66231cc519107b0c
 vendor/lib64/liblbs_core.so|130fdbea699d318867161d133007e1fc3fb5cb0c
@@ -1080,10 +1058,6 @@ vendor/lib64/nfc_nci.st21nfc.st.so
 vendor/firmware/st21nfc_fw.bin
 vendor/firmware/st21nfc_fw7.bin
 
-# OpenVX - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/lib/libopenvx.so|0caa7c42935a77da34dedafa44a5fa400ad7e45c
-vendor/lib64/libopenvx.so|fe914862f469b64e1ea5ccb1022dd3f20668ec48
-
 # Perf
 vendor/etc/lm/prekill/prekill_2GB.data
 vendor/etc/lm/prekill/prekill_4GB.data
@@ -1091,31 +1065,31 @@ vendor/etc/lm/prekill/prekill_6GB.data
 vendor/etc/lm/PreKillFeature.xml
 vendor/etc/powerhint.xml
 
-# PD - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/pd-mapper|b286f6d4b0d2b55e06a531c235f0852185875dff
-vendor/lib64/libpdmapper.so|d6058c9ed9f54d7a8066bb1323785f2683e2b517
-vendor/lib64/libpdnotifier.so|b9c908f3f2ba51ee998b4f2be68192a6878f6969
+# PD
+vendor/bin/pd-mapper
+vendor/lib64/libpdmapper.so
+vendor/lib64/libpdnotifier.so
 
-# Peripheral manager - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/pm-proxy|f27e551138d7f612943885ac698f9f88ec1acaf9
-vendor/bin/pm-service|5be0b39d724d4d38f7b5348ca2563699139b125f
-vendor/lib64/libperipheral_client.so|371cc38073c9d9bf8614f992e57a5a9891691191
+# Peripheral manager
+vendor/bin/pm-proxy
+vendor/bin/pm-service
+vendor/lib64/libperipheral_client.so
 
 # Power-off charging daemon - from xiaomi
 system/bin/charger:system/bin/chargeonlymode
 
-# QCC - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service|b49b4964ca1b391921b05d0350479bae517a75ae
-vendor/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc|afeb332a4750a11587658fcc9a75a27f63bbccdd
-vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so|29dd375362065b3a1655ca0e2d0031450790bcd6
-vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so|0f98bfd30c23b561caf8a472cceea5baa58abf67
-vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so|154868a579a9d30c86fe5f8aaaa254aaab07c58d
+# QCC
+vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service
+vendor/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 
-# QCV (SOC Helper) - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/init.qti.qcv.sh|355a70cde39583a7f2a07441ba5ab1ed4d7feb18
-vendor/etc/init/init.qti.qcv.rc|1d0cff5660bdf7abc22ac2b960a0dcd88404d740
-vendor/lib64/libsoc_helper.so|cdd194a76c1ff4836411babeb329090c4eae8d3b
-vendor/lib64/libsoc_helper_jni.so|1ed6ebd7bd154e481617ce98273139d2b916094b
+# QCV (SOC Helper)
+vendor/bin/init.qti.qcv.sh
+vendor/etc/init/init.qti.qcv.rc
+vendor/lib64/libsoc_helper.so
+vendor/lib64/libsoc_helper_jni.so
 
 # QMI - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/bin/irsc_util|68d97ba7c1d9ed8ca9a9a1673be60680171e711d
@@ -1163,16 +1137,16 @@ vendor/lib64/libqsocket.so|33b007b455cd9bc6897d737a5a325570ee630ff0
 vendor/lib64/libsmemlog.so|ff9ef200029d21b8dd93eca663f120d07be0e3d9
 vendor/lib64/libsystem_health_mon.so|9b13ab7123f78ad044e5dd75f14dc7a4ae8267f3
 
-# QSP - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/vendor.qti.qspmhal@1.0-service|ac1c898683786dba373e76d63e31b62e138c1695
-vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc|bdc5cbedd1688807409c72262824ca9162b20239
-vendor/etc/seccomp_policy/qspm.policy|943dd12bd4ae7cb0037b2e246143d76bb1787257
-vendor/lib64/vendor.qti.qspmhal@1.0-impl.so|96904e353acd05c4a56afd861d913f30809af7b4
-vendor/lib64/vendor.qti.qspmhal@1.0.so|162278a49e1d11e1d34634bc1b913b6d6764db1d
+# QSP
+vendor/bin/vendor.qti.qspmhal@1.0-service
+vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
+vendor/etc/seccomp_policy/qspm.policy
+vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
+vendor/lib64/vendor.qti.qspmhal@1.0.so
 
-# RemoteFS - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/rmt_storage|ea511ef474ca59c44d928581288cb2bae9f37cc8
-vendor/etc/init/vendor.qti.rmt_storage.rc|bc212c6353c2ded44ae4d759605fbbe55aa4fa3f
+# RemoteFS
+vendor/bin/rmt_storage
+vendor/etc/init/vendor.qti.rmt_storage.rc
 
 # RIL - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/bin/hw/qcrild|34ed5cea445577caa24385185cdb28881135972d
@@ -1314,25 +1288,22 @@ vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
 vendor/etc/sensor_diag.cfg
 
-# SecureMSM - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/hdcp1prov|d7e7d56866a657ee6a90ebea0529bd54d13df4f7
-vendor/bin/hdcp2p2prov|f02c04b8b90ed70f9de927465ebe7f2db9bf1b4f
-vendor/lib64/libhdcp1prov.so|b72bd7c5341598c7ee1462c8272620e4bc100a8a
-vendor/lib64/libhdcp2p2prov.so|311ee368645dbfa4638982a23545e9b02e2047ef
-vendor/lib64/libhdcpsrm.so|e419c107da4919b898a6917396e8930ebc9de5d0
-vendor/lib64/libpvr.so|66eb207b47f32bb157b296edc2b8ff864c63eb02
-vendor/lib64/librmp.so|96741cb9f27a80b5cc2535abaa305ac0970584c9
-vendor/lib64/libspl.so|e2b3e2dd28b0eee567d72de696cd1e01288ae06f
+# SecureMSM 
+vendor/bin/hdcp1prov
+vendor/bin/hdcp2p2prov
+vendor/lib64/libhdcp1prov.so
+vendor/lib64/libhdcp2p2prov.so
+vendor/lib64/libhdcpsrm.so
 
 # Secure element
 vendor/lib/android.hardware.secure_element@1.0-impl.so
 vendor/lib64/android.hardware.secure_element@1.0-impl.so
 
-# SMC Invoke - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/etc/ssg/ta_config.json|e18554b038da3737b7352d1271e5fde9c789c9df
-vendor/etc/ssg/tz_whitelist.json|c0dc4f4cfee20db5993eb5142e362cba7dfaecd6
-vendor/lib64/libnative-api.so|fd6cf92e0347452288758b6ecc25b449535ecb61
-vendor/lib64/libqcbor.so|7da5294a577f5a71ede5b3804a026bf69bd025ee
+# SMC Invoke
+vendor/etc/ssg/ta_config.json
+vendor/etc/ssg/tz_whitelist.json
+vendor/lib64/libnative-api.so
+vendor/lib64/libqcbor.so
 
 # Snapdragon Computer Vision Engine - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 -vendor/lib/libfastcvopt.so|eb6e1052f12b45f2f651f1437e6072459648f2f3
@@ -1354,23 +1325,23 @@ vendor/lib64/libscveObjectTracker_stub.so|62db08e185e915fe975e5234d1ce1d749e6e97
 vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so|200237017fdf72f5338ddceeaca5375ba1891058
 vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so|1b0b2665e8ebd65dccb832078fbca81f951e9908
 
-# Soter - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|8e315a85eeeb94a51f1533c80212d2fc0ec88760
-vendor/bin/vendor.qti.hardware.soter@1.0-provision|d1fbc5777ca05a7405b9e65e334b22894cf29155
-vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
-vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|b1bea56084e2530a437746674fc7fc0488ca0a2c
-vendor/lib64/vendor.qti.hardware.soter@1.0.so|9e7805fbc289224be834e5523a63421817e32229
+# Soter
+vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
+vendor/bin/vendor.qti.hardware.soter@1.0-provision
+vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
-# SS Restart - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/ssr_diag|82db8b7fca90bc0e87b29d32cbda5cc7e4ec0749
-vendor/bin/ssr_setup|b181e27a6b93777430026ad403ca8e9cf811f5c6
-vendor/bin/subsystem_ramdump|804a1b433124d5bd022e762e536b4ae5e6bb0f2b
-vendor/lib/libsubsystem_control.so|8a24d9a5a1c8be316bc277b9944b29af2f91a9ee
-vendor/lib64/libsubsystem_control.so|4f54280aa78b617665d58a78cfbdef41de1b7a07
+# SS Restart
+vendor/bin/ssr_diag
+vendor/bin/ssr_setup
+vendor/bin/subsystem_ramdump
+vendor/lib/libsubsystem_control.so
+vendor/lib64/libsubsystem_control.so
 
-# TFTP - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/tftp_server|38847c960ca1dc54dfdec67ac4646f9e4aa37e9d
-vendor/etc/init/vendor.qti.tftp.rc|b27f188cbffba470a4510d50e46ff7c8446c22cb
+# TFTP
+vendor/bin/tftp_server
+vendor/etc/init/vendor.qti.tftp.rc
 
 # Thermal configs
 vendor/bin/mi_thermald
@@ -1388,40 +1359,34 @@ vendor/etc/thermal-tgame.conf
 -vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so
 
-# Thermal (limits-hal) - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/hw/vendor.qti.hardware.limits@1.0-service|0b8947b9f6ddc6953a324ea43e33bcc8f7edab26
-vendor/etc/init/vendor.qti.hardware.limits@1.0-service.rc|77c989d8d59b99716b900e96d94a4aa9bcab6aa6
-vendor/lib64/vendor.qti.hardware.limits@1.0.so|8fef74ce2bef2e064e0ccef4a302c995cdfca7c8
--vendor/etc/vintf/manifest/vendor.qti.hardware.limits@1.0-service.xml|6109f13748cb74b7d042e2604a9883a1b071e810
+# Time
+vendor/app/TimeService/TimeService.apk
+vendor/bin/time_daemon
+vendor/etc/init/init.time_daemon.rc
+vendor/lib64/libtime_genoff.so
 
-# Time services - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
--vendor/app/TimeService/TimeService.apk|1a5f39aa2969feee50ff81ec870b5e2669ae515e
-vendor/bin/time_daemon|5ac6b1af3c41eecad1e522df8e272db5fab86523
-vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
-vendor/lib64/libtime_genoff.so|17547993adc4fb9cb1cdc1abbd765f4ef9a05f09
-
-# TLOC - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/tloc_daemon|bb6682220052e3990fb497b07d45d0dd3934f515
-vendor/etc/init/tloc_daemon.rc|9dd38e92847bc34f8a3228f4cd81ef14b6e89785
+# TLOC
+vendor/bin/tloc_daemon
+vendor/etc/init/tloc_daemon.rc
 
 # Touch Firmware
 vendor/firmware/Conf_MultipleTest.ini
 vendor/firmware/focaltech_ts_fw_samsung.bin
 
-# Trusted Execution Environment connector - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|00dfdec5db40bbd3bd2af327200a61a73cbd47d7
-vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
-vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|cfbc6c28a93f13a59705c10d30e3218b9811cba2
-vendor/lib64/libGPQTEEC_vendor.so|d70f659c06a38dbae028f41ca6e0dece0ef1d5cd
-vendor/lib64/libGPTEE_vendor.so|92c0215dbd3271e597d536c259df44aac716a402
-vendor/lib64/libQTEEConnector_listener.so|bd2d7041c20eeeb85436696377edfbd1d302df49
-vendor/lib64/libQTEEConnector_vendor.so|30e5fd8d4fff50083f44f6d0bd09f4bd287a8366
-vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|16abc70df20edc071deb364f130353ad3543c129
+# Trusted Execution Environment connector
+vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
+vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
+vendor/lib64/libGPQTEEC_vendor.so
+vendor/lib64/libGPTEE_vendor.so
+vendor/lib64/libQTEEConnector_listener.so
+vendor/lib64/libQTEEConnector_vendor.so
+vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
-# Trusted User Interface - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|772dfdebadcfb9af3e6253fd3baf6d7502394ddd
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|409e97dc747e425fe86e7e98a13a15498813b76b
+# Trusted User Interface
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # UBWC - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/lib/libstreamparser.so|935aabbbde4806bad2e09453c73004238d69db6f
