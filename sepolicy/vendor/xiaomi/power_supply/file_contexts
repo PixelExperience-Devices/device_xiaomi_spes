@@ -1,0 +1,4 @@
+/sys/devices/platform/soc/4a84000.i2c/i2c-0/0-0066/max77729-fuelgauge/power_supply/bms(/.*)?	u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4a84000.i2c/i2c-0/0-0065/power_supply/sc8551-standalone/charging_enabled    u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4a84000.i2c/i2c-0/0-0071/power_supply/bms(/.*)?	u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4a84000.i2c/i2c-0/0-0066/power_supply/sc8551-standalone/charging_enabled    u:object_r:vendor_sysfs_battery_supply:s0
