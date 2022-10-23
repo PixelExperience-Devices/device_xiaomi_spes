@@ -28,8 +28,8 @@ r_dir_file(hal_fingerprint_default, input_device)
 # Allow hal_fingerprint_default to read in vendor_sysfs_graphics
 r_dir_file(hal_fingerprint_default, vendor_sysfs_graphics)
 
-# Allow hal_fingerprint_default to read in vendor_sysfs_spss
-r_dir_file(hal_fingerprint_default, vendor_sysfs_spss)
+# Allow hal_fingerprint_default to read and write to vendor_sysfs_spss
+allow hal_fingerprint_default vendor_sysfs_spss:file rw_file_perms;
 
 # Allow hal_fingerprint_default to read in rootfs
 r_dir_file(hal_fingerprint_default, rootfs)
