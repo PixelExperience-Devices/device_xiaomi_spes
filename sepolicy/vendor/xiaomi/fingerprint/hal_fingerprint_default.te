@@ -3,7 +3,7 @@ allow hal_fingerprint_default rootfs:dir r_dir_perms;
 
 # Allow fingerprint HAL to create vendor_fingerprint_data_file
 allow hal_fingerprint_default vendor_fingerprint_data_file:dir rw_dir_perms;
-allow hal_fingerprint_default vendor_fingerprint_data_file:dir create_dir_perms;
+allow hal_fingerprint_default vendor_fingerprint_data_file:file create_file_perms;
 
 allow hal_fingerprint_default self:netlink_socket create_socket_perms_no_ioctl;
 
