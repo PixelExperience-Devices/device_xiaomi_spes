@@ -48,6 +48,22 @@ on post-fs-data
     chmod 0666 /sys/class/drm/card0-DSI-1/disp_param
 
 on boot
+    # Xiaomi Camera
+    # Add a cpuset for the camera daemon
+    # We want all cores for camera
+    mkdir /dev/cpuset/camera-daemon
+    write /dev/cpuset/camera-daemon/cpus 0-7
+    write /dev/cpuset/camera-daemon/mems 0
+    chown cameraserver cameraserver /dev/cpuset/camera-daemon
+    chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
+    chown cameraserver cameraserver /mnt/vendor/persist/camera
+    chown cameraserver cameraserver /mnt/vendor/persist/camera/rear_dc_cal_wd.bin
+    chown cameraserver cameraserver /mnt/vendor/persist/camera/jiigan_dc_cal.bin
+    chown cameraserver cameraserver /mnt/vendor/persist/camera/com.xiaomi.dcal.wd.bin
+    chmod 0660 /dev/cpuset/camera-daemon/tasks
+    chmod 0775 /data/vendor/camera
+    chmod 0644 /data/vendor/camera/com.xiaomi.dcal.wd.bin
+
     # DisplayFeature
     chown system system /sys/class/drm/card0-DSI-1/disp_param
     chmod 0664 /sys/class/drm/card0-DSI-1/disp_param
@@ -127,3 +143,14 @@ on property:init.svc.surfaceflinger=running
 
 on property:init.svc.surfaceflinger=restarting
     stop displayfeature
+
+service vendor.camera-provider-2-4 /vendor/bin/hw/android.hardware.camera.provider@2.4-service_64
+     override
+    interface android.hardware.camera.provider@2.4::ICameraProvider legacy/0
+    interface vendor.qti.hardware.camera.postproc@1.0::IPostProcService camerapostprocservice
+    class hal
+    user cameraserver
+    group audio camera input drmrpc oem_2907
+    ioprio rt 4
+    capabilities SYS_NICE
+    writepid /dev/cpuset/camera-daemon/tasks /dev/stune/foreground/tasks
