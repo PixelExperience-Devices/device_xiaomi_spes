@@ -3,3 +3,6 @@
 
 # Boot devices
 /dev/block/platform/soc/4804000.ufshc/by-name/vendor_boot_[ab]          u:object_r:boot_block_device:s0
+
+# Touch firmware
+/vendor/firmware/Conf_MultipleTest.ini                                  u:object_r:vendor_app_file:s0
