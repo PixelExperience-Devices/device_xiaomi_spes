@@ -208,28 +208,21 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.dirac.acs.ignore_error=1
 
 # Display
+TARGET_USE_QCOM_OFFSET := true
+
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
     libdisplayconfig.qti \
     disable_configstore
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    debug.sf.frame_rate_multiple_threshold=90 \
+    debug.sf.frame_rate_multiple_threshold=60 \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     ro.surface_flinger.max_virtual_display_dimension=4096 \
     ro.surface_flinger.set_display_power_timer_ms=1000 \
     ro.surface_flinger.set_idle_timer_ms=4000 \
     ro.surface_flinger.set_touch_timer_ms=4000 \
     ro.surface_flinger.use_content_detection_for_refresh_rate=true
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    debug.sf.use_phase_offsets_as_durations=1 \
-    debug.sf.late.sf.duration=10500000 \
-    debug.sf.late.app.duration=20500000 \
-    debug.sf.early.sf.duration=16000000 \
-    debug.sf.early.app.duration=16500000 \
-    debug.sf.earlyGl.sf.duration=13500000 \
-    debug.sf.earlyGl.app.duration=21000000
 
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_backpressure=1 \
