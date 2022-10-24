@@ -1,5 +1,6 @@
 # Battery secret
 /vendor/bin/batterysecret                   u:object_r:batterysecret_exec:s0
+/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm6125@2:qcom,usb-pdphy@1700/typec/port0/data_role		u:object_r:vendor_sysfs_usb_supply:s0
 
 # Persist subsystem
 /mnt/vendor/persist/subsys(/.*)?            u:object_r:persist_subsys_file:s0
