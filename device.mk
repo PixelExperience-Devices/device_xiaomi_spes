@@ -115,13 +115,14 @@ PRODUCT_PRODUCT_PROPERTIES += \
     bluetooth.hardware.power.tx_cur_ma=93
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    bt.max.hfpclient.connections=1 \
-    persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
-    persist.vendor.bt.aac_frm_ctl.enabled=true \
-    persist.vendor.btstack.enable.splita2dp=true \
-    persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
+    persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aac \
+    persist.vendor.btstack.aac_frm_ctl.enabled=true \
+    persist.vendor.btstack.connect.peer_earbud=true \
+    persist.vendor.btstack.enable.swb=true \
+    persist.vendor.btstack.enable.swbpm=true \
+    persist.vendor.service.bdroid.soc.alwayson=true \
     ro.bluetooth.emb_wp_mode=false \
-    ro.bluetooth.wipower=false \
+    ro.bluetooth.wipower=false
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.btstack.enable.lpa=true \
@@ -129,12 +130,13 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.bluetooth.modem_nv_support=true \
-    persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false \
-    persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true \
+    persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
+    persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=false \
+    persist.vendor.qcom.bluetooth.enable.splita2dp=true \
     persist.vendor.qcom.bluetooth.scram.enabled=false \
     persist.vendor.qcom.bluetooth.soc=cherokee \
-    ro.vendor.bluetooth.wipower=false \
-    vendor.qcom.bluetooth.soc=cherokee
+    persist.vendor.qcom.bluetooth.twsp_state.enabled=false \
+    ro.vendor.bluetooth.wipower=false
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
@@ -232,6 +234,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.display.svi=1 \
     ro.vendor.histogram.enable=true \
     ro.vendor.xiaomi.bl.poll=true \
+    vendor.display.idle_time=0 \
     vendor.display.qdcm.mode_combine=2 \
     vendor.display.svi.config=1 \
     vendor.display.svi.config_path=/vendor/etc/SVIConfig.xml
@@ -344,6 +347,7 @@ PRODUCT_ODM_PROPERTIES += \
     vendor.mm.enable.qcom_parser=63963135
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    debug.stagefright.omx_default_rank=0 \
     media.aac_51_output_enabled=true \
     media.stagefright.enable-aac=true \
     media.stagefright.enable-fma2dp=true \
@@ -356,7 +360,8 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 
 # Netflix
 PRODUCT_SYSTEM_PROPERTIES += \
-    ro.netflix.channel=004ee050-1a17-11e9-bb61-6f1da27fb55b
+    ro.netflix.channel=004ee050-1a17-11e9-bb61-6f1da27fb55b \
+    ro.netflix.signup=1
 
 # Netmgr
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
@@ -506,6 +511,11 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/bootctrl \
     hardware/xiaomi
     
+# SSR
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.vendor.ssr.restart_level=ALL_ENABLE \
+    persist.vendor.ssr.enable_ramdumps=1
+
 # Storage.xml moment
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.binary_xml=false
