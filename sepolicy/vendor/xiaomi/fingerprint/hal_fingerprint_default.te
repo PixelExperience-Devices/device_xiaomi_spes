@@ -1,11 +1,15 @@
-allow hal_fingerprint_default system_data_root_file:dir r_dir_perms;
-allow hal_fingerprint_default rootfs:dir r_dir_perms;
-
-# Allow fingerprint HAL to create vendor_fingerprint_data_file
+typeattribute hal_fingerprint_default data_between_core_and_vendor_violators;
+allow hal_fingerprint_default goodix_fingerprint_data_file:dir create_dir_perms;
+allow hal_fingerprint_default goodix_fingerprint_data_file:dir rw_dir_perms;
+allow hal_fingerprint_default goodix_fingerprint_data_file:file create_file_perms;
+allow hal_fingerprint_default vendor_fingerprint_data_file:dir create_dir_perms;
 allow hal_fingerprint_default vendor_fingerprint_data_file:dir rw_dir_perms;
 allow hal_fingerprint_default vendor_fingerprint_data_file:file create_file_perms;
 
 allow hal_fingerprint_default self:netlink_socket create_socket_perms_no_ioctl;
+allow hal_fingerprint_default system_data_root_file:dir r_dir_perms;
+allow hal_fingerprint_default vendor_hal_perf_hwservice:hwservice_manager find;
+allow hal_fingerprint_default system_data_root_file:dir r_dir_perms;
 
 # Allow hal_fingerprint_default to read and write to
 # fingerprint_device/input_device/tee_device/uhid_device/vendor_qdsp_device/vendor_xdsp_device
@@ -16,23 +20,20 @@ allow hal_fingerprint_default {
   uhid_device
 }:chr_file rw_file_perms;
 
-# Allow hal_fingerprint_default to read and write to vendor_sysfs_fingerprint
-allow hal_fingerprint_default vendor_sysfs_fingerprint:file rw_file_perms;
+allow hal_fingerprint_default {
+  tee_device
+  fingerprint_device
+}:chr_file ioctl;
 
-# Allow hal_fingerprint_default to read in firmware_file
-r_dir_file(hal_fingerprint_default, firmware_file)
-
-# Allow hal_fingerprint_default to read in input_device
-r_dir_file(hal_fingerprint_default, input_device)
-
-# Allow hal_fingerprint_default to read in vendor_sysfs_graphics
-r_dir_file(hal_fingerprint_default, vendor_sysfs_graphics)
-
-# Allow hal_fingerprint_default to read and write to vendor_sysfs_spss
-allow hal_fingerprint_default vendor_sysfs_spss:file rw_file_perms;
-
-# Allow hal_fingerprint_default to read in rootfs
-r_dir_file(hal_fingerprint_default, rootfs)
+# Allow hal_fingerprint_default to read and write to vendor_sysfs_fingerprint/vendor_sysfs_graphics
+allow hal_fingerprint_default {
+  sysfs
+  sysfs_msm_subsys
+  vendor_sysfs_fingerprint
+  vendor_sysfs_fps_attr
+  vendor_sysfs_graphics
+  vendor_sysfs_spss
+}:file rw_file_perms;
 
 # Allow hal_fingerprint_default to read QDSP and XDSP device
 allow hal_fingerprint_default {
@@ -40,8 +41,23 @@ allow hal_fingerprint_default {
   vendor_xdsp_device
 }:chr_file r_file_perms;
 
+# Allow hal_fingerprint_default to read in firmware_file
+r_dir_file(hal_fingerprint_default, firmware_file)
+
+# Allow hal_fingerprint_default to read in input_device
+r_dir_file(hal_fingerprint_default, input_device)
+
+# Allow hal_fingerprint_default to read in sysfs_msm_subsys
+r_dir_file(hal_fingerprint_default, sysfs_msm_subsys)
+
+# Allow hal_fingerprint_default to read in vendor_sysfs_graphics
+r_dir_file(hal_fingerprint_default, vendor_sysfs_graphics)
+
+# Allow hal_fingerprint_default to read in rootfs
+r_dir_file(hal_fingerprint_default, rootfs)
+
 # Allow hal_fingerprint_default to get IPerf interface
-hal_client_domain(hal_fingerprint_default, vendor_hal_perf)
+binder_call(hal_fingerprint_default, vendor_hal_perf_default)
 
 # Allow hal_fingerprint_default to set fingerprint properties
 set_prop(hal_fingerprint_default, vendor_fingerprint_prop)
@@ -50,6 +66,3 @@ get_prop(hal_fingerprint_default, vendor_system_prop)
 
 # Allow hal_fingerprint_default to read adsprpc properties
 get_prop(hal_fingerprint_default, vendor_adsprpc_prop)
-
-# Allow hal_fingerprint_default to add vendor_hal_xiaomi_fingerprint_hwservice
-add_hwservice(hal_fingerprint_default, vendor_hal_xiaomi_fingerprint_hwservice)
