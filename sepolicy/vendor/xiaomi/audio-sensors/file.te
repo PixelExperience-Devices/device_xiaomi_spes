@@ -1,2 +1,5 @@
+# Audio socket
+type audio_socket, file_type;
+
 # Ultrasound
 type vendor_sysfs_iio, fs_type, sysfs_type;

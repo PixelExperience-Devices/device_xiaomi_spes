@@ -1,12 +1,22 @@
 # Allow connection to audio socket
-allow hal_sensors_default audio_socket:sock_file rw_file_perms;
+binder_call(hal_sensors_default, hal_audio_default)
+hal_client_domain(hal_sensors_default, hal_audio)
 unix_socket_connect(hal_sensors_default, audio, hal_audio_default)
+
+allow hal_sensors_default {
+  audio_socket
+  socket_device
+}:sock_file rw_file_perms;
 
 # Allow Sensors hal to read and write to ultrasound device
 allow hal_sensors_default {
   iio_device
+  sensors_device
   sound_device
 }:chr_file rw_file_perms;
+
+# Alow Sensors hal to find hal_audio_hwservice
+allow hal_sensors_default hal_audio_hwservice:hwservice_manager find;
 
 # Allow Sensors hal to access iio sysfs
 r_dir_file(hal_sensors_default, vendor_sysfs_iio)
