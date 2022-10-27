@@ -64,6 +64,9 @@ on property:vendor.post_boot.parsed=1
     write /proc/sys/kernel/sched_lib_name "UnityMain,libunity.so"
     write /proc/sys/kernel/sched_lib_mask_force 255
 
+    # Enable suspend to RAM
+    write /sys/power/mem_sleep "deep"
+
 on property:persist.sys.device_provisioned=1
     setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,7
     setprop dalvik.vm.dex2oat-threads 6
