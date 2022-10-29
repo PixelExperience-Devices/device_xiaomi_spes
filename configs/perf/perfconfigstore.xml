@@ -39,20 +39,25 @@ property Name is called. -->
                 <Prop Name="ro.vendor.qti.sys.fw.trim_enable_memory" Value="2147483648" />
                 <Prop Name="ro.vendor.qti.am.reschedule_service" Value="true" />
                 <Prop Name="ro.vendor.iocgrp.config" Value="0" />
+                <Prop Name="ro.lmk.thrashing_limit_pct_dup" Value="30" />
                 <Prop Name="ro.lmk.kill_heaviest_task_dup" Value="true" />
+                <Prop Name="ro.lmk.kill_timeout_ms_dup" Value="100" />
+                <Prop Name="ro.lmk.thrashing_threshold" Value="30" />
+                <Prop Name="ro.lmk.thrashing_decay" Value="2" />
+                <Prop Name="ro.lmk.nstrat_low_swap" Value="30" />
+                <Prop Name="ro.lmk.nstrat_psi_partial_ms" Value="70" />
+                <Prop Name="ro.lmk.nstrat_psi_complete_ms" Value="70" />
+                <Prop Name="ro.lmk.nstrat_psi_scrit_complete_stall_ms" Value="75" />
                 <Prop Name="ro.lmk.enhance_batch_kill" Value="false" />
-                <Prop Name="ro.lmk.enable_watermark_check" Value="true" />
                 <Prop Name="ro.lmk.enable_userspace_lmk" Value="false" />
-                <Prop Name="ro.lmk.use_new_strategy_dup" Value="true"/>
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
-                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="60" />
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
                 <Prop Name="vendor.perf.bgt.enable" Value="true" />
 
                 <!--Mention all the target/kernel specific properties at the end of xml file
                     All the default valuea are kept above-->
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_age" Value="5000" Variant="bengal_32" />
-                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="32"  Variant="bengal_32" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="96"  Variant="bengal_32" />
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_limit" Value="5"  Variant="bengal_32" />
                 <Prop Name="ro.lmk.kill_heaviest_task_dup"    Value="false" Variant="bengal_32" />
                 <Prop Name="vendor.iop.enable_uxe"               Value="0"  Variant="bengal_32" />
@@ -63,7 +68,7 @@ property Name is called. -->
 
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_age" Value="5000" Variant="bengal_32go" />
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_limit" Value="5"  Variant="bengal_32go" />
-                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="32"  Variant="bengal_32go" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="96"  Variant="bengal_32go" />
                 <Prop Name="ro.lmk.kill_heaviest_task_dup" Value="false"    Variant="bengal_32go" />
                 <Prop Name="vendor.iop.enable_uxe"             Value="0"    Variant="bengal_32go" />
                 <Prop Name="ro.lmk.enable_preferred_apps"    Value="false"  Variant="bengal_32go"/>
@@ -81,8 +86,15 @@ property Name is called. -->
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_limit" Value="5"     Target="khaje" Ram="3" />
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_age"   Value="5000"  Target="khaje" Ram="3" />
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="32"    Target="khaje" Ram="3" />
-                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="32"    Target="khaje" Ram="4" />
+                <Prop Name="ro.lmk.thrashing_threshold"          Value="30"    Target="khaje" Ram="3"/>
+                <Prop Name="ro.lmk.thrashing_decay"              Value="50"    Target="khaje" Ram="3"/>
+                <Prop Name="ro.lmk.nstrat_low_swap"              Value="0"     Target="khaje" Ram="3"/>
+                <Prop Name="ro.lmk.nstrat_psi_partial_ms"        Value="70"    Target="khaje" Ram="3"/>
+                <Prop Name="ro.lmk.nstrat_psi_complete_ms"       Value="150"    Target="khaje" Ram="3"/>
+                <Prop Name="ro.lmk.nstrat_psi_scrit_complete_stall_ms" Value="300" Target="khaje" Ram="3"/>
+		        <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="96"    Target="khaje" Ram="4" />
 
+                <!-- app compaction props from lahaina -->
                 <Prop Name="vendor.appcompact.enable_app_compact" Value="true" />
                 <Prop Name="vendor.appcompact.full_compact_type"  Value="2" />
                 <Prop Name="vendor.appcompact.some_compact_type"  Value="4" />
