@@ -232,6 +232,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.display.svi=1 \
     ro.vendor.histogram.enable=true \
     ro.vendor.xiaomi.bl.poll=true \
+    vendor.display.defer_fps_frame_count=2 \
     vendor.display.idle_time=0 \
     vendor.display.qdcm.mode_combine=2 \
     vendor.display.svi.config=1 \
