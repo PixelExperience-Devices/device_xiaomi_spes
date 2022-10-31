@@ -166,7 +166,7 @@ marketname=`getprop ro.product.marketname`
 if [ "$marketname" != "" ]; then
     setprop vendor.usb.product_string "$marketname"
 else
-    setprop vendor.usb.product_string "$(getprop vendor.usb.product_string)"
+    setprop vendor.usb.product_string "$(getprop ro.product.model)"
 fi
 
 #
