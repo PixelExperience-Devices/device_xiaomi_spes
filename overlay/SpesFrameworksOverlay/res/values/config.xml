@@ -428,33 +428,6 @@
     <!-- The default peak refresh rate. -->
     <integer name="config_defaultPeakRefreshRate">90</integer>
 
-     <!-- Not allow to switch to higher refresh rate when display brightness setting is
-         equal or less than this value -->
-    <integer-array name="config_brightnessThresholdsOfPeakRefreshRate">
-        <item>10</item> <!-- 33% UI brightness -->
-        <item>14</item> <!-- 40% UI brightness -->
-    </integer-array>
-    <integer-array name="config_ambientThresholdsOfPeakRefreshRate">
-        <item>-1</item>
-        <item>20</item>
-    </integer-array>
-
-    <!-- default refresh rate in the zone defined by birghtness and ambient thresholds -->
-    <integer name="config_defaultRefreshRateInZone">90</integer>
-
-    <!-- Switch to fixed refresh rate when display brightness setting is
-         equal or more than this value -->
-    <integer-array name="config_highDisplayBrightnessThresholdsOfFixedRefreshRate">
-        <item>255</item> <!-- 100% UI brightness -->
-    </integer-array>
-
-    <integer-array name="config_highAmbientBrightnessThresholdsOfFixedRefreshRate">
-        <item>50000</item>
-    </integer-array>
-
-    <!-- default refresh rate in the high zone defined by birghtness and ambient thresholds -->
-    <integer name="config_fixedRefreshRateInHighZone">60</integer>
-    
     <!-- Indicates whether device has a power button fingerprint sensor. -->
     <bool name="config_is_powerbutton_fps" translatable="false" >true</bool>
 
