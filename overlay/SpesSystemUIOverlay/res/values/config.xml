@@ -60,6 +60,6 @@
     <bool name="config_vibrateOnIconAnimation">true</bool>
 
     <!-- Preferred refresh rate at keyguard, if supported by the display -->
-    <integer name="config_keyguardRefreshRate">90</integer>
+    <integer name="config_keyguardRefreshRate">60</integer>
 
 </resources>
