@@ -317,7 +317,11 @@ PRODUCT_PACKAGES += \
 # IDC
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/idc/,$(TARGET_COPY_OUT_VENDOR)/usr/idc)
-    
+
+# Incremental FS
+PRODUCT_VENDOR_OVERRIDES += \
+    ro.incremental.enable=yes
+
 # Keyhandler
 PRODUCT_PACKAGES += \
     KeyHandler
