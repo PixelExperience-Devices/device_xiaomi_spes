@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from miui_SPESGlobal_V13.0.4.0.SGCMIXM_bc890fc589_12.0
+# All unpinned blobs below are extracted from miui_SPESGlobal_V13.0.5.0.SGCMIXM
 # LA.UM.9.12.r1-13300-SMxx50.QSSI12.0 blobs from kona
 # LA.UM.9.12.r1-14400-SMxx50.QSSI12.0 blobs from kona
 

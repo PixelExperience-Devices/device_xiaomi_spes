@@ -54,9 +54,6 @@ function blob_fixup() {
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
             "${SIGSCAN}" -p "13 0A 00 94" -P "1F 20 03 D5" -f "${2}"
 	    ;;
-        vendor/bin/mi_thermald)
-            sed -i 's/%d\/on/%d\/../g' "${2}"
-            ;;
         vendor/lib64/camera/components/com.qti.node.mialgocontrol.so)
             llvm-strip --strip-debug  "${2}"
             "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
