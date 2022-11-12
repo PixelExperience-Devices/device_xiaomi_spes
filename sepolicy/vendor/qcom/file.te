@@ -1,4 +1,1 @@
 type sysfs_kgsl, fs_type, sysfs_type;
-
-#Define the files used by powermodule
-type vendor_pm_data_file, file_type, data_file_type;
