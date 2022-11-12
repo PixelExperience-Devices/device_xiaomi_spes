@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 WaveOS
+ * Copyright (C) 2021 crDroid Android Project
  * Copyright (C) 2021 Chaldeaprjkt
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,10 +23,7 @@ import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 import android.view.Display;
 
-import org.lineageos.settings.R;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
@@ -47,12 +44,10 @@ public class RefreshTileService extends TileService {
         context = getApplicationContext();
         Display.Mode mode = context.getDisplay().getMode();
         Display.Mode[] modes = context.getDisplay().getSupportedModes();
-        int[] blocklist = context.getResources().getIntArray(R.array.refresh_rate_tile_blocklist);
         for (Display.Mode m : modes) {
             int rate = (int) Math.round(m.getRefreshRate());
-            boolean isBlocked = blocklist != null && Arrays.stream(blocklist).anyMatch(x -> x == rate);
             if (m.getPhysicalWidth() == mode.getPhysicalWidth() &&
-                    m.getPhysicalHeight() == mode.getPhysicalHeight() && !isBlocked) {
+                m.getPhysicalHeight() == mode.getPhysicalHeight()) {
                 availableRates.add(rate);
             }
         }
@@ -91,7 +86,7 @@ public class RefreshTileService extends TileService {
         displayText = String.format(Locale.US, min == max ? "%d Hz" : "%d - %d Hz", min, max);
         tile.setContentDescription(displayText);
         tile.setSubtitle(displayText);
-        tile.setState(min != max ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
+        tile.setState(min == max ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
         tile.updateTile();
     }
 

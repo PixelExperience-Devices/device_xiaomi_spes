@@ -45,8 +45,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         } catch (Exception e) {
             Log.d(TAG, "Dirac is not present in system");
         }
-        RefreshUtils.startService(context);
-        ThermalUtils.startService(context);
+        RefreshUtils.initialize(context);
+        ThermalUtils.initialize(context);
 
         // Pocket
         PocketService.startService(context);
