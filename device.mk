@@ -413,6 +413,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    ApertureOverlay \
     SpesCarrierConfigOverlay \
     SpesFrameworksOverlay \
     SpesSettingsOverlay \
