@@ -1,1 +1,4 @@
-/dev/ir_spi                                    u:object_r:vendor_ir_spi_device:s0
+# IR
+/dev/ir_spi                                                             u:object_r:lirc_device:s0
+/dev/lirc[0-9]                                                          u:object_r:lirc_device:s0
+/dev/spidev[0-9]\.1                                                     u:object_r:lirc_device:s0
