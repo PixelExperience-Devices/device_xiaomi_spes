@@ -74,9 +74,6 @@ on property:vendor.post_boot.parsed=1
     write /proc/sys/kernel/sched_lib_name "UnityMain,libunity.so"
     write /proc/sys/kernel/sched_lib_mask_force 255
 
-    # Enable suspend to RAM
-    write /sys/power/mem_sleep "deep"
-
     # Setup default schedtune values for foreground/top-app
     write /dev/stune/schedtune.boost 0
     write /dev/stune/schedtune.prefer_idle 0
