@@ -92,9 +92,6 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/xiaomi_manifest.xml
 
-ODM_MANIFEST_SKUS += k7tn
-ODM_MANIFEST_K7TN_FILES := $(DEVICE_PATH)/configs/hidl/manifest_k7tn.xml
-
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_spes
 TARGET_RECOVERY_DEVICE_MODULES := libinit_spes

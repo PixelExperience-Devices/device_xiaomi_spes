@@ -379,27 +379,21 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
 
 # NFC
+$(call inherit-product, hardware/st/nfc/nfc_vendor_product.mk)
+ODM_MANIFEST_SKUS += $(TARGET_NFC_SKU)
+ODM_MANIFEST_K7TN_FILES := hardware/st/nfc/aidl/nfc-service-default.xml
+TARGET_USES_ST_AIDL_NFC := true
+TARGET_NFC_SKU := k7tn
+
 PRODUCT_PACKAGES += \
-    android.hardware.nfc-service.st \
     com.android.nfc_extras \
     libchrome.vendor \
-    nfc_nci.st21nfc.default \
     NfcNci \
     SecureElement \
     Tag
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_k7tn/android.hardware.nfc.ese.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_k7tn/android.hardware.nfc.hce.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_k7tn/android.hardware.nfc.hcef.xml \
-    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_k7tn/android.hardware.nfc.uicc.xml \
-    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_k7tn/android.hardware.nfc.xml \
-    frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_k7tn/android.hardware.se.omapi.ese.xml \
-    frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_k7tn/android.hardware.se.omapi.uicc.xml \
-    frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_k7tn/com.android.nfc_extras.xml
 
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.nfc.port=I2C
