@@ -103,7 +103,6 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so|ecdf9f24262c49031c470b14a27d3f99d2b47ff4
 # Audio Configs
 vendor/etc/audio_effects.conf
 vendor/etc/audio_effects.xml
-vendor/etc/audio_platform_info_qrd.xml
 vendor/etc/audio_platform_info_scubaidp.xml
 vendor/etc/audio_platform_info_scubaqrd.xml
 vendor/etc/audio_platform_info.xml
@@ -111,12 +110,9 @@ vendor/etc/audio_policy_volumes.xml
 vendor/etc/default_volume_tables.xml
 vendor/etc/media_codecs_vendor_audio.xml
 vendor/etc/mixer_paths_idp_india.xml
-vendor/etc/mixer_paths_qrd.xml
 vendor/etc/mixer_paths_scubaidp.xml
 vendor/etc/mixer_paths_scubaqrd.xml
-vendor/etc/mixer_paths.xml
 vendor/etc/r_submix_audio_policy_configuration.xml
-vendor/etc/sound_trigger_mixer_paths.xml
 vendor/etc/sound_trigger_platform_info.xml
 vendor/etc/usb_audio_policy_configuration.xml
 
