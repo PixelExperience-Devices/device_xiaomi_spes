@@ -1,6 +1,17 @@
 # All unpinned blobs below are extracted from miui_SPESGlobal_V13.0.5.0.SGCMIXM
 # LA.UM.9.12.r1-13300-SMxx50.QSSI12.0 blobs from kona
 # LA.UM.9.12.r1-14400-SMxx50.QSSI12.0 blobs from kona
+# LA.VENDOR.1.0.r1-19000-WAIPIO blobs from taro
+
+# ACDB - from LA.VENDOR.1.0.r1-15600-WAIPIO
+vendor/etc/acdbdata/bengal_idp/IDP_acdb_cal.acdb|fab9d9cbea770f295a1008cb1366d432eec62c81
+vendor/etc/acdbdata/bengal_idp/IDP_workspaceFileXml.qwsp|5f56c0cb5d27755e5db26f9ffcc5756e10753460
+vendor/etc/acdbdata/bengal_qrd/QRD_acdb_cal.acdb|278f923deace47b1fc766e9e1a5a527fe0422dc6
+vendor/etc/acdbdata/bengal_qrd/QRD_workspaceFileXml.qwsp|82216a3aaf9efdb42114d1b37ce7f9b33759f453
+vendor/etc/acdbdata/bengal_scubaidp/IDP_scuba_acdb_cal.acdb|fab9d9cbea770f295a1008cb1366d432eec62c81
+vendor/etc/acdbdata/bengal_scubaidp/IDP_scuba_workspaceFileXml.qwsp|5f56c0cb5d27755e5db26f9ffcc5756e10753460
+vendor/etc/acdbdata/bengal_scubaqrd/QRD_scuba_acdb_cal.acdb|278f923deace47b1fc766e9e1a5a527fe0422dc6
+vendor/etc/acdbdata/bengal_scubaqrd/QRD_scuba_workspaceFileXml.qwsp|82216a3aaf9efdb42114d1b37ce7f9b33759f453
 
 # ACDB
 vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Bluetooth_cal.acdb
