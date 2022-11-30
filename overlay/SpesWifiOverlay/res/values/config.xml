@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2020 Qualcomm Technologies, Inc.
+     All Rights Reserved.
+     Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<resources>
+
+    <!-- dual sap mode is supported on this device. -->
+    <bool name="config_wifi_dual_sap_mode_enabled">false</bool>
+
+</resources>
