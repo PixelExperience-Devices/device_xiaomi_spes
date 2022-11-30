@@ -123,6 +123,12 @@ vendor/etc/diracmobile.config
 # Audio Firmware
 vendor/firmware/aw87xxx_acf.bin
 
+# Audio FTM
+vendor/etc/ftm_test_config
+vendor/etc/ftm_test_config_bengal-qrd-snd-card
+vendor/etc/ftm_test_config_bengal-scubaidp-snd-card
+vendor/etc/ftm_test_config_bengal-scubaqrd-snd-card
+
 # Audio FX
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libmisoundfx.so
