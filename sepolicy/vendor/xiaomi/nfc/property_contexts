@@ -1,0 +1,2 @@
+# NFC
+persist.vendor.nfc.                             u:object_r:vendor_nfc_prop:s0
