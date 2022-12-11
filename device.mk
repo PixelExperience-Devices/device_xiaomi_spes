@@ -69,7 +69,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_ODM_PROPERTIES += \
     aaudio.mmap_policy=1 \
-    ro.vendor.audio.sdk.fluencetype=fluence
+    ro.vendor.audio.sdk.fluencetype=fluence \
+    vendor.audio.feature.dynamic_ecns.enable=false
 
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.config.media_vol_default=8 \
@@ -78,12 +79,25 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.config.vc_call_vol_steps=11
 
 PRODUCT_VENDOR_PROPERTIES += \
+    audio_para_version=K7T-Audiopara-V01-20211029 \
+    persist.audio.button_jack.profile=volume \
+    persist.audio.button_jack.switch=0 \
     ro.audio.monitorRotation=true \
+    ro.vendor.audio.afe.record=true \
     ro.vendor.audio.misound.bluetooth.enable=true \
-    ro.vendor.audio.scenario.support=true \
+    ro.vendor.audio.scenario.support=false \
     ro.vendor.audio.soundfx.type=mi \
     ro.vendor.audio.soundfx.usb=true \
-    ro.vendor.audio.us.proximity=true
+    ro.vendor.audio.sfx.earadj=true \
+    ro.vendor.audio.sfx.scenario=false \
+    ro.vendor.audio.spk.clean=true \
+    ro.vendor.audio.spk.stereo=true \
+    ro.vendor.audio.sos=true \
+    ro.vendor.audio.surround.support=false \
+    ro.vendor.audio.vocal.support=false \
+    ro.vendor.audio.voice.change.support=true \
+    ro.vendor.audio.us.proximity=true \
+    vendor.audio.chk.cal.us=0
 
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.soundtrigger.appdefine.cnn.level=31 \
