@@ -109,7 +109,6 @@ vendor/etc/audio_platform_info.xml
 vendor/etc/audio_policy_volumes.xml
 vendor/etc/default_volume_tables.xml
 vendor/etc/media_codecs_vendor_audio.xml
-vendor/etc/mixer_paths_idp_india.xml
 vendor/etc/mixer_paths_scubaidp.xml
 vendor/etc/mixer_paths_scubaqrd.xml
 vendor/etc/r_submix_audio_policy_configuration.xml
