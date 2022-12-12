@@ -173,7 +173,7 @@ TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 
 # qcom/common tree
 include $(COMMON_PATH)/BoardConfigQcom.mk
-OVERRIDE_QCOM_HARDWARE_VARIANT := sm8250-common
+OVERRIDE_QCOM_HARDWARE_VARIANT := bengal
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
