@@ -31,9 +31,6 @@
     <!-- Margin on the right side of the system icon group on Keyguard. -->
     <dimen name="system_icons_keyguard_padding_end">0dp</dimen>
 
-    <!-- Starting padding for a left-aligned status bar clock -->
-    <dimen name="status_bar_left_clock_starting_padding">@dimen/status_bar_padding_start</dimen>
-    
     <!-- Location on the screen of the center of the fingerprint sensor. For devices with under
      display fingerprint sensors, this directly corresponds to the fingerprint sensor's location.
      For devices with sensors on the back of the device, this corresponds to the location on the
