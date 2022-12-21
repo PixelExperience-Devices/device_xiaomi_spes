@@ -19,6 +19,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <vector>
+#include <android-base/logging.h>
 
 #include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
@@ -90,12 +91,14 @@ void load_redmi_spesn() {
 
 void vendor_load_properties() {
     std::string region = GetProperty("ro.boot.hwc", "");
-    if (region.find("India") != std::string::npos) {
-        load_redmi_spes_in();
-    } else if (region.find("Global") != std::string::npos) {
-        load_redmi_spes();
-    } else {
-        load_redmi_spesn();
+    if (access("/system/bin/recovery", F_OK) != 0) {
+        if (region.find("India") != std::string::npos) {
+           load_redmi_spes_in();
+        } else if (region.find("Global") != std::string::npos) {
+           load_redmi_spes();
+        } else {
+           load_redmi_spesn();
+        }
     }
 
     // Set hardware revision
