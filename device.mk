@@ -73,9 +73,7 @@ PRODUCT_ODM_PROPERTIES += \
     vendor.audio.feature.dynamic_ecns.enable=false
 
 PRODUCT_SYSTEM_PROPERTIES += \
-    ro.config.media_vol_default=8 \
-    ro.config.media_vol_steps=25 \
-    ro.config.vc_call_vol_default=10 \
+    ro.config.media_vol_default=10 \
     ro.config.vc_call_vol_steps=11
 
 PRODUCT_VENDOR_PROPERTIES += \
