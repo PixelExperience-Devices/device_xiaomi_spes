@@ -167,8 +167,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.postproc@1.0.vendor
     
 PRODUCT_SYSTEM_PROPERTIES += \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera \
-    vendor.camera.aux.packagelist.ext=org.codeaurora.snapcam,com.android.camera \
     persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera
 
 PRODUCT_VENDOR_PROPERTIES += \
