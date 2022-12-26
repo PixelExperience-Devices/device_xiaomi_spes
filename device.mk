@@ -68,8 +68,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service
 
 PRODUCT_ODM_PROPERTIES += \
-    aaudio.mmap_policy=1 \
-    ro.vendor.audio.sdk.fluencetype=fluence \
     vendor.audio.feature.dynamic_ecns.enable=false
 
 PRODUCT_SYSTEM_PROPERTIES += \
