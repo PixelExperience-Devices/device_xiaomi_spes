@@ -68,7 +68,8 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service
 
 PRODUCT_ODM_PROPERTIES += \
-    vendor.audio.feature.dynamic_ecns.enable=false
+    vendor.audio.feature.dynamic_ecns.enable=false \
+    vendor.audio.hw.aac.encoder=false
 
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.config.media_vol_default=10 \
