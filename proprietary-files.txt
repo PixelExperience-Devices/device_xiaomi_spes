@@ -161,7 +161,6 @@ vendor/lib/libaudcal.so
 vendor/lib/libaudioalsa.so
 vendor/lib/libaudioconfigstore.so
 vendor/lib/libaudioparsers.so
-vendor/lib/libbatterylistener.so
 vendor/lib/libcirrusspkrprot.so
 vendor/lib/libcomprcapture.so
 vendor/lib/libdrc.so
