@@ -112,8 +112,6 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|ecdf9f24262c49031c470b14a27d3f99d2b47ff4
 
 # Audio Configs
-vendor/etc/audio_effects.conf
-vendor/etc/audio_effects.xml
 vendor/etc/audio_platform_info.xml
 vendor/etc/audio_platform_info_scubaidp.xml
 vendor/etc/audio_platform_info_scubaqrd.xml
