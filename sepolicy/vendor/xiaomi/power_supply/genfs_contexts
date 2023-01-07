@@ -1,9 +1,10 @@
 # Battery
 genfscon sysfs /class/power_supply/bms                                                                                                 u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0071/power_supply/bms(/.*)?                                                   u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-3/3-0066/power_supply/bq2597x-standalone                                          u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-4/4-0034/4a84000.i2c:qcom,smb1396@34:qcom,div2_cp/power_supply/charge_pump_master u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-4/4-0035/4a84000.i2c:qcom,smb1396@35:qcom,div2_cp_slave/power_supply/cp_slave     u:object_r:vendor_sysfs_battery_supply:s0
-genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-4/4-0055/power_supply/bms                                                         u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-4/4-0055/power_supply/bms(/.*)?                                                   u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-4/4-0065/power_supply/bq2597x-master                                              u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-3/3-0051/power_supply/bq2597x-master                                              u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-3/3-0066/power_supply/bq2597x-master                                              u:object_r:vendor_sysfs_battery_supply:s0
@@ -21,7 +22,7 @@ genfscon sysfs /devices/platform/soc/soc:ant_check/wakeup/wakeup24              
 genfscon sysfs /devices/platform/soc/soc:ant_check/wakeup/wakeup25                                                                     u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:ant_check_div/wakeup/wakeup24                                                                 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:ant_check_div/wakeup/wakeup25                                                                 u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/max77729-fuelgauge/power_supply/bms                                      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/max77729-fuelgauge/power_supply/bms(/.*)?                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/max77729-fuelgauge/power_supply/bms/wakeup29                             u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/max77729-charger/wakeup/wakeup34                                         u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0066/max77729-charger/wakeup/wakeup32                                         u:object_r:sysfs_wakeup:s0
