@@ -788,12 +788,6 @@ vendor/lib64/libmifpext.so
 vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so|04fa410eb6ca960489911021327aa0fd745e09d7|8034b67ff67e649d3978e34b0a657c49daa94418
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
-# FM - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|e1234c2e98644e2bdf74746704960ea3a2857629
-vendor/lib/vendor.qti.hardware.fm@1.0.so|6e0acce313956c08b964a0e24ffe1ffeb6448b01
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|d117bae0207eb9a7c0aff115593bbbf9461688a7
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|19fcbfe03d4b6304af9b01b89ab8fc6f9968d87b
-
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
