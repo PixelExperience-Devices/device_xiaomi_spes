@@ -14,6 +14,5 @@
 
 runtime_resource_overlay {
     name: "SettingsProvider2201117TY",
-    sdk_version: "current",
     product_specific: true,
 }

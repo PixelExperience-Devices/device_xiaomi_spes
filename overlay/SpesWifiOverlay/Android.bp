@@ -14,6 +14,5 @@
 
 runtime_resource_overlay {
     name: "SpesWifiOverlay",
-    sdk_version: "current",
     vendor: true,
 }
