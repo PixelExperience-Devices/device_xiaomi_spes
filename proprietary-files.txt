@@ -1016,8 +1016,15 @@ vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
 vendor/lib/libsmwrapper.so
 
-# Media - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
-vendor/etc/seccomp_policy/mediacodec.policy|566768911884c0d9d3fc4be82c13d516c5807827
+# Media OSAL - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
+vendor/lib/libmmosal.so|dd0d1a01f4934e519d86c1e43ab2cfd2cc11f524
+vendor/lib64/libmmosal.so|60b7a94d6cd73c6d5be0e76dd503179adafd79a7
+
+# Media OMX
+vendor/lib/libOmxVdec.so
+vendor/lib64/libOmxVdec.so
+
+# Media OMX - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/lib/libAlacSwDec.so|cb41b0945e57b349e6aa476cdac4315ee13a2def
 vendor/lib/libApeSwDec.so|ce425ef9372ed6635e313422b3578f77b90ff526
 vendor/lib/libFlacSwDec.so|6b17d0965c9f8bddab3ffd59e7bb16e92bb68d85
@@ -1034,14 +1041,8 @@ vendor/lib/libOmxG711Dec.so|704e832f601ef3f491f471bb75d7ea3abc4d78ac
 vendor/lib/libOmxMpeghDecSw.so|23dbc543efab3169f382bc371f3361644fa50d69
 vendor/lib/libOmxMpeghEncSw.so|440276eed570302cd51048c15005b925b63be97f
 vendor/lib/libOmxQcelp13Dec.so|56e643a94933055af473b8e185061dbc55799d76
-vendor/lib/libOmxSwVdec.so|18ed02c61520fcea7786b83cd477bca5d4d1bad6
-vendor/lib/libOmxSwVencMpeg4.so|bf20b35e622aa64eee84a09d05fbafbb1ef3accc
-vendor/lib/libOmxVdec.so|a8fa06584858fbc27f35102e6fcecd2136e40d44
-vendor/lib/libOmxVideoDSMode.so|9ebeebc9ab721dd9e2d6bb7a4c2cea5abfad6065
 vendor/lib/libOmxWmaDec.so|36f4c673b3fc059abdf86943bd0e4859a970f55c
 vendor/lib/libdsd2pcm.so|c5ab1afd7a5a23bf83d80b5ac74247c3dd2085af
-vendor/lib/libmmosal.so|dd0d1a01f4934e519d86c1e43ab2cfd2cc11f524
-vendor/lib/libswvdec.so|7d269da9b5b9b2f5e4ee3ce3b68e3725ce012ef0
 vendor/lib64/libAlacSwDec.so|2bd791269f5151fa6b6cfaaa1744f5c0ecb19d28
 vendor/lib64/libApeSwDec.so|efac4ae01cd425577c704d06704b00970d324167
 vendor/lib64/libFlacSwDec.so|1aa31537b6f1f5752eb44486310647631cbb5c89
@@ -1056,12 +1057,7 @@ vendor/lib64/libOmxEvrcDec.so|8e13f9ebf88a58d74a6b87f2374683affde4b1d4
 vendor/lib64/libOmxG711Dec.so|cb4dca54c3f89d6cabefc99108226a15d8978a55
 vendor/lib64/libOmxMpeghEncSw.so|0dae5dce34679a23491730579d8d89373ae80d8c
 vendor/lib64/libOmxQcelp13Dec.so|2925d7a2530a5f8f0e592cafffe0fb4cef0404d5
-vendor/lib64/libOmxSwVdec.so|b2afb33fc6e8e80f40cc475184f98dd0f027ffec
-vendor/lib64/libOmxSwVencMpeg4.so|0054dc1855d91a399a4c7567095319aeaf99a14a
-vendor/lib64/libOmxVdec.so|a9bc08954bb5f655186085d7e6b546021277312b
 vendor/lib64/libOmxWmaDec.so|469de8d7503c24bcdece185172b88cb01d1218d2
-vendor/lib64/libmmosal.so|60b7a94d6cd73c6d5be0e76dd503179adafd79a7
-vendor/lib64/libswvdec.so|e50cc714152873d4fdcabd3ed1bbf9e635725b78
 
 # Neural networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
