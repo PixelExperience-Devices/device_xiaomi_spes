@@ -38,7 +38,7 @@ property Name is called. -->
                 <Prop Name="ro.vendor.qti.sys.fw.trim_cache_percent" Value="100" />
                 <Prop Name="ro.vendor.qti.sys.fw.trim_enable_memory" Value="2147483648" />
                 <Prop Name="ro.vendor.qti.am.reschedule_service" Value="true" />
-                <Prop Name="ro.vendor.iocgrp.config" Value="0" />
+                <Prop Name="ro.vendor.iocgrp.config" Value="1" />
                 <Prop Name="ro.lmk.thrashing_limit_pct_dup" Value="30" />
                 <Prop Name="ro.lmk.kill_heaviest_task_dup" Value="true" />
                 <Prop Name="ro.lmk.kill_timeout_ms_dup" Value="100" />
@@ -50,9 +50,17 @@ property Name is called. -->
                 <Prop Name="ro.lmk.nstrat_psi_scrit_complete_stall_ms" Value="75" />
                 <Prop Name="ro.lmk.enhance_batch_kill" Value="false" />
                 <Prop Name="ro.lmk.enable_userspace_lmk" Value="false" />
+                <Prop Name="ro.lmk.use_new_strategy_dup" Value="true" />
+                <Prop Name="ro.lmk.super_critical" Value="606" />
+                <Prop Name="ro.lmk.direct_reclaim_pressure" Value="45" />
+                <Prop Name="ro.lmk.reclaim_scan_threshold" Value="0" />
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
-                <Prop Name="vendor.perf.bgt.enable" Value="true" />
+                <Prop Name="ro.vendor.perf.gfl.tap_ignore_enable" Value="true"/>
+                <Prop Name="ro.vendor.perf.wlc.heavygame" Value="true"/>
+                <Prop Name="vendor.perf.fps_switch.enable" Value="1"/>
+                <Prop Name="vendor.perf.performancemode.support" Value="true" />
+                <Prop Name="vendor.perf.topAppRenderThreadBoost.enable" Value="false" />
 
                 <!--Mention all the target/kernel specific properties at the end of xml file
                     All the default valuea are kept above-->
@@ -77,7 +85,7 @@ property Name is called. -->
                 <Prop Name="ro.lmk.psi_scrit_complete_stall_ms" Value="85"  Variant="bengal_32go"/>
 
                 <!--Mention all the khaje specific properties here -->
-		<Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="96"    Target="khaje" Ram="4" />
+		        <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="96"    Target="khaje" Ram="4" />
 
                 <!-- app compaction props from lahaina -->
                 <Prop Name="vendor.appcompact.enable_app_compact" Value="true" />
