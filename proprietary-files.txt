@@ -1,7 +1,7 @@
 # All unpinned blobs below are extracted from miui_SPESGlobal_V13.0.6.0.SGCMIXM
 # LA.UM.9.12.r1-13300-SMxx50.QSSI12.0 blobs from kona
 # LA.UM.9.12.r1-14400-SMxx50.QSSI12.0 blobs from kona
-# LA.VENDOR.1.0.r1-19000-WAIPIO blobs from taro
+# LA.VENDOR.1.0.r1-15600-WAIPIO blobs from taro
 
 # ACDB - from LA.VENDOR.1.0.r1-15600-WAIPIO
 vendor/etc/acdbdata/bengal_idp/IDP_acdb_cal.acdb|fab9d9cbea770f295a1008cb1366d432eec62c81
