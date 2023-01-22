@@ -239,12 +239,8 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_backpressure=1 \
-    ro.vendor.display.dither=true \
-    ro.vendor.display.mi_calib.enable=true \
     ro.vendor.display.sensortype=2 \
     ro.vendor.display.svi=1 \
-    ro.vendor.histogram.enable=true \
-    ro.vendor.xiaomi.bl.poll=true \
     vendor.display.defer_fps_frame_count=2 \
     vendor.display.idle_time=0 \
     vendor.display.idle_time_inactive=0 \
