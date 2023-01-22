@@ -418,7 +418,6 @@ vendor/lib64/camera/components/com.qti.node.eisv3.so
 vendor/lib64/camera/components/com.qti.node.fcv.so
 vendor/lib64/camera/components/com.qti.node.gpu.so
 vendor/lib64/camera/components/com.qti.node.memcpy.so
-vendor/lib64/camera/components/com.qti.node.mialgocontrol.so|28e525e7b8e0e1684d500fd23b0d96ceb311beb5
 vendor/lib64/camera/components/com.qti.node.mimovie.so
 vendor/lib64/camera/components/com.qti.node.stich.so
 vendor/lib64/camera/components/com.qti.node.swaidenoiser.so
@@ -446,6 +445,9 @@ vendor/lib64/camera/components/com.qtistatic.stats.af.so
 vendor/lib64/camera/components/com.qtistatic.stats.awb.so
 vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so
 vendor/lib64/camera/components/com.vidhance.node.processing.so
+
+# Camera Componentes - com.qti.node.mialgocontrol
+vendor/lib64/camera/components/com.qti.node.mialgocontrol.so|28e525e7b8e0e1684d500fd23b0d96ceb311beb5
 
 # Camera Configs
 vendor/etc/camera/model/dof_model/capture_cache
@@ -753,8 +755,10 @@ vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
 vendor/lib64/libmifpext.so
-vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so|04fa410eb6ca960489911021327aa0fd745e09d7|8034b67ff67e649d3978e34b0a657c49daa94418
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+
+# Fingerprint - goodix.hardware.biometrics
+vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so|04fa410eb6ca960489911021327aa0fd745e09d7|8034b67ff67e649d3978e34b0a657c49daa94418
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
