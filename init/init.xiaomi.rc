@@ -38,6 +38,10 @@ on post-fs-data
     chmod 0644 /dev/elliptic0
     chmod 0644 /dev/elliptic1
 
+    # add for mishow
+    chmod 0777 /sys/class/power_supply/battery/input_suspend
+    chown system system /sys/class/power_supply/battery/input_suspend
+
 on boot
     # Xiaomi Camera
     # Add a cpuset for the camera daemon
