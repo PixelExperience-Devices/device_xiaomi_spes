@@ -250,7 +250,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # DPM
 PRODUCT_VENDOR_PROPERTIES += \
-    persist.dpm.feature=1 \
     persist.vendor.dpmhalservice.enable=1
 
 # DRM
