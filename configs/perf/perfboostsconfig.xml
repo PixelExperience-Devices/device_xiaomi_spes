@@ -448,6 +448,28 @@
                 Id="0x00001097" Type="0" Enable="true" Timeout="12" Target="khaje" Fps="90"
                 Resources="0x40800000, 1500, 0x42804000, 0, 0x42C20000, 1" />
 
+    <!--Performance mode-->
+        <!-- SCHED_WINDOW_TICKS_UPDATE -->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
+        <!-- LPM_BIAS resource opcode, value-->
+        <!-- SCHED_PREFER_SPREAD resource opcode, value -->
+        <!-- SLB_BIG, val, SLB_BIG, val, SLB_BIG, val, SLB_BIG, val-->
+        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
+        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
+        <!-- CPU_DOWN_FREQ_THRESHOLD_US, val us -->
+        <!-- GPU MIN_FREQUENCY resource opcode, value-->
+
+        <!-- Type="", Performance mode -->
+    <Config
+            Id="0x00001091" Enable="true" Target="khaje"
+            Resources="0x40CA4000, 2, 0x40804000, 2400, 0x40804100, 1900, 0x40800000, 2208, 0x40800100, 1800, 0x40C74000, 0xF0, 0x40408000,
+                       0x63, 0x40CA8000, 2, 0x40C68040, 60, 0x40C68050, 60, 0x40C68060, 60, 0x40C68070, 60, 0x40C58000, 75, 0x40C54000, 95,
+                       0x41448000, 20000, 0x4280C000, 1025" />
+
     <!--XiaoMi bluetooth boost-->
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->

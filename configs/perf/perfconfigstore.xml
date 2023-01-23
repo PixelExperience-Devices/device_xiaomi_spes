@@ -53,6 +53,7 @@ property Name is called. -->
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
                 <Prop Name="vendor.perf.bgt.enable" Value="true" />
+                <Prop Name="vendor.perf.performancemode.support" Value="true" Target="khaje" />
 
                 <!--Mention all the target/kernel specific properties at the end of xml file
                     All the default valuea are kept above-->
