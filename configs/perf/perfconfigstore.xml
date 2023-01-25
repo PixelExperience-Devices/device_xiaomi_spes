@@ -77,7 +77,7 @@ property Name is called. -->
                 <Prop Name="ro.lmk.psi_scrit_complete_stall_ms" Value="85"  Variant="bengal_32go"/>
 
                 <!--Mention all the khaje specific properties here -->
-		<Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="96"    Target="khaje" Ram="4" />
+		        <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="96" Target="khaje" />
 
                 <!-- app compaction props from lahaina -->
                 <Prop Name="vendor.appcompact.enable_app_compact" Value="true" />
