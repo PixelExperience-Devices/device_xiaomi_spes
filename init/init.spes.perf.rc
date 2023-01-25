@@ -17,6 +17,10 @@ on early-init
     write /dev/stune/schedtune.boost 50
     write /dev/stune/schedtune.prefer_idle 1
 
+on boot
+    # GPU boost
+    chmod 0660 /sys/class/kgsl/kgsl-3d0/min_pwrlevel
+
 on property:sys.boot_completed=1
     # Read only one page at a time
     write /proc/sys/vm/page-cluster 0
