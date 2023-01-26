@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from miui_SPESNGlobal_V13.0.6.0.SGKMIXM
+# All MIUI blobs below are extracted from miui_SPESNGlobal_V13.0.6.0.SGKMIXM
 # LA.UM.9.12.r1-13300-SMxx50.QSSI12.0 blobs from kona
 # LA.UM.9.12.r1-14400-SMxx50.QSSI12.0 blobs from kona
 # LA.VENDOR.1.0.r1-15600-WAIPIO blobs from taro
@@ -13,7 +13,7 @@ vendor/etc/acdbdata/bengal_scubaidp/IDP_scuba_workspaceFileXml.qwsp|5f56c0cb5d27
 vendor/etc/acdbdata/bengal_scubaqrd/QRD_scuba_acdb_cal.acdb|278f923deace47b1fc766e9e1a5a527fe0422dc6
 vendor/etc/acdbdata/bengal_scubaqrd/QRD_scuba_workspaceFileXml.qwsp|82216a3aaf9efdb42114d1b37ce7f9b33759f453
 
-# ACDB
+# ACDB - from MIUI
 vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Bluetooth_cal.acdb
 vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_General_cal.acdb
 vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Global_cal.acdb
@@ -59,7 +59,7 @@ vendor/etc/acdbdata/nn_ns_models/fai__2.2.0_0.1__3.0.0_0.0__eai_1.00.pmd
 vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
-# ADSP
+# ADSP - from MIUI
 vendor/bin/adsprpcd
 vendor/bin/dspservice
 vendor/bin/loadalgo
@@ -74,7 +74,7 @@ vendor/lib64/libadsprpc.so
 vendor/lib64/libloadalgo_stub.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
-# ADSP Modules
+# ADSP Modules - from MIUI
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
@@ -99,7 +99,7 @@ vendor/lib/rfsa/adsp/misound_res.bin
 vendor/lib/rfsa/adsp/misound_res_headphone.bin
 vendor/lib/rfsa/adsp/misound_res_spk.bin
 
-# Alarm
+# Alarm - from MIUI
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
 -system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
@@ -111,7 +111,7 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 # ANT+ - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|ecdf9f24262c49031c470b14a27d3f99d2b47ff4
 
-# Audio Configs
+# Audio Configs - from MIUI
 vendor/etc/audio_platform_info_scubaidp.xml
 vendor/etc/audio_platform_info_scubaqrd.xml
 vendor/etc/audio_policy_volumes.xml
@@ -128,16 +128,16 @@ lib/libDiracAPI_SHARED.so:vendor/lib/libDiracAPI_SHARED.so
 lib/soundfx/libdirac.so:vendor/lib/soundfx/libdirac.so
 vendor/etc/diracmobile.config
 
-# Audio Firmware
+# Audio Firmware - from MIUI
 vendor/firmware/aw87xxx_acf.bin
 
-# Audio FTM
+# Audio FTM - from MIUI
 vendor/etc/ftm_test_config
 vendor/etc/ftm_test_config_bengal-qrd-snd-card
 vendor/etc/ftm_test_config_bengal-scubaidp-snd-card
 vendor/etc/ftm_test_config_bengal-scubaqrd-snd-card
 
-# Audio FX
+# Audio FX - from MIUI
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libmisoundfx.so
 vendor/lib/soundfx/libqcbassboost.so
@@ -145,11 +145,11 @@ vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 vendor/lib/soundfx/libshoebox.so
 
-# Audio HAL
+# Audio HAL - from MIUI
 vendor/lib/hw/audio.primary.bengal.so
 vendor/lib/libaudio_log_utils.so
 
-# Audio Libraries
+# Audio Libraries - from MIUI
 vendor/lib/liba2dpoffload.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
@@ -173,7 +173,7 @@ vendor/lib/libspkrprot.so
 vendor/lib/libssrec.so
 vendor/lib/libsurround_3mic_proc.so
 
-# Batterysecret
+# Batterysecret - from MIUI
 vendor/bin/batterysecret
 vendor/etc/init/init.batterysecret.rc
 
@@ -209,7 +209,7 @@ vendor/lib64/libbtnv.so|7973f6eeaa23f85709682e6fca66d589f514563d
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|52b83b6f371a49d866276aabc5d6bda4faa400b6
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|8d098cef4c4442f9aa2c64389be5eba32003dcce
 
-# Camera
+# Camera - from MIUI
 vendor/bin/f2player
 vendor/lib64/camera/com.qti.eeprom.irs2381c_polar.so
 vendor/lib64/camera/com.qti.eeprom.truly_cmb433.so
@@ -379,7 +379,7 @@ vendor/lib64/libwa_rtdof.so
 vendor/lib64/libwa_widelens_undistort.so
 vendor/lib64/libxmi_high_dynamic_range.so
 
-# Camera Arcsoft
+# Camera Arcsoft - from MIUI
 vendor/lib64/libarcsoft_beautyshot.so
 vendor/lib64/libarcsoft_dualcam_refocus_image.so
 vendor/lib64/libarcsoft_hdr_detection.so
@@ -389,7 +389,7 @@ vendor/lib64/libarcsoft_portrait_lighting.so
 vendor/lib64/libarcsoft_portrait_lighting_c.so
 vendor/lib64/libarcsoft_supernight.so
 
-# Camera CamX
+# Camera CamX - from MIUI
 vendor/lib64/libcamxexternalformatutils.so
 vendor/lib64/libcamxfacialfeatures.so
 vendor/lib64/libcamxfdalgo.so
@@ -402,7 +402,7 @@ vendor/lib64/libcamxswispiqmodule.so
 vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
 
-# Camera Components
+# Camera Components - from MIUI
 vendor/lib64/camera/components/com.mi.node.realtimebokeh.so
 vendor/lib64/camera/components/com.qti.camx.chiiqutils.so
 vendor/lib64/camera/components/com.qti.eisv2.so
@@ -446,10 +446,10 @@ vendor/lib64/camera/components/com.qtistatic.stats.awb.so
 vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so
 vendor/lib64/camera/components/com.vidhance.node.processing.so
 
-# Camera Componentes - com.qti.node.mialgocontrol
+# Camera Componentes - com.qti.node.mialgocontrol 
 vendor/lib64/camera/components/com.qti.node.mialgocontrol.so|28e525e7b8e0e1684d500fd23b0d96ceb311beb5
 
-# Camera Configs
+# Camera Configs - from MIUI
 vendor/etc/camera/model/dof_model/capture_cache
 vendor/etc/camera/model/dof_model/capture_model
 vendor/etc/camera/model/dof_model/capture_policy
@@ -494,10 +494,10 @@ vendor/etc/camera/morpho_lowlight_2.0_ofilm_s5kjn1_wide_global.xml
 vendor/etc/camera/morpho_lowlight_2.0_ofilm_s5kjn1_wide_india.xml
 vendor/etc/camera/vidhance_calibration
 
-# Camera Device
+# Camera Device - from MIUI
 vendor/lib64/vendor.qti.hardware.camera.device@3.5.so
 
-# Camera Feature
+# Camera Feature - from MIUI
 vendor/lib64/com.qti.chiusecaseselector.so
 vendor/lib64/com.qti.feature2.anchorsync.so
 vendor/lib64/com.qti.feature2.demux.so
@@ -518,7 +518,7 @@ vendor/lib64/com.qti.feature2.swmf.so
 # Camera Postprocessing
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|7a115f12f4fa948bd54c4fd4124a59c9b54730f9
 
-# Camera Sensor
+# Camera Sensor - from MIUI
 vendor/lib64/libmmcamera_cac3.so
 vendor/lib64/libmmcamera_faceproc.so
 vendor/lib64/libmmcamera_faceproc2.so
@@ -526,10 +526,10 @@ vendor/lib64/libmmcamera_lscv35.so
 vendor/lib64/libmmcamera_mfnr.so
 vendor/lib64/libmmcamera_mfnr_t4.so
 
-# Consumer IR
+# Consumer IR - from MIUI
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.bengal.so
 
-# CDSP
+# CDSP - from MIUI
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
 vendor/lib/libcdsp_default_listener.so
@@ -545,13 +545,13 @@ vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 vendor/lib64/libsysmon_cdsp_skel.so
 
-# Charger
+# Charger - from MIUI
 vendor/bin/hvdcp_opti
 vendor/bin/init.qti.chg_policy.sh
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 vendor/etc/charger_fstab.qti
 
-# CNE
+# CNE - from MIUI
 -vendor/app/CACertService/CACertService.apk
 -vendor/app/CneApp/CneApp.apk
 -vendor/app/IWlanService/IWlanService.apk
@@ -618,13 +618,13 @@ vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so
 vendor/lib64/vendor.qti.latency@2.0.so
 vendor/lib64/vendor.qti.latency@2.1.so
 
-# Configstore
+# Configstore - from MIUI
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
-# Data
+# Data - from MIUI
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
 vendor/bin/ipacm-diag
@@ -651,17 +651,17 @@ vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
 
-# Diag
+# Diag - from MIUI
 vendor/lib/libdiag.so
 vendor/lib64/libdiag.so
 
-# Display Calibration
+# Display Calibration - from MIUI
 vendor/etc/dsi_panel_k7_38_0c_0a_fhdp_video_display_mi.xml
 vendor/etc/dsi_panel_k7_38_0c_0b_fhdp_video_display_mi.xml
 vendor/etc/qdcm_calib_data_k7_38_0c_0a_video_mode_fhdp_dsi_panel.xml
 vendor/etc/qdcm_calib_data_k7_38_0c_0b_video_mode_fhdp_dsi_panel.xml
 
-# Display
+# Display - from MIUI
 vendor/bin/ppd
 vendor/bin/qdcmss
 vendor/etc/display/advanced_sf_offsets.xml
@@ -691,13 +691,13 @@ vendor/lib64/vendor.display.color@1.4.so
 vendor/lib64/vendor.display.color@1.5.so
 vendor/lib64/vendor.display.postproc@1.0.so
 
-# DPM
+# DPM - from MIUI
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/libdpmqmihal.so
 
-# DRM
+# DRM - from MIUI
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
 vendor/bin/qseecomd
 vendor/etc/init/qseecomd.rc
@@ -722,11 +722,11 @@ vendor/lib64/libssd.so
 vendor/lib64/libtzdrmgenprov.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
-# Embedded Secure Element power manager
+# Embedded Secure Element power manager - from MIUI
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
-# EmbmsslServer
+# EmbmsslServer - from MIUI
 vendor/bin/embmsslServer
 vendor/etc/init/init.embmssl_server.rc
 vendor/lib64/libembmsservice.so
@@ -735,7 +735,7 @@ vendor/lib64/vendor.qti.hardware.embmssl@1.0.so
 vendor/lib64/vendor.qti.hardware.embmssl@1.1-adapter-helper.so
 vendor/lib64/vendor.qti.hardware.embmssl@1.1.so
 
-# Factory
+# Factory - from MIUI
 vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
 vendor/bin/mmid
 vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc
@@ -743,7 +743,7 @@ vendor/etc/permissions/vendor.qti.hardware.factory.xml
 vendor/lib64/vendor.qti.hardware.factory@1.0.so
 vendor/lib64/vendor.qti.hardware.factory@1.1.so
 
-# Fingerprint
+# Fingerprint - from MIUI
 vendor/etc/permissions/com.fingerprints.extension.xml
 -vendor/framework/com.fingerprints.extension.jar
 vendor/lib/libmifpext.so
@@ -760,7 +760,7 @@ vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 # Fingerprint - goodix.hardware.biometrics
 vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so|04fa410eb6ca960489911021327aa0fd745e09d7|8034b67ff67e649d3978e34b0a657c49daa94418
 
-# Gatekeeper
+# Gatekeeper - from MIUI
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
@@ -864,7 +864,7 @@ vendor/lib64/libllvm-qcom.so|e4ff6f0d3cd3823fa65768b935adfe878a4bda7a
 vendor/lib/hw/vulkan.adreno.so|b8968241a9e6dc41c681f2365ff97d2fcabe079e
 vendor/lib64/hw/vulkan.adreno.so|bb4a404e1bb27d38f5fda38363b9bc93fa28e6d4
 
-# Graphic Firmware
+# Graphic Firmware - from MIUI
 vendor/firmware/a610_zap.b00
 vendor/firmware/a610_zap.b01
 vendor/firmware/a610_zap.b02
@@ -890,13 +890,13 @@ vendor/firmware/a702_zap.b02
 vendor/firmware/a702_zap.elf
 vendor/firmware/a702_zap.mdt
 
-# HotwordEnrollment
+# HotwordEnrollment - from MIUI
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk;PRESIGNED
 -product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk;PRESIGNED
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 -system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
-# IMS
+# IMS - from MIUI
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
@@ -949,7 +949,7 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 
-# IPA firmware
+# IPA firmware - from MIUI
 vendor/etc/init/ipa_fws.rc
 vendor/firmware/ipa_fws.b00
 vendor/firmware/ipa_fws.b01
@@ -966,7 +966,7 @@ vendor/firmware/scuba_ipa_fws.b04
 vendor/firmware/scuba_ipa_fws.elf
 vendor/firmware/scuba_ipa_fws.mdt
 
-# Keymaster
+# Keymaster - from MIUI
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
 vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc
 -vendor/etc/vintf/manifest/android.hardware.keymaster@4.1-service-default-qti.xml
@@ -975,7 +975,7 @@ vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
 
-# Listen
+# Listen - from MIUI
 vendor/lib/libadpcmdec.so
 vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2svarnn.so
@@ -988,7 +988,7 @@ vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
 vendor/lib/libsmwrapper.so
 
-# Media
+# Media - from MIUI
 vendor/lib/libdsd2pcm.so
 vendor/lib/libmmosal.so
 vendor/lib/libOmxAacDec.so
@@ -1040,7 +1040,7 @@ vendor/lib64/libOmxVdec.so
 vendor/lib64/libOmxVenc.so
 vendor/lib64/libOmxWmaDec.so
 
-# Neural networks
+# Neural networks - from MIUI
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc
 -vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
@@ -1049,7 +1049,7 @@ vendor/lib64/unnhal-acc-adreno.so
 vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hvx.so
 
-# NFC
+# NFC - from MIUI
 vendor/bin/STFlashTool
 vendor/etc/libnfc-nci.conf
 vendor/etc/st21nfc_conf.txt
@@ -1058,23 +1058,23 @@ vendor/lib64/libst_sr_models.so
 vendor/lib64/libstfactory-vendor.so
 vendor/lib64/nfc_nci.st21nfc.st.so
 
-# NFC Firmware
+# NFC Firmware - from MIUI
 vendor/firmware/st21nfc_fw.bin
 vendor/firmware/st21nfc_fw7.bin
 
-# Perf
+# Perf - from MIUI
 vendor/etc/lm/prekill/prekill_2GB.data
 vendor/etc/lm/prekill/prekill_4GB.data
 vendor/etc/lm/prekill/prekill_6GB.data
 vendor/etc/lm/PreKillFeature.xml
 vendor/etc/powerhint.xml
 
-# PD
+# PD - from MIUI
 vendor/bin/pd-mapper
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
 
-# Peripheral manager
+# Peripheral manager - from MIUI
 vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
@@ -1082,20 +1082,20 @@ vendor/lib64/libperipheral_client.so
 # Power-off charging daemon - from xiaomi
 system/bin/charger:system/bin/chargeonlymode
 
-# QCC
+# QCC - from MIUI
 vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service
 vendor/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 
-# QCV (SOC Helper)
+# QCV (SOC Helper) - from MIUI
 vendor/bin/init.qti.qcv.sh
 vendor/etc/init/init.qti.qcv.rc
 vendor/lib64/libsoc_helper.so
 vendor/lib64/libsoc_helper_jni.so
 
-# QMI
+# QMI - from MIUI
 vendor/bin/irsc_util
 vendor/bin/qrtr-cfg
 vendor/bin/qrtr-lookup
@@ -1136,18 +1136,18 @@ vendor/lib64/libqsocket.so
 vendor/lib64/libsmemlog.so
 vendor/lib64/libsystem_health_mon.so
 
-# QSP
+# QSP - from MIUI
 vendor/bin/vendor.qti.qspmhal@1.0-service
 vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
 vendor/etc/seccomp_policy/qspm.policy
 vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
 vendor/lib64/vendor.qti.qspmhal@1.0.so
 
-# RemoteFS
+# RemoteFS - from MIUI
 vendor/bin/rmt_storage
 vendor/etc/init/vendor.qti.rmt_storage.rc
 
-# RIL
+# RIL - from MIUI
 vendor/bin/hw/qcrild
 vendor/bin/qtigetprop
 vendor/bin/qtisetprop
@@ -1220,7 +1220,7 @@ vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/9_version_update_ecc_table.sql
 vendor/radio/qcril_database/qcril.db
 
-# Sensors
+# Sensors - from MIUI
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
@@ -1236,7 +1236,7 @@ vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/sensors.ssc.so
 
-# Sensors Config
+# Sensors Config - from MIUI
 vendor/etc/sensors/config/bengal_adux1050_0.json
 vendor/etc/sensors/config/bengal_bu27030_0.json
 vendor/etc/sensors/config/bengal_bu52053nvx_0.json
@@ -1294,18 +1294,18 @@ vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
 vendor/etc/sensor_diag.cfg
 
-# SecureMSM
+# SecureMSM - from MIUI
 vendor/bin/hdcp1prov
 vendor/bin/hdcp2p2prov
 vendor/lib64/libhdcp1prov.so
 vendor/lib64/libhdcp2p2prov.so
 vendor/lib64/libhdcpsrm.so
 
-# Secure element
+# Secure element - from MIUI
 vendor/lib/android.hardware.secure_element@1.0-impl.so
 vendor/lib64/android.hardware.secure_element@1.0-impl.so
 
-# SMC Invoke
+# SMC Invoke - from MIUI
 vendor/etc/ssg/ta_config.json
 vendor/etc/ssg/tz_whitelist.json
 vendor/lib64/libnative-api.so
@@ -1331,25 +1331,25 @@ vendor/lib64/libscveObjectTracker_stub.so|62db08e185e915fe975e5234d1ce1d749e6e97
 vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so|200237017fdf72f5338ddceeaca5375ba1891058
 vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so|1b0b2665e8ebd65dccb832078fbca81f951e9908
 
-# Soter
+# Soter - from MIUI
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/bin/vendor.qti.hardware.soter@1.0-provision
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
-# SS Restart
+# SS Restart - from MIUI
 vendor/bin/ssr_diag
 vendor/bin/ssr_setup
 vendor/bin/subsystem_ramdump
 vendor/lib/libsubsystem_control.so
 vendor/lib64/libsubsystem_control.so
 
-# TFTP
+# TFTP - from MIUI
 vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
 
-# Thermal configs
+# Thermal configs - from MIUI
 vendor/bin/mi_thermald
 vendor/etc/thermal-4k.conf
 vendor/etc/thermal-arvr.conf
@@ -1365,21 +1365,21 @@ vendor/etc/thermald-devices.conf
 -vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so
 
-# Time
+# Time - from MIUI
 vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
-# TLOC
+# TLOC - from MIUI
 vendor/bin/tloc_daemon
 vendor/etc/init/tloc_daemon.rc
 
-# Touch Firmware
+# Touch Firmware - from MIUI
 vendor/firmware/Conf_MultipleTest.ini
 vendor/firmware/focaltech_ts_fw_samsung.bin
 
-# Trusted Execution Environment connector
+# Trusted Execution Environment connector - from MIUI
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
 vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
@@ -1389,7 +1389,7 @@ vendor/lib64/libQTEEConnector_listener.so
 vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
-# Trusted User Interface
+# Trusted User Interface - from MIUI
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
@@ -1418,7 +1418,7 @@ vendor/lib64/vendor.qti.hardware.vpp@1.1.so|3caf062498db60c9018eaf685cc023e381ff
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so|7f4e9e8097cb421bc20881910a77e540d9effd30
 vendor/lib64/vendor.qti.hardware.vpp@1.3.so|f41500bd64308e0df2e0cb2cfc932b69bae2c81c
 
-# Widevine DRM
+# Widevine DRM - from MIUI
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
@@ -1428,7 +1428,7 @@ vendor/lib64/liboemcrypto.so
 vendor/lib64/libtrustedapploader.so
 vendor/lib64/libwvhidl.so
 
-# Wi-Fi
+# Wi-Fi - from MIUI
 vendor/bin/cnss-daemon
 
 # WiFi Display - from LA.UM.9.12.r1-13300-SMxx50.QSSI12.0
