@@ -319,6 +319,12 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl-qti \
     android.hardware.health@2.1-service
 
+# HVDCP
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.cp.fcc_main_ua=400000 \
+    persist.vendor.cp.taper_term_mv=6500 \
+    persist.vendor.cp.vbus_offset_mv=1040
+
 # IDC
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/idc/,$(TARGET_COPY_OUT_VENDOR)/usr/idc)
