@@ -1,1 +1,3 @@
 type sysfs_kgsl, fs_type, sysfs_type;
+type sysfs_hvdcp, fs_type, sysfs_type;
+type vendor_subsys_hvdcp, fs_type, sysfs_type;

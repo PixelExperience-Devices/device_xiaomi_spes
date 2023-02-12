@@ -43,3 +43,12 @@
 /sys/devices/virtual/fastrpc/adsprpc-smd-secure/wakeup[0-9]+(/.*)?     u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/fastrpc/adsprpc-smd/wakeup[0-9]+(/.*)?            u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/misc/msm_qcelp/wakeup[0-9]+(/.*)?                 u:object_r:sysfs_wakeup:s0
+
+#vendor_hvdcp
+/sys/devices/platform/soc/soc:qcom,nopmi-chg/power_supply/usb/voltage_now u:object_r:vendor_subsys_hvdcp:s0
+/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm7250b@0:qcom,qpnp-smb5/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm7250b@0:qpnp,qg/iio:device[0-9](/.*?)  u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-04/1c40000.qcom,spmi:qcom,pm7250bl@4:vadc@3100/iio:device[0-9](/.*?)  u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm7250b@0:vadc@3100/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4a88000.i2c/i2c-1/1-0010/4a88000.i2c:qcom,smb1394@10:qcom,charge_pump/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4a88000.i2c/i2c-1/1-000c/4a88000.i2c:qcom,smb1355@c:qcom,smb1355-charger@1000/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0

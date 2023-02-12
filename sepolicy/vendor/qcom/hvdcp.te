@@ -1,0 +1,7 @@
+r_dir_file(vendor_hvdcp, sysfs_batteryinfo)
+r_dir_file(vendor_hvdcp, vendor_sysfs_battery_supply)
+r_dir_file(vendor_hvdcp, sysfs)
+set_prop(vendor_hvdcp, ctl_stop_prop)
+allow vendor_hvdcp vendor_subsys_hvdcp:dir read;
+allow vendor_hvdcp vendor_subsys_hvdcp:file { open read };
+allow vendor_hvdcp sysfs_hvdcp:file { getattr open read write};
