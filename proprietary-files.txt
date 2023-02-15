@@ -1,4 +1,4 @@
-# All MIUI blobs below are extracted from miui_SPESNGlobal_V13.0.6.0.SGKMIXM
+# All MIUI blobs below are extracted from miui_SPESNGlobal_V13.0.7.0.SGKMIXM
 # LA.UM.9.15.2.r1-06000-KAMORTA.QSSI-13.0 blobs from bengal
 # LA.VENDOR.1.0.r1-15600-WAIPIO blobs from taro
 
