@@ -691,4 +691,7 @@
         <item>org.lineageos.aperture.dev</item>
     </string-array>
 
+    <!-- Ripple animation played at the time of screen unlock-->
+    <bool name="config_enableUnlockRippleAnimation">false</bool>
+    
 </resources>
