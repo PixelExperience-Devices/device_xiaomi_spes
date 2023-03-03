@@ -97,8 +97,6 @@ genfscon sysfs /devices/platform/soc/soc:qcom,nopmi-chg/power_supply/battery/wak
 genfscon sysfs /devices/platform/soc/soc:qcom,nopmi-chg/power_supply/usb/wakeup42                                                                                                          u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,nopmi-chg/wakeup/wakeup43                                                                                                                    u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/diag/diag/wakeup                                                                                                                                           u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/fastrpc/adsprpc-smd/wakeup                                                                                                                                 u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/fastrpc/adsprpc-smd-secure/wakeup                                                                                                                          u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/input/input1/wakeup                                                                                                                                        u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_aac/wakeup                                                                                                                                        u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_alac/wakeup                                                                                                                                       u:object_r:sysfs_wakeup:s0
@@ -142,5 +140,4 @@ genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.q
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm7250b@0:qcom,usb-pdphy@1700/usbpd/usbpd0/wakeup u:object_r:sysfs_wakeup:s0
 
 # hvdcp
-genfscon sysfs /bus/iio/devices                                                      u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /sys/kernel/tracing/instances/usb/events/filemap/.*                   u:object_r:vendor_subsys_hvdcp:s0
