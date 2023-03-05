@@ -1,3 +1,6 @@
+# Camera
+/(vendor|system/vendor)/lib(64)?/vendor\.qti\.hardware\.camera\.device@3\.5\.so u:object_r:same_process_hal_file:s0
+
 # Label Listen 0-9 Audio Service wakeup stats
 /sys/devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:sound/Listen\s[0-9]\sAudio\sService/wakeup      u:object_r:sysfs_wakeup:s0
 
