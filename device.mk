@@ -356,6 +356,9 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.lmk.stall_limit_critical=40
     
 # Media
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml
+
 PRODUCT_ODM_PROPERTIES += \
     media.settings.xml=/vendor/etc/media_profiles_khaje.xml \
     vendor.mm.enable.qcom_parser=63963135
