@@ -521,10 +521,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.sensors.hal_trigger_ssr=false \
     persist.vendor.sensors.support_direct_channel=false
 
-# SoC
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.soc.manufacturer=QTI
-    
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
