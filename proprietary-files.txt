@@ -662,20 +662,10 @@ vendor/etc/display/advanced_sf_offsets.xml|de6449ddd7fd4e975ae29ce5aeeda1d6dff27
 vendor/etc/init/qdcmss.rc|53d78d686678c4f923a9ec4ace7d4d3575b13788
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
 vendor/lib64/libdisp-aba.so|894b0fe1ace5effb471ebb7437cd590a096e47d8
-vendor/lib64/libdisplayqos.so|15701f18257c43be5657bbd867a8acf1f469e373
-vendor/lib64/libdisplayskuutils.so|ac4f2231f098c03824844799106685bf81f97782
 vendor/lib64/libdpps.so|bea8d2059d61e6064b2b38789a822fbd5d777574
-vendor/lib64/libhdr_tm.so|4be3cfff1ef40cbc6ad329b79c60881263aa6723
 vendor/lib64/libmm-hdcpmgr.so|bacafd357b847581239b6d57f733404f6fb94ecc
-vendor/lib64/libqseed3.so|c9fb729cf48278d0c87d27c0af17ae3a8ccb1bf7
 vendor/lib64/librcmask.so|c0c6d49dae38389532cfb3cb0b816dc0b1b71051
 vendor/lib64/libsdedrm.so|34e9f34b280f310118ea2b37e11e96d9440f3632
-vendor/lib64/libsdm-color.so|05a26cec9b01fc6f036a15527d3efad6938ec6c2
-vendor/lib64/libsdm-colormgr-algo.so|1fb7f3cb11557bbf677afb5d6eda0e4e9fd3ac58
-vendor/lib64/libsdm-diag.so|d602a56edde3fb2cf7de81d5ab18ef2ef3cf3814
-vendor/lib64/libsdm-disp-vndapis.so|2f1abd975b1f1dbabcc410e56c29ac296adcc411
-vendor/lib64/libsdmextension.so|ed163190bd1cc6db2e247fd9c9eb370ede15d62f
-vendor/lib64/libtinyxml2_1.so|fb0a2b16e5cfd28515268edc5c2345190d1ef4e5
 vendor/lib64/vendor.display.color@1.0.so|f1f7d91884c8e3c9ea300e67f5df91057094de40
 vendor/lib64/vendor.display.color@1.1.so|e7ab973147c3e03e31efacee13e8d8a9c841eb7b
 vendor/lib64/vendor.display.color@1.2.so|fe9ec904459b7675297e5ef6883ae98b438fb77f
@@ -1098,7 +1088,6 @@ vendor/lib/libqmi_csvt_srvc.so|4f7890a0f6c80436341e639a3179b78495594612
 vendor/lib/libqmi_encdec.so|d8642bf7e8193db310dafad8116222f3b3d9013a
 vendor/lib/libqmi_legacy.so|7805ed3a940405d88d4b7dd29516c68ee19c5b08
 vendor/lib/libqmiservices.so|a60531847ff655ae54c9e8397d8c5386f00fbca3
-vendor/lib/libqrtr.so|89e9808e264dc47648c18549a4eedc2169b9c6ef
 vendor/lib/libqsocket.so|bc42794c439b8a767e87b60071e3827a793218aa
 vendor/lib/libsmemlog.so|bae2c5f4cd959cf3f4e0f4420dfc8b4d0719f7f8
 vendor/lib/libsystem_health_mon.so|773607a534b86db7d01c6a5e05e29498a6d7992f
@@ -1115,7 +1104,6 @@ vendor/lib64/libqmi_csvt_srvc.so|42b2ae8d93d800fbbe95b0797d5e8bd53942e74b
 vendor/lib64/libqmi_encdec.so|ff9a6ea2e08036e83b9089e32afda0d19cbe08bd
 vendor/lib64/libqmi_legacy.so|03289e1b13333d96d2b8c118a541189b4a4d840f
 vendor/lib64/libqmiservices.so|d732ee6d9f1b96403275b087850ec42b3b9686f8
-vendor/lib64/libqrtr.so|61efce3800472e7aaa6671dca003bed63f2fb9ca
 vendor/lib64/libqsocket.so|33b007b455cd9bc6897d737a5a325570ee630ff0
 vendor/lib64/libsmemlog.so|ff9ef200029d21b8dd93eca663f120d07be0e3d9
 vendor/lib64/libsystem_health_mon.so|9b13ab7123f78ad044e5dd75f14dc7a4ae8267f3
