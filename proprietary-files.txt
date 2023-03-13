@@ -697,11 +697,6 @@ vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so|39d820c32426a131ade6b946b068
 # Fingerprint - goodix.hardware.biometrics
 vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so|04fa410eb6ca960489911021327aa0fd745e09d7|8034b67ff67e649d3978e34b0a657c49daa94418
 
-# Gatekeeper - from LA.UM.9.15.2.r1-06000-KAMORTA.QSSI-13.0
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
-vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|6e6249eb7df66b3941cc21d213fabde557daf76e
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|f467cb1abd6aa19e9ba95dab6a56b655a45bc8e8
-
 # GPS - from LA.UM.9.15.2.r1-06000-KAMORTA.QSSI-13.0
 vendor/bin/garden_app|987a4b0d1f2fc446e384f1d68b041819c8221d07
 vendor/bin/loc_launcher|f0b95b7d523d2785a3090c2598c4bbd6170f1ba1
@@ -901,15 +896,6 @@ vendor/firmware/scuba_ipa_fws.b03|c07cfef57f8f694b4cee41e78700614efbedf2bc
 vendor/firmware/scuba_ipa_fws.b04|e3552692a635dceca369cab6d9349091b669c80a
 vendor/firmware/scuba_ipa_fws.elf|5fb0eec640db37e5339f3c98cb1abc66cd88825e
 vendor/firmware/scuba_ipa_fws.mdt|598e9fec2dda59091107d22167036b61e30e5300
-
-# Keymaster - from MIUI
-vendor/bin/hw/android.hardware.keymaster@4.1-service-qti|54c133774f52b3ba44eef59f6e5d3259f91ae350
-vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc|f6907552961ba772c1ad5b493913a60d65abedb4
--vendor/etc/vintf/manifest/android.hardware.keymaster@4.1-service-default-qti.xml|478d11fc12dd7c6a85b543cf163bec217aea3148
-vendor/lib64/libkeymasterdeviceutils.so|612084a8d77c1da0ca5a6312e9c10a9a133b86c5
-vendor/lib64/libkeymasterprovision.so|edc2de28e9ff74a2fa5ad4fe16b140a730ac7141
-vendor/lib64/libkeymasterutils.so|38ffc0bad64f7fb35f09740f8bf636fbed0a97f5
-vendor/lib64/libqtikeymaster4.so|82b633556e09bbab11e74148fd09b88010f2484e
 
 # Listen - from MIUI
 vendor/lib/libadpcmdec.so|297d8fecff85b6dc67ff19e788bcf3f1286014a0
