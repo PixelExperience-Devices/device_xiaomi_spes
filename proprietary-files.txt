@@ -545,12 +545,6 @@ vendor/lib64/libmdsprpc.so|ee2011c3683944ee786d1620626ddcce2ebb6d4d
 vendor/lib64/libsdsprpc.so|693ad39170cde5e0f28546c963afdd4cd69b563b
 vendor/lib64/libsysmon_cdsp_skel.so|3ae87b24980f983ba83fd563134328bb0f6f62e8
 
-# Charger - from LA.UM.9.15.2.r1-06000-KAMORTA.QSSI-13.0
-vendor/bin/hvdcp_opti|8746afb1705d67d1b7f41333ea3ff97245f84fdd
-vendor/bin/init.qti.chg_policy.sh|9a96b05abdfe149eb8a7e20a791284e84b5fffe0
-vendor/etc/charger_fstab.qti|8464c139d93f05e86ff9c9d31b3e8617b8d9476e
-vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc|29b23be4f604282abf715f86aec9697175a9aaad
-
 # CNE - from LA.UM.9.15.2.r1-06000-KAMORTA.QSSI-13.0
 -vendor/app/CACertService/CACertService.apk|b1072f129d588b5c5aefa8824b6d531586a26755
 -vendor/app/CneApp/CneApp.apk|345dc6c677e9bd7a7d36033b8955e90d2a1594d5
