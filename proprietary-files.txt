@@ -617,10 +617,6 @@ vendor/lib64/libqdi.so|509303942da015ac76166f8ce684487ec5e05c1e
 vendor/lib64/libqdp.so|a5fa81e178350744d829fc3e5b59512e9c418920
 vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so|861c72278b358e4428963960f3e95c90b30b344b
 
-# Diag - from LA.UM.9.15.2.r1-06000-KAMORTA.QSSI-13.0
-vendor/lib/libdiag.so|94d20d63203eb134bcc4deb484b71dae174414e2
-vendor/lib64/libdiag.so|4033044033149b1e71bce47d5bab4c1319d42d43
-
 # Display Calibration - from MIUI
 vendor/etc/dsi_panel_k7_38_0c_0a_fhdp_video_display_mi.xml|a376ee7d4dd147783721ae744f23be53cbe4691c
 vendor/etc/dsi_panel_k7_38_0c_0b_fhdp_video_display_mi.xml|a376ee7d4dd147783721ae744f23be53cbe4691c
@@ -654,27 +650,13 @@ vendor/lib64/libdpmqmihal.so|67a75d6bd39f4bc825e14d21fa5b61e26ac82b22
 
 # DRM - from MIUI
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service|d3d6ed383483747f8bec574adcac1c24ef1ac3a4
-vendor/bin/qseecomd|0d1fcedd333c0a2823a5ea4ac6be7fc1a7b28016
-vendor/etc/init/qseecomd.rc|0ebfb7c5d1d2459be4fdac951a182dc486f3bda7
 vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc|0f43244d70d5efc1e4f089b926a9dc4f59e53db1
 vendor/etc/gpfspath_oem_config.xml|7aeade35b0bbe27530f6aca8c1ed5192a7acf59d
 vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so|b97925174c9db328bbd6012c1d2996fd20e59456
-vendor/lib64/libGPreqcancel.so|b9efbc8623981e1249ad0a0f8964b2b655d2b334
-vendor/lib64/libGPreqcancel_svc.so|77af0d788855d1cf4184f34fdbe31b012fa8be49
-vendor/lib64/libQSEEComAPI.so|0a1ab0271dba26e4b2fcba9810ac63b24f4a25d4
 vendor/lib64/libSecureUILib.so|9782d66a900b30d9e3e9181a4d48ab824614bd67
 vendor/lib64/libStDrvInt.so|6091f1f496b87730f9a77e9ede504c4fa99c608a
-vendor/lib64/libbase64.so|bcba077148d981308a444a7b334fa18130eae545
-vendor/lib64/libcpion.so|8a63f2c0e508105cfe3808d2319591fceb841b49
-vendor/lib64/libdrmfs.so|6a5a11ff9adc9e1c8fa7b4f0252fab40c90495d4
-vendor/lib64/libdrmtime.so|621b8dc9b3754888a7879818cd7ec2a7d90bd35b
-vendor/lib64/libops.so|0bff10dec47975c62f378bf04dc2f06e3b8277ff
-vendor/lib64/libqisl.so|c79719eebc094c2af9561e8df2c158638b111b70
-vendor/lib64/librpmb.so|0f099af852fce1bf7d653b956a73bea915e8d806
 vendor/lib64/libsecureui.so|9a34f7b698958fe867f0a85b6ca19bb1a66ffac2
 vendor/lib64/libsecureui_svcsock.so|6af612f057f4f28720d6db9b300b58c883da6539
-vendor/lib64/libssd.so|718b0af5a5dfa50bc85730946819441b9cacbd4b
-vendor/lib64/libtzdrmgenprov.so|eb8b905583cde457c94af8c29248da7f59921bd8
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so|df4e94735c85347d2eb97ac06b7d50fcd0f1055d
 
 # Embedded Secure Element power manager - from MIUI
@@ -762,7 +744,6 @@ vendor/lib64/liblocationservice.so|da4a4f77e52b3ac2d536bf262b6c545f4727e06f
 vendor/lib64/liblocationservice_glue.so|5087838ca49c474063785ad361d35f2cead2c873
 vendor/lib64/liblowi_client.so|dad7a6e14ed843721f1d271da9ed43505b9b85b3
 vendor/lib64/liblowi_wifihal.so|f4b273951dd3dd5284de5c352cc934d018413f47
-vendor/lib64/libminksocket.so|6629b78ab61916acd6e8f879cc0e2b246ec00ef9
 vendor/lib64/libqcc_file_agent.so|0345fc438536bc11f3e65999e0b750efb19ba9f9
 vendor/lib64/libslimclient.so|60252c9982551dd766cbbff247dc82767f63a4c8
 vendor/lib64/libsynergy_loc_api.so|753ab01d54293bee0f24a6e5613447f9f19fc0e1
@@ -1299,14 +1280,9 @@ vendor/firmware/Conf_MultipleTest.ini|39e9c063d3130d085995dc874dae263e4b501188
 vendor/firmware/focaltech_ts_fw_samsung.bin|8bfa360b217508c18a054e52b5195a144b0469a9
 
 # Trusted Execution Environment connector - from LA.UM.9.15.2.r1-06000-KAMORTA.QSSI-13.0
-vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|4167b12a9f09c52a4dc1555f243dec17051b8a23
 vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|b92070d73c9963c985d71c7f69ebc9f418c7d07d
-vendor/lib64/libGPQTEEC_vendor.so|d70f659c06a38dbae028f41ca6e0dece0ef1d5cd
-vendor/lib64/libGPTEE_vendor.so|92c0215dbd3271e597d536c259df44aac716a402
 vendor/lib64/libQTEEConnector_listener.so|a05a271a35ff4f558f4665b4467b5eb66f56716b
-vendor/lib64/libQTEEConnector_vendor.so|30e5fd8d4fff50083f44f6d0bd09f4bd287a8366
-vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|e97b21908ec942b5ea6c78100d46398fe1784d0e
 
 # Trusted User Interface - from LA.UM.9.15.2.r1-06000-KAMORTA.QSSI-13.0
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|772dfdebadcfb9af3e6253fd3baf6d7502394ddd
@@ -1321,9 +1297,7 @@ vendor/bin/hw/android.hardware.drm@1.3-service.widevine|2158f47423c723a9da29bb81
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|a9ce64f68c86725c06c1b1429e90b04ff96ebf60
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
 vendor/lib64/mediadrm/libwvdrmengine.so|1e029b294540037c72690ec5755426f14b98f511
-vendor/lib64/libminkdescriptor.so|7237570df0118124564a85a34a387e9cba7e3cd3
 vendor/lib64/liboemcrypto.so|706af3d14e2b54d176b93719e02ee6d7539bc05c
-vendor/lib64/libtrustedapploader.so|030366cf9b29f9beacea371f1c2a8781664be851
 vendor/lib64/libwvhidl.so|cbc02c1560ed8a9cbe697b5351a94def71692e75
 
 # Wi-Fi - from MIUI
