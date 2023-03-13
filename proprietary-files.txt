@@ -1356,12 +1356,6 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|dcab0e77fcf6d1d1fc669a6573a888e
 # UBWC - from LA.UM.9.15.2.r1-06000-KAMORTA.QSSI-13.0
 vendor/lib/libstreamparser.so|632154ab1e299347d43173f7ea4947260fba9a08
 
-# VPP - LA.UM.9.15.2.r1-06000-KAMORTA.QSSI-13.0
-vendor/lib/vendor.qti.hardware.vpp@1.1.so|3e0467d0c30bb6cccab12d2e67dacc5ea852b3df
-vendor/lib/vendor.qti.hardware.vpp@1.2.so|d1226cfbeee864b7cac52bcee37fdf4524892fd6
-vendor/lib64/vendor.qti.hardware.vpp@1.1.so|05c88622d43390c3b4a216755b44c2e034c282e8
-vendor/lib64/vendor.qti.hardware.vpp@1.2.so|fcda1d2266d3f66015cd6506b7f496a2033db3d8
-
 # Widevine DRM - from MIUI
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine|2158f47423c723a9da29bb81bb16987a1e715c21
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|a9ce64f68c86725c06c1b1429e90b04ff96ebf60
