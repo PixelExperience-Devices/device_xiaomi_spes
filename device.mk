@@ -187,7 +187,6 @@ PRODUCT_PACKAGES += \
     libsuspend
 
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.charger.enable_suspend=true \
     persist.vendor.quick.charge=1 \
     ro.charger.disable_init_blank=true
 
