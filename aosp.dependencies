@@ -7,20 +7,14 @@
    },
    {
        "remote"      : "pixel-devices",
-       "repository"  : "device_xiaomi_spes-kernel",
-       "target_path" : "device/xiaomi/spes-kernel",
-       "branch"      : "thirteen"
-   },
-   {
-       "remote"      : "pixel-devices",
-       "repository"  : "kernel_xiaomi_spes",
-       "target_path" : "kernel/xiaomi/spes",
+       "repository"  : "kernel_xiaomi_sm6225",
+       "target_path" : "kernel/xiaomi/sm6225",
        "branch"      : "thirteen"
    },
    {
        "remote"      : "pixel-devices-blobs",
-       "repository"  : "vendor_xiaomi_spes",
-       "target_path" : "vendor/xiaomi/spes",
+       "repository"  : "vendor_xiaomi_sm6225-common",
+       "target_path" : "vendor/xiaomi/sm6225-common",
        "branch"      : "thirteen"
    },
    {

@@ -26,3 +26,5 @@ allow hal_sensors_default vendor_sysfs_iio:file rw_file_perms;
 binder_call(hal_sensors_default, hal_audio_default)
 
 dontaudit hal_sensors_default default_prop:file read;
+
+get_prop(hal_sensors_default, vendor_adsprpc_prop)

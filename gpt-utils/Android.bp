@@ -16,7 +16,7 @@
 
 
 cc_library {
-    name: "libgptutils.spes",
+    name: "libgptutils.bengal",
     vendor: true,
     recovery_available: true,
     shared_libs: [

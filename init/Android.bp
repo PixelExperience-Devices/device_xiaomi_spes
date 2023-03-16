@@ -12,27 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-cc_library_static {
-    name: "libinit_spes",
-    recovery_available: true,
-    shared_libs: ["libbase"],
-    srcs: ["init_spes.cpp"],
-    include_dirs: [
-        "system/core/init",
-        "system/libbase/include"
-    ]
-}
-
 prebuilt_etc {
-    name: "init.spes.rc",
-    src: "init.spes.rc",
+    name: "init.bengal.rc",
+    src: "init.bengal.rc",
     sub_dir: "init",
     vendor: true,
 }
 
 prebuilt_etc {
-    name: "init.spes.perf.rc",
-    src: "init.spes.perf.rc",
+    name: "init.bengal.perf.rc",
+    src: "init.bengal.perf.rc",
     sub_dir: "init",
     vendor: true,
 }
@@ -59,9 +48,9 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "ueventd.spes.rc",
+    name: "ueventd.bengal.rc",
     filename: "ueventd.rc",
-    src: "ueventd.spes.rc",
+    src: "ueventd.bengal.rc",
     device_specific: true,
 }
 
