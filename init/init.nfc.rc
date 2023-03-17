@@ -1,0 +1,23 @@
+on post-fs-data
+    mkdir /data/vendor/nfc 0770 nfc nfc
+
+service stflashtool /vendor/bin/STFlashTool
+    class late_start
+    group nfc
+    user nfc
+    disabled
+    oneshot
+
+service nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.st
+    override
+    class hal
+    user nfc
+    group nfc
+    disabled
+
+on post-fs && property:ro.boot.hwname=spesn
+    start stflashtool
+    setprop ro.vendor.se.type HCE,UICC
+
+on boot && property:ro.boot.hwname=spesn
+    start nfc_hal_service
