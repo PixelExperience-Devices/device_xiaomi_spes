@@ -587,7 +587,7 @@ vendor/bin/tftp_server|bda7e4722d0ec8cec04ae3c274b4fdc4a7172b02
 vendor/etc/init/vendor.qti.tftp.rc|b27f188cbffba470a4510d50e46ff7c8446c22cb
 
 # Thermal - from SPESNGlobal_V13.0.7.0.SGKMIXM
-vendor/etc/thermal-normal.conf|bf660aacd130bbab178597b18e33f0ee492db39f
+vendor/etc/thermal-normal.conf|42ce733f913f676f330f4f0892c28a90946219f2
 
 # Time - from LA.UM.9.15.2.r1-06000-KAMORTA.QSSI-13.0
 -vendor/app/TimeService/TimeService.apk|92317b3b72586489456d37057b4c3c8e55863923
