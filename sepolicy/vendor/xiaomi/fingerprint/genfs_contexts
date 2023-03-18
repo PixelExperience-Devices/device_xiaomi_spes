@@ -6,9 +6,12 @@ genfscon sysfs /devices/platform/soc/soc:fpc1020/request_vreg                  u
 genfscon sysfs /devices/platform/soc/soc:fpc1020/wakeup_enable                 u:object_r:vendor_sysfs_fingerprint:s0
 genfscon sysfs /devices/platform/soc/soc:fpc1020/vendor                        u:object_r:vendor_sysfs_fingerprint:s0
 genfscon sysfs /devices/soc/soc:fpc1020                                        u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/soc/soc:silead_fp                             u:object_r:vendor_sysfs_fingerprint:s0
 genfscon sysfs /devices/platform/soc/soc:fpc1020/wakeup                        u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:fpc1020/wakeup/wakeup26               u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/goodix_ts.0/wakeup                            u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/wakeup                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:fingerprint_goodix/wakeup             u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:goodix_fp/wakeup                      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:silead_fp/wakeup                      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:fingerprint_silead/wakeup             u:object_r:sysfs_wakeup:s0

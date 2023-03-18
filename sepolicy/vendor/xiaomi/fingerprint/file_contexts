@@ -4,10 +4,15 @@
 /data/vendor/goodix(/.*)?                                               u:object_r:fingerprint_vendor_data_file:s0
 /data/vendor/fpc(/.*)?                                                  u:object_r:fingerprint_vendor_data_file:s0
 /data/vendor/fpdump(/.*)?                                               u:object_r:fingerprint_vendor_data_file:s0
+/data/vendor/silead(/.*)?                                               u:object_r:vendor_fingerprint_data_file:s0
 /sys/devices/platform/soc/soc:fpc1020(/.*?)                             u:object_r:vendor_sysfs_fps_attr:s0
 
 # Fingerprint devices
 /dev/goodix_fp                                                          u:object_r:fingerprint_device:s0
+/dev/silead_fp                                                          u:object_r:fingerprint_device:s0
+/dev/silead_s*                                                          u:object_r:fingerprint_device:s0
+/dev/spidev.*                                                           u:object_r:fingerprint_device:s0
 
 # Fingerprint HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi          u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/vendor\.silead\.hardware\.fingerprintext@1\.0-service                                    u:object_r:hal_fingerprint_default_exec:s0
