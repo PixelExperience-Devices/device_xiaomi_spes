@@ -23,10 +23,3 @@ prebuilt_hidl_interfaces {
         "vendor.qti.hardware.factory@1.1::IFactory",
     ],
 }
-
-prebuilt_hidl_interfaces {
-    name: "hidl_Limits_interface",
-    interfaces: [
-        "vendor.qti.hardware.limits@1.0::ILimits",
-    ],
-}
