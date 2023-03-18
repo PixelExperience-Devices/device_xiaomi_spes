@@ -658,7 +658,6 @@ vendor/etc/thermal-chg-only.conf|d7affb7547a6f07267b8dddd9d7e549f9fdeb498
 vendor/etc/thermal-engine.conf|c6c9312b7c7b52926cf7d0fc9bff933d90967100
 vendor/etc/thermal-map.conf|721b5beb89ff9c268afa53e51e131f043f973f3c
 vendor/etc/thermal-nolimits.conf|830225487652441ee1ee1992c410de9903af1ca9
-vendor/etc/thermal-normal.conf|bf660aacd130bbab178597b18e33f0ee492db39f
 vendor/etc/thermal-phone.conf|3f69560baae65d9293c912e49a0de736e29c5278
 vendor/etc/thermal-tgame.conf|d6a166b817f728b6ce09fa8dcbed1c9ff1202bae
 vendor/etc/thermald-devices.conf|eaa11ec5435404df861a76e5c857e93028ed7ef4
