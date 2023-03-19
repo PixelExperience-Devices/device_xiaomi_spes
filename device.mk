@@ -90,6 +90,13 @@ PRODUCT_PACKAGES += \
     SettingsProvider2201117TIOverlay \
     SettingsProvider2201117TYOverlay
 
+# Parts
+PRODUCT_PACKAGES += \
+    RefreshRateParts
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/parts/privapp-permissions-refresh-rate-parts.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-refresh-rate-parts.xml
+
 # Rootdir / Init files
 PRODUCT_PACKAGES += \
     init.nfc.rc
