@@ -537,6 +537,7 @@ vendor/firmware/scuba_ipa_fws.elf|5fb0eec640db37e5339f3c98cb1abc66cd88825e
 vendor/firmware/scuba_ipa_fws.mdt|598e9fec2dda59091107d22167036b61e30e5300
 
 # Listen - from MIUI
+vendor/lib/hw/sound_trigger.primary.bengal.so|af17f35cf18a93e6dfb52366f31a6d03987e0718
 vendor/lib/libadpcmdec.so|297d8fecff85b6dc67ff19e788bcf3f1286014a0
 vendor/lib/libcapiv2svacnn.so|c897fbba664fcb0ea1951d3220d8db54ae0d7995
 vendor/lib/libcapiv2svarnn.so|97f6bd6b25479fbf0f4f7cb06d9f1a462266f22a
