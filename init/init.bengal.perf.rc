@@ -66,8 +66,6 @@ on property:vendor.post_boot.parsed=1
     write /proc/sys/kernel/sched_downmigrate "60 75"
     write /proc/sys/kernel/sched_group_upmigrate 95
     write /proc/sys/kernel/sched_group_downmigrate 75
-    write /proc/sys/kernel/sched_autogroup_enabled 0
-    write /proc/sys/kernel/sched_walt_rotate_big_tasks 0
     
     # Back to default VM settings
     write /proc/sys/vm/dirty_expire_centisecs 3000
