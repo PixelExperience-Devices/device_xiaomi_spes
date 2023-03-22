@@ -1,0 +1,14 @@
+[
+   {
+       "remote"      : "pixel-devices",
+       "repository"  : "device_xiaomi_spes-kernel",
+       "target_path" : "device/xiaomi/spes-kernel",
+       "branch"      : "thirteen"
+   },
+   {
+       "remote"      : "pixel-devices-blobs",
+       "repository"  : "vendor_xiaomi_spes",
+       "target_path" : "vendor/xiaomi/spes",
+       "branch"      : "thirteen"
+   }
+]
