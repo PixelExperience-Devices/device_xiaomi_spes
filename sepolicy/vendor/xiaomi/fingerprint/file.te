@@ -2,4 +2,6 @@
 type vendor_fingerprint_data_file, data_file_type, core_data_file_type, file_type;
 type goodix_fingerprint_data_file, data_file_type, file_type, core_data_file_type;
 
+# Fingeprint sysfs
+type sysfs_fingerprint, sysfs_type, fs_type;
 type sysfs_msm_subsys, fs_type, sysfs_type;

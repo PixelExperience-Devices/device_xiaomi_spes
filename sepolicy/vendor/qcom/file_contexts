@@ -1,8 +1,3 @@
-# Graphics
-/vendor/lib(64)?/libgpudataproducer\.so                                u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/egl/libq3dtools_esx\.so                               u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/egl/libVkLayer_ADRENO_qprofiler\.so                   u:object_r:same_process_hal_file:s0
-
 # Label Listen 0-9 Audio Service wakeup stats
 /sys/devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:sound/Listen\s[0-9]\sAudio\sService/wakeup      u:object_r:sysfs_wakeup:s0
 
@@ -11,44 +6,3 @@
 
 # Label discard_max_bytes in /data partition
 /sys/devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes u:object_r:vendor_sysfs_scsi_host:s0
-
-#FPC
-/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-03/1c40000.qcom,spmi:qcom,pmi632@3:qcom,leds@d000/modalias u:object_r:vendor_sysfs_fps_attr:s0
-
-# sysfs read_ahead_kb files
-/sys/devices/platform/soc/4744000.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0rpmb/queue/read_ahead_kb u:object_r:vendor_sysfs_mmc_host:s0
-/sys/devices/platform/soc/soc:qcom,ipa_fws@[a-f0-9]+/subsys[0-9]+/name  u:object_r:vendor_sysfs_data:s0
-
-###### sysfs_wakeup ##########
-/sys/devices/platform/dummy_hcd.0/usb1/wakeup/wakeup[0-9]+(/.*)?      u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/soc:gpio_keys/wakeup/wakeup[0-9]+(/.*)?     u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/soc:fpc[0-9]+/wakeup/wakeup[0-9]+(/.*)?     u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/62dc0000.slim/tavil-slim-pgd/wakeup/wakeup[0-9]+(/.*)?    u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/[a-f0-9]+.qcom,spmi/spmi-0/spmi0-0[0-9]/[a-f0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,power-on@[a-z0-9]+/wakeup(/.*)?                u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/[a-f0-9]+.qcom,spmi/spmi-0/spmi0-0[0-9]/[a-f0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,pm[0-9]+_rtc/wakeup/wakeup[0-9]+(/.*)?         u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/[a-f0-9]+.qcom,spmi/spmi-0/spmi0-0[0-9]/[a-f0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,pm[0-9]+_rtc/rtc/rtc[0-9]/wakeup[0-9]+(/.*)?   u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/[a-f0-9]+.qcom,spmi/spmi-0/spmi0-0[0-9]/[a-f0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,qpnp-[a-z0-9]+/wakeup/wakeup[0-9]+(/.*)?       u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/[a-f0-9]+.qcom,spmi/spmi-0/spmi0-0[0-9]/[a-f0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,qpnp-[a-z0-9]+/power_supply/(usb|main|pc_port|battery|dc)/wakeup[0-9]+(/.*)?    u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/[a-f0-9]+.qcom,spmi/spmi-0/spmi0-0[0-9]/[a-f0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qpnp,[a-z0-9]+/power_supply/[a-z0-9]+/wakeup[0-9]+(/.*)?                          u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/[a-f0-9]+.qcom,[a-z0-9\-_]+/wakeup/wakeup[0-9]+(/.*)?     u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/[a-f0-9]+.qcom,[a-z0-9\-_]+/subsys[0-9]/wakeup/wakeup[0-9]+(/.*)?     u:object_r:sysfs_wakeup:s0
-/sys/class/wakeup/wakeup[0-9]+(/.*)?                                                u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/soc:qcom,[a-z0-9\-_]+/wakeup/wakeup[0-9]+(/.*)?           u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/soc:qcom,[a-z0-9\-_]+/subsys[0-9]/wakeup/wakeup[0-9]+(/.*)?           u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/[a-z]+-macro/[a-z]+_swr_ctrl/wakeup/wakeup[0-9]+(/.*)?     u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/[a-f0-9]+.i2c/i2c-[0-9]/[0-9]-[0-9]+/wakeup/wakeup[0-9]+(/.*)?     u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/[a-f0-9]+.[a-z]+/wakeup/wakeup[0-9]+(/.*)?                         u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/wakeup/wakeup[0-9]+(/.*)?                         u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/misc/msm_[a-z0-9_]+/wakeup[0-9]+(/.*)?            u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/fastrpc/adsprpc-smd-secure/wakeup[0-9]+(/.*)?     u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/fastrpc/adsprpc-smd/wakeup[0-9]+(/.*)?            u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/misc/msm_qcelp/wakeup[0-9]+(/.*)?                 u:object_r:sysfs_wakeup:s0
-
-#vendor_hvdcp
-/sys/devices/platform/soc/soc:qcom,nopmi-chg/power_supply/usb/voltage_now u:object_r:vendor_subsys_hvdcp:s0
-/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm7250b@0:qcom,qpnp-smb5/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
-/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm7250b@0:qpnp,qg/iio:device[0-9](/.*?)  u:object_r:vendor_sysfs_battery_supply:s0
-/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-04/1c40000.qcom,spmi:qcom,pm7250bl@4:vadc@3100/iio:device[0-9](/.*?)  u:object_r:vendor_sysfs_battery_supply:s0
-/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm7250b@0:vadc@3100/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
-/sys/devices/platform/soc/4a88000.i2c/i2c-1/1-0010/4a88000.i2c:qcom,smb1394@10:qcom,charge_pump/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
-/sys/devices/platform/soc/4a88000.i2c/i2c-1/1-000c/4a88000.i2c:qcom,smb1355@c:qcom,smb1355-charger@1000/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0

@@ -1,5 +1,5 @@
 # NFC
 /vendor/bin/STFlashTool                                                 u:object_r:stflashtool_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.nfc-service\.st       u:object_r:hal_nfc_default_exec:s0
+/vendor/bin/hw/android\.hardware\.nfc@1\.2-service\.st                  u:object_r:hal_nfc_default_exec:s0
 /vendor/lib(64)?/libst_sr_models\.so                                    u:object_r:same_process_hal_file:s0
 /dev/st21nfc                                                            u:object_r:nfc_device:s0

@@ -12,7 +12,3 @@ allow hal_audio_default system_suspend_hwservice:hwservice_manager find;
 
 # Allow Audio hal to set audio properties
 set_prop(hal_audio_default, vendor_audio_prop)
-
-# Dirac
-get_prop(hal_audio_default, dirac_prop)
-set_prop(hal_audio_default, dirac_prop)
