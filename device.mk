@@ -12,12 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit from sm6225-common
-$(call inherit-product, device/xiaomi/sm6225-common/common.mk)
-
-# Inherit from vendor blobs
-$(call inherit-product, vendor/xiaomi/spes/spes-vendor.mk)
-
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -124,3 +118,9 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v32.so \
     prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase-v32.so
+
+# Inherit from vendor blobs
+$(call inherit-product, vendor/xiaomi/spes/spes-vendor.mk)
+
+# Inherit from sm6225-common
+$(call inherit-product, device/xiaomi/sm6225-common/common.mk)
