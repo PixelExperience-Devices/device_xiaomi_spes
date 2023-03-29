@@ -15,33 +15,18 @@
  */
 
 #include <cstdlib>
-#include <fstream>
 #include <string.h>
-#include <unistd.h>
-#include <vector>
-#include <android-base/logging.h>
 
-#include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 #include <sys/sysinfo.h>
+#include <android-base/properties.h>
 
 #include "property_service.h"
 #include "vendor_init.h"
 
 using android::base::GetProperty;
 using std::string;
-
-std::vector<std::string> ro_props_default_source_order = {
-    "",
-    "odm.",
-    "odm_dlkm.",
-    "product.",
-    "system.",
-    "system_ext.",
-    "vendor.",
-    "vendor_dlkm.",
-};
 
 void property_override(string prop, string value)
 {
@@ -53,59 +38,53 @@ void property_override(string prop, string value)
         __system_property_add(prop.c_str(), prop.size(), value.c_str(), value.size());
 }
 
-void load_redmi_spes() {
-    property_override("bluetooth.device.default_name", "Redmi Note 11");
-    property_override("ro.product.brand", "Redmi");
-    property_override("ro.product.device", "spes");
-    property_override("ro.product.manufacturer", "Xiaomi");
-    property_override("ro.product.marketname", "Redmi Note 11");
-    property_override("ro.product.model", "2201117TG");
-    property_override("ro.product.mod_device", "spes_global");
-    property_override("ro.product.name", "spes_global");
-    property_override("vendor.usb.product_string", "Redmi Note 11");
+void set_ro_build_prop(const string &source, const string &prop,
+                       const string &value, bool product = false) {
+    string prop_name;
+
+    if (product)
+        prop_name = "ro.product." + source + prop;
+    else
+        prop_name = "ro." + source + "build." + prop;
+
+    property_override(prop_name.c_str(), value.c_str());
 }
 
-void load_redmi_spes_in() {
-    property_override("bluetooth.device.default_name", "Redmi Note 11");
-    property_override("ro.product.brand", "Redmi");
-    property_override("ro.product.device", "spes");
-    property_override("ro.product.manufacturer", "Xiaomi");
-    property_override("ro.product.marketname", "Redmi Note 11");
-    property_override("ro.product.model", "2201117TI");
-    property_override("ro.product.mod_device", "spes_global");
-    property_override("ro.product.name", "spes_global");
-    property_override("vendor.usb.product_string", "Redmi Note 11");
+void set_device_props(const string model, const string name, const string marketname,
+                      const string mod_device) {
+    // list of partitions to override props
+    string source_partitions[] = { "", "bootimage.", "odm.", "product.",
+                                   "system.", "system_ext.", "vendor." };
+
+    for (const string &source : source_partitions) {
+        set_ro_build_prop(source, "model", model, true);
+        set_ro_build_prop(source, "name", name, true);
+        set_ro_build_prop(source, "marketname", marketname, true);
+    }
+    property_override("ro.product.mod_device", mod_device.c_str());
+    property_override("bluetooth.device.default_name", marketname.c_str());
+    property_override("vendor.usb.product_string", marketname.c_str());
 }
 
-void load_redmi_spesn() {
-    property_override("bluetooth.device.default_name", "Redmi Note 11 NFC");
-    property_override("ro.product.brand", "Redmi");
-    property_override("ro.product.device", "spesn");
-    property_override("ro.product.manufacturer", "Xiaomi");
-    property_override("ro.product.marketname", "Redmi Note 11 NFC");
-    property_override("ro.product.model", "2201117TY");
-    property_override("ro.product.mod_device", "spesn_global");
-    property_override("ro.product.name", "spesn");
-    property_override("vendor.usb.product_string", "Redmi Note 11 NFC");
-}
+void vendor_load_properties()
+{
+    // Detect device and configure properties
 
-void vendor_load_properties() {
-    std::string region = GetProperty("ro.boot.hwc", "");
-    if (access("/system/bin/recovery", F_OK) != 0) {
-        if (region.find("India") != std::string::npos) {
-           load_redmi_spes_in();
-        } else if (region.find("Global") != std::string::npos) {
-           load_redmi_spes();
-        } else {
-           load_redmi_spesn();
-        }
+    if (GetProperty("ro.boot.hwname", "") == "spesn") { // Redmi Note 11 NFC
+        set_device_props("2201117TY", "spesn_global", "Redmi Note 11 NFC", "spesn_global");
+    } else { // Redmi Note 11
+        string region = GetProperty("ro.boot.hwc", "");
+        if (region == "IN") // Redmi Note 11 India
+            set_device_props("2201117TI", "spes_in", "Redmi Note 11", "spes_in_global");
+        else // Redmi Note 11 Global
+            set_device_props("2201117TG", "spes_global", "Redmi Note 11", "spes_global");
     }
 
     // Set hardware revision
     property_override("ro.boot.hardware.revision", GetProperty("ro.boot.hwversion", "").c_str());
 
     // Set dalvik heap configuration
-    std::string heapstartsize, heapgrowthlimit, heapsize, heapminfree,
+    string heapstartsize, heapgrowthlimit, heapsize, heapminfree,
 			heapmaxfree, heaptargetutilization;
 
     struct sysinfo sys;
