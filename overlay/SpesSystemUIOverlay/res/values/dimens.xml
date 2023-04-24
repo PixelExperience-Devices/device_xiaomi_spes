@@ -29,7 +29,7 @@
     <dimen name="ongoing_appops_dot_min_padding">18dp</dimen>
 
     <!-- Margin on the left side of the carrier text on Keyguard -->
-    <dimen name="keyguard_carrier_text_margin">20dp</dimen>
+    <dimen name="keyguard_carrier_text_margin">0dp</dimen>
 
     <!-- Margin on the right side of the system icon group on Keyguard. -->
     <dimen name="system_icons_keyguard_padding_end">0dp</dimen>
