@@ -63,7 +63,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
 PRODUCT_VENDOR_PROPERTIES += \
-    vendor.display.defer_fps_frame_count=2
+    vendor.display.defer_fps_frame_count=2 \
+    vendor.display.override_doze_mode=1
 
 # Fingerprint
 PRODUCT_PACKAGES += \
