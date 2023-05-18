@@ -67,7 +67,8 @@ PRODUCT_ODM_PROPERTIES += \
     vendor.display.enable_rounded_corner=0
 
 PRODUCT_VENDOR_PROPERTIES += \
-    vendor.display.defer_fps_frame_count=2
+    vendor.display.defer_fps_frame_count=2 \
+    vendor.display.override_doze_mode=1
 
 # Fingerprint
 PRODUCT_PACKAGES += \
