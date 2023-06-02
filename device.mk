@@ -17,10 +17,15 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # API Level
-PRODUCT_SHIPPING_API_LEVEL := 30
+BOARD_SHIPPING_API_LEVEL := 33
+BOARD_API_LEVEL := 33
+
+SHIPPING_API_LEVEL := 33
+PRODUCT_SHIPPING_API_LEVEL := $(SHIPPING_API_LEVEL)
 
 # Audio
 PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.audio.policy.engine.odm=true \
     ro.vendor.audio.spk.stereo=true \
     ro.vendor.audio.us.proximity=true
 
