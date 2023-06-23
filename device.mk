@@ -23,6 +23,10 @@ BOARD_API_LEVEL := 33
 SHIPPING_API_LEVEL := 33
 PRODUCT_SHIPPING_API_LEVEL := $(SHIPPING_API_LEVEL)
 
+# AB
+TARGET_IS_VAB := true
+PRODUCT_VIRTUAL_AB_OTA := true
+
 # Audio
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.policy.engine.odm=true \
