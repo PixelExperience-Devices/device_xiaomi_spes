@@ -71,6 +71,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.fp.sideCap=true
 
+# FUSE passthrough
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.fuse.passthrough.enable=true
+
 # Kernel
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)-kernel/kernel
 
