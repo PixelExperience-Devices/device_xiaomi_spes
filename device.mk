@@ -76,6 +76,10 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_VENDOR_KERNEL_HEADERS += $(LOCAL_PATH)-kernel/kernel-headers
 
+# Media
+PRODUCT_ODM_PROPERTIES += \
+    media.settings.xml=/vendor/etc/media_profiles_khaje.xml
+
 # NFC
 $(call inherit-product, hardware/st/nfc/nfc_vendor_product.mk)
 ODM_MANIFEST_SKUS += $(TARGET_NFC_SKU)
