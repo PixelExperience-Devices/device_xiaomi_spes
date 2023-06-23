@@ -61,6 +61,9 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.defer_fps_frame_count=2
 
 # Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.3-service.xiaomi
+
 PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.fp.sideCap=true
 
