@@ -119,6 +119,10 @@ vendor/lib/libspkrprot.so|b7bbc0adc502d14febfc6ca284679c081e840916
 vendor/lib/libssrec.so|44e5d6fb497c564b8a8b46c909fa151ee722a24e
 vendor/lib/libsurround_3mic_proc.so|e8e086123e0c1dc17f008f97edb3611cd4c702e1
 
+# Batterysecret - from SPES MIUI
+vendor/bin/batterysecret|58c75096366cf981b4a1f1cea1f41a392ac0d07b
+vendor/etc/init/init.batterysecret.rc|93b03fe5139f32fa17a006198a55cdc19570b252
+
 # Camera - from SPES MIUI
 system/lib/vendor.xiaomi.hardware.campostproc@1.0.so|e16c19068828f996ba118ef4f11c85d1ecd97db6
 system/lib64/vendor.xiaomi.hardware.campostproc@1.0.so|203cdbc15cb05cd9b8ee05ff70a36e362b4c26ea
