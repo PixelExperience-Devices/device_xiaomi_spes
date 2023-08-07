@@ -60,6 +60,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.frame_rate_multiple_threshold=60 \
     ro.surface_flinger.set_touch_timer_ms=200
 
+PRODUCT_ODM_PROPERTIES += \
+    vendor.display.disable_layer_stitch=1 \
+    vendor.display.enable_rounded_corner=0
+
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.defer_fps_frame_count=2
 
