@@ -446,6 +446,9 @@ vendor/lib64/libmmcamera_lscv35.so|44560c24c5f7ad8d82338be2f8ee250cdfeddb61
 vendor/lib64/libmmcamera_mfnr.so|c308ae487c3b54f1874a59517c1247db6d0ca9fd
 vendor/lib64/libmmcamera_mfnr_t4.so|d8eeef7b26f37f6802e17239225a67e05c977fc4
 
+# Charging - from SPES MIUI
+vendor/bin/hvdcp_opti|606c65c67f128aa6a91fb9567239ee32bcafe231
+
 # Consumer IR - from SPES MIUI
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.bengal.so|bb96104803e2468d7982e6955dad14e6bd739939
 
