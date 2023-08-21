@@ -37,6 +37,9 @@ TARGET_OTA_ASSERT_DEVICE := spes,spesn
 # Screen density
 TARGET_SCREEN_DENSITY := 440
 
+# Sepolicy
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+
 # Inherit from the proprietary version
 include vendor/xiaomi/spes/BoardConfigVendor.mk
 
