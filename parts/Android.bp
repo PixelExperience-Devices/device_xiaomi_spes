@@ -1,5 +1,5 @@
 android_app {
-    name: "RefreshRateParts",
+    name: "SpesParts",
 
     srcs: ["src/**/*.java"],
 
