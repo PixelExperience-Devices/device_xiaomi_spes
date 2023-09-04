@@ -78,15 +78,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.fuse.passthrough.enable=true
 
-# Kernel
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)-kernel/kernel
-
-PRODUCT_COPY_FILES += \
-    $(TARGET_PREBUILT_KERNEL):kernel \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)-kernel/vendor-modules,$(TARGET_COPY_OUT_VENDOR)/lib/modules)
-
-PRODUCT_VENDOR_KERNEL_HEADERS += $(LOCAL_PATH)-kernel/kernel-headers
-
 # Media
 PRODUCT_ODM_PROPERTIES += \
     media.settings.xml=/vendor/etc/media_profiles_khaje.xml
@@ -135,8 +126,7 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
-    $(LOCAL_PATH)-kernel
+    $(LOCAL_PATH)
 
 # VNDK
 PRODUCT_COPY_FILES += \
