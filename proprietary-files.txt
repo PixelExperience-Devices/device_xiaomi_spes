@@ -617,8 +617,8 @@ vendor/etc/sensors/hals.conf|810453f519762dc7d9d4822399de0bdc9a0cfcf9
 vendor/etc/sensors/sns_reg_config|d516cd2088b375d75e83b3a6d093f6290396f4db
 vendor/etc/sensor_diag.cfg|ad39511c15df2a2279ddbb4f056071704b9ec891
 
-# Thermal - from SPESNGlobal_V13.0.7.0.SGKMIXM
-vendor/etc/thermal-normal.conf|42ce733f913f676f330f4f0892c28a90946219f2
+# Thermal - from SPES MIUI
+vendor/etc/thermal-normal.conf|670b7a3153bda4102e56e4b86e9ceece2f24947c
 
 # Thermal configs - from SPES MIUI
 vendor/bin/mi_thermald|e3c9e29cf38cbd2751da29106f84f13fbe6b68db
