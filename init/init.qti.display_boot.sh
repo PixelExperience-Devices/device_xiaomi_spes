@@ -79,7 +79,7 @@ case "$target" in
         518|561|585|586)
         # Set property for khaje
         setprop vendor.display.disable_layer_stitch 1
-        setprop vendor.display.enable_rounded_corner 1
+        setprop vendor.display.enable_rounded_corner 0
         setprop vendor.display.disable_rounded_corner_thread 0
         setprop vendor.display.enable_rc_support 1
         setprop vendor.display.enable_perf_hint_large_comp_cycle 1
