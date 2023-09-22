@@ -65,10 +65,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.set_touch_timer_ms=800 \
     ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
-PRODUCT_ODM_PROPERTIES += \
-    vendor.display.disable_layer_stitch=1 \
-    vendor.display.enable_rounded_corner=0
-
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.defer_fps_frame_count=2 \
     vendor.display.override_doze_mode=1
