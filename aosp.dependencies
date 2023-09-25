@@ -1,12 +1,6 @@
 [
    {
        "remote"      : "pixel-devices",
-       "repository"  : "device_xiaomi_spes-kernel",
-       "target_path" : "device/xiaomi/spes-kernel",
-       "branch"      : "thirteen"
-   },
-   {
-       "remote"      : "pixel-devices",
        "repository"  : "device_xiaomi_sm6225-common",
        "target_path" : "device/xiaomi/sm6225-common",
        "branch"      : "thirteen"
