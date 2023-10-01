@@ -41,6 +41,7 @@ TARGET_OTA_ASSERT_DEVICE := spes,spesn
 TARGET_SCREEN_DENSITY := 440
 
 # Sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # Inherit from the proprietary version

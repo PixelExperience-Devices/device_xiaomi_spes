@@ -4,6 +4,10 @@ on early-init
 on post-fs-data
     mkdir /data/vendor/nfc 0770 nfc nfc
 
+on boot
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable
+
 service charger /system/bin/chargeonlymode
     override
     class charger
