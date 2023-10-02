@@ -279,7 +279,12 @@ vendor/lib64/libofflinelog.so|7f90bb7fe4b4e7e506ca71c095ebd48020d4992a
 vendor/lib64/libopencv.so|3290c7e4b89dbcd895d20b1c56313e5f2ec31d34
 vendor/lib64/libopestriping.so|c095c5ea556d5c2178b42f108ba3a72178e7980d
 vendor/lib64/libsdk_sr.so|4fc511481b08aa3331d3edb2744cade6575a9e80
+vendor/lib64/libsns_device_mode_stub.so|8ad1f54c0644a30655c7b151eff7ecf6f80dd064
+vendor/lib64/libsns_fastRPC_util.so|2dafbfdf226f8e0da4a59ba0311e79f4fda5c6ce
+vendor/lib64/libsns_low_lat_stream_stub.so|f6eeff8e4f274bb311a67e2be139519604747d5c
 vendor/lib64/libsns_registry_skel.so|3da1394ce601a52386120087ea47f4334a4daed3
+vendor/lib64/libsnsapi.so|208be1707a670165ced8fa863c28b1ac8923e6c4
+vendor/lib64/libsnsdiaglog.so|afa3eb00b750fd929203d97e018321bc7e4d92ff
 vendor/lib64/libswregistrationalgo.so|29444b2e317fc6470f4a09df5505f98af6c44008
 vendor/lib64/libtfestriping.so|63b7e3b6b0078fc1b69be442a5d8ad0a89b21a18
 vendor/lib64/libvideofilter_only.so|ddb58095833dd871a8f22826be95700108c587e8
@@ -360,7 +365,7 @@ vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so|86ed5c251e4353f41dfc
 vendor/lib64/camera/components/com.vidhance.node.processing.so|f259935b53fb665876c17ea9a44e6e88fbec56af
 
 # Camera Componentes/com.qti.node.mialgocontrol - from SPES MIUI
-vendor/lib64/camera/components/com.qti.node.mialgocontrol.so|cd0d76260d97c1b6050614fc236af58d76d0b1e1
+vendor/lib64/camera/components/com.qti.node.mialgocontrol.so|87fa47ba5e9f55344729246706f1ed1ca7a9c481
 
 # Camera Configs - from SPES MIUI
 vendor/etc/camera/model/dof_model/capture_cache|852b45f60c33509f38e5f5dd2eb02a7004c203be
@@ -556,9 +561,18 @@ system/bin/charger:system/bin/chargeonlymode|8f26fadb55ac3bb2e6f69340b4c14348b6c
 
 # Sensors - from SPES MIUI
 vendor/bin/init.qcom.sensors.sh|454c6de8c65b9ad1c41f063544871a4ba0665689
+vendor/bin/sensors.qti|afba8bd5ca1637287d1ade5e5ae4cea483c42726
+vendor/bin/sscrpcd|c233c02124098beb8add6cc7d5e99d1b8ca9e072
+vendor/etc/init/init.vendor.sensors.rc|8d286f50fd261dc8843c6a208386b535cc07641e
+vendor/etc/init/vendor.sensors.qti.rc|f34fc966af816b50f10ae7520b33863961a14478
+vendor/etc/init/vendor.sensors.sscrpcd.rc|df52901f1ad0fbc97d6070e28896a6be40154814
 vendor/etc/elliptic_sensor.xml|2a38626bb26d9def04d2a34167440c2ee1a41bc1
 vendor/lib64/hw/sensors.elliptic@2.0.so|c19dfafbb3fb4ae8372c8b57fb02d08af5f98c50
 vendor/lib64/libnotifyaudiohal.so|dacd0783b6b06c2ccb60510bf62d8cb16e42dcdd
+vendor/lib64/libsensorcal.so|cc3def96d5514b5dfda60251a6a70a15797f2a04
+vendor/lib64/libsensorslog.so|5279ee2022daabd375685af69c5ac7c1dcfcb77d
+vendor/lib64/libssc.so|6ae5e37029f9a9f33edf1cd47d1bc66a41802c6d
+vendor/lib64/libssc_default_listener.so|1653233f7454f3be9e8361ab5fde7cd45e9ac9b4
 vendor/lib64/libsnsapi.so|208be1707a670165ced8fa863c28b1ac8923e6c4
 vendor/lib64/sensors.ssc.so|a229f862687b32ae3dfb648b7cb7936be126242e
 vendor/lib64/sensors.touch.detect.so|0fe0b39a02d619dbaf56c80ee598c541e121b94a
