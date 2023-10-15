@@ -412,12 +412,6 @@ vendor/etc/camera/morpho_lowlight_2.0_ofilm_s5kjn1_wide_global.xml|4a4dabd03eb4d
 vendor/etc/camera/morpho_lowlight_2.0_ofilm_s5kjn1_wide_india.xml|cdc1ac72ab25a8a8beac9fec6c9b1cf3d45b077b
 vendor/etc/camera/vidhance_calibration|a7b903097b3fa6712e841b9be27a8ffe3aa0e2fb
 
-# Camera Device - from SPES MIUI
-vendor/lib/vendor.qti.hardware.camera.device@1.0.so|1f7f3d82623c638a3144ddffa209d53f86768b6c
-vendor/lib/vendor.qti.hardware.camera.device@3.5.so|de60d040fb0aaea67f23cc80de81e2b04e2d3064
-vendor/lib64/vendor.qti.hardware.camera.device@1.0.so|7539c1b3b28964214362668af11b69b0b19632f6
-vendor/lib64/vendor.qti.hardware.camera.device@3.5.so|a2b4a0439876fbe6733f99844e22228315a66ba6
-
 # Camera Feature - from SPES MIUI
 vendor/lib64/com.qti.chiusecaseselector.so|b47d1d39ed451734e6fe64716fce3ce5119d00bc
 vendor/lib64/com.qti.feature2.anchorsync.so|7f35de81a64e298e4fc0cba15dee60b434da4652
@@ -438,10 +432,6 @@ vendor/lib64/com.qti.feature2.swmf.so|141ce16ec803851acb3f26bfb42a1e84ae1c503c
 
 # Camera Postprocessing - from SPES MIUI
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|b250d988518158fe5a8dec1a3409519e1aa0cec0
-
-# Camera provider - from SPES MIUI
-vendor/lib/android.hardware.camera.provider@2.4-legacy.so|831d13da063a5265c4dbba852ea479165732b38e
-vendor/lib64/android.hardware.camera.provider@2.4-legacy.so|87b2807b4db92737ac0fab9af3df58bfb5d82465
 
 # Camera Sensor - from SPES MIUI
 vendor/lib64/libmmcamera_cac3.so|1c1c29bb35e4a109d16a07056dbd5c6ee5465d6f
