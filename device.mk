@@ -73,7 +73,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.xiaomi
 
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES += \
     ro.hardware.fp.sideCap=true
 
 # Media
