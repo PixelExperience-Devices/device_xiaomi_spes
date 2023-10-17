@@ -31,7 +31,7 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_spes
 # Kernel
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 KERNEL_DEFCONFIG := vendor/spes-perf_defconfig
-KERNEL_LLVM_SUPPORT := true
+KERNEL_CUSTOM_LLVM := true
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6225
 
 # OTA assert
