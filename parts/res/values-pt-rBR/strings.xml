@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> 
+ 
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"> 
+     
+    <!-- OLED Features --> 
+    <string name="oled_features_title">Recursos adicionais de exibição</string> 
+    <string name="oled_features_summary">Modo de alto brilho (HBM)</string> 
+    <string name="oled_features_info">O Modo de Alto Brilho (HBM) aumenta o brilho máximo da tela para melhorar a visibilidade sob a luz solar. Aumenta o consumo de energia.</string> 
+    <string name="kernel_not_supported">Kernel não suporta esse recurso</string> 
+ 
+    <string name="oled_hbm_title">Modo de alto brilho</string> 
+    <string name="oled_hbm_summary">Aumente o brilho da tela sob a luz solar</string> 
+    <string name="oled_hbm_tile_title">HBM</string> 
+    <string name="oled_hbm_title_enabled">Habilitado</string> 
+    <string name="oled_hbm_title_disabled">Desabilitado</string> 
+ 
+</resources>
