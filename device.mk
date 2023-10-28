@@ -29,7 +29,6 @@ PRODUCT_VIRTUAL_AB_OTA := true
 
 # Audio
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.audio.policy.engine.odm=true \
     ro.vendor.audio.spk.stereo=true \
     ro.vendor.audio.us.proximity=true
 
