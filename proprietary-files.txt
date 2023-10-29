@@ -361,7 +361,7 @@ vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so|86ed5c251e4353f41dfc
 vendor/lib64/camera/components/com.vidhance.node.processing.so|f259935b53fb665876c17ea9a44e6e88fbec56af
 
 # Camera Componentes/com.qti.node.mialgocontrol - from SPES MIUI
-vendor/lib64/camera/components/com.qti.node.mialgocontrol.so|87fa47ba5e9f55344729246706f1ed1ca7a9c481
+vendor/lib64/camera/components/com.qti.node.mialgocontrol.so|1ce787058cb1099bee2e3c12388accf56b62d044
 
 # Camera Configs - from SPES MIUI
 vendor/etc/camera/model/dof_model/capture_cache|852b45f60c33509f38e5f5dd2eb02a7004c203be
