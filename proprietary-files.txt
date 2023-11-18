@@ -542,9 +542,6 @@ vendor/lib64/nfc_nci.st21nfc.st.so|f477617b327089c4b72f2ec58ee4ecc0b772a1fe
 vendor/firmware/st21nfc_fw.bin|ca308173c4272a1288a49df38d9ddee4f8f14957
 vendor/firmware/st21nfc_fw7.bin|09853bac356e0f926badddcdb6b6f0c0d6239060
 
-# Power-off charging daemon - from SPES MIUI
-system/bin/charger:system/bin/chargeonlymode|8f26fadb55ac3bb2e6f69340b4c14348b6c11f0d
-
 # Sensors - from SPES MIUI
 vendor/bin/init.qcom.sensors.sh|454c6de8c65b9ad1c41f063544871a4ba0665689
 vendor/bin/sensors.qti|afba8bd5ca1637287d1ade5e5ae4cea483c42726
