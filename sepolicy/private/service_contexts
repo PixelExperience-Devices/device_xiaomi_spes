@@ -1,0 +1,2 @@
+# DC Dimming
+dc_dim                                      u:object_r:dc_dimming_service:s0
