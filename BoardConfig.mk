@@ -30,8 +30,8 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_spes
 
 # Kernel
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-KERNEL_DEFCONFIG := vendor/spes-perf_defconfig
-KERNEL_CUSTOM_LLVM := true
+TARGET_KERNEL_CLANG_VERSION := r450784e
+TARGET_KERNEL_CONFIG := vendor/spes-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6225
 
 # OTA assert
@@ -43,6 +43,8 @@ TARGET_SCREEN_DENSITY := 440
 # Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
+
 
 # Inherit from the proprietary version
 include vendor/xiaomi/spes/BoardConfigVendor.mk
